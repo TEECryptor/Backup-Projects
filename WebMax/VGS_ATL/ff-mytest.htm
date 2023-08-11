@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+<TITLE>对象 myatlCtrl 的 ATL 8.0 测试页</TITLE>
+</HEAD>
+<BODY>
+<script language="javascript">
+<!--
+	var eleId;
+	
+	function mytest()
+	{
+		eleId = document.getElementById("myatlCtrl");
+		if (eleId)
+		{
+			eleId.BrowType = 2;
+		alert("haha...");
+			//alert(eleId.MyName);
+		}
+	}
+	function myevent()
+	{
+			var strFuncName;
+		strFuncName = arguments[0];
+		strFuncName += "(";
+		if (arguments.length > 1)
+		{
+			strFuncName += arguments[1];
+		}
+		for (var i = 2; i < arguments.length; i++)
+		{
+			strFuncName += ",";
+			strFuncName += arguments[i];
+		}
+		strFuncName += ")";
+		eval(strFuncName);
+	}
+-->
+</script>
+
+<!--
+<OBJECT ID="myatlCtrl" CLASSID="CLSID:77E4E844-C9D2-44F3-A7CE-2E708144C218"></OBJECT>
+-->
+		<embed
+		    id="myatlCtrl"
+		    TYPE="application/vgs"
+		    pluginspage="http://www.suntoward.com/webmax2/vgs/vgsplayer.xpi"
+		    ALIGN="baseline" BORDER="2"
+		    WIDTH="400" HEIGHT="300"
+		    clsid="{046216A1-952E-486C-8598-4F2D0D0676F2}"
+		    param_BrowType=3
+		    codeBaseURL=""
+		   />
+<input onclick="mytest()" type="button" value="事件" />
+</BODY>
+</HTML>

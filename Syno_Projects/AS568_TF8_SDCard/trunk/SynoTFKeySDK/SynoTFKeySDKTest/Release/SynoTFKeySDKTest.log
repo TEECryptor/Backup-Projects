@@ -1,0 +1,50 @@
+﻿Build started 2016/3/13 16:37:04.
+     1>Project "D:\Syno_Projects\trunk\SynoTFKeySDK\SynoTFKeySDKTest\SynoTFKeySDKTest.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\SynoTFKeySDKTest.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\SynoTFKeySDKTest.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Base64\Base64.cpp ChangePinDlg.cpp DevInitDlg.cpp InputFileNameDlg.cpp LoginDlg.cpp NewDataFileDlg.cpp PlainTextDlg.cpp SelectSDKDlg.cpp SynoTFKeySDKTest.cpp SynoTFKeySDKTestDlg.cpp TFKeySDKTester\Pkcs11SDKTester.cpp TFKeySDKTester\SkfSDKTester.cpp UnlockPinDlg.cpp
+         Base64.cpp
+         ChangePinDlg.cpp
+         DevInitDlg.cpp
+         InputFileNameDlg.cpp
+         LoginDlg.cpp
+         NewDataFileDlg.cpp
+         PlainTextDlg.cpp
+         SelectSDKDlg.cpp
+         SynoTFKeySDKTest.cpp
+         SynoTFKeySDKTestDlg.cpp
+         Pkcs11SDKTester.cpp
+     1>TFKeySDKTester\Pkcs11SDKTester.cpp(889): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 11.0\VC\include\string.h(288) : see declaration of 'wcscpy'
+         SkfSDKTester.cpp
+         UnlockPinDlg.cpp
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\Common\SynoConvert.c
+         SynoConvert.c
+       ResourceCompile:
+         C:\Program Files\Windows Kits\8.0\bin\x86\rc.exe /D NDEBUG /D _UNICODE /D UNICODE /l"0x0409" /IRelease\ /nologo /fo"Release\SynoTFKeySDKTest.res" SynoTFKeySDKTest.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeySDKTest.exe" /INCREMENTAL:NO /NOLOGO uafxcw.lib LIBCMT.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeySDKTest.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeySDKTest.lib" /MACHINE:X86 /SAFESEH Release\SynoTFKeySDKTest.res
+         Release\Base64.obj
+         Release\SynoConvert.obj
+         Release\ChangePinDlg.obj
+         Release\DevInitDlg.obj
+         Release\InputFileNameDlg.obj
+         Release\LoginDlg.obj
+         Release\NewDataFileDlg.obj
+         Release\PlainTextDlg.obj
+         Release\SelectSDKDlg.obj
+         Release\stdafx.obj
+         Release\SynoTFKeySDKTest.obj
+         Release\SynoTFKeySDKTestDlg.obj
+         Release\Pkcs11SDKTester.obj
+         Release\SkfSDKTester.obj
+         Release\UnlockPinDlg.obj
+         Generating code
+         Finished generating code
+         SynoTFKeySDKTest.vcxproj -> D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeySDKTest.exe
+     1>Done Building Project "D:\Syno_Projects\trunk\SynoTFKeySDK\SynoTFKeySDKTest\SynoTFKeySDKTest.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:13.65

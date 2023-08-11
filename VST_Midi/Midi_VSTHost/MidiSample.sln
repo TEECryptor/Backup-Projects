@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MidiSample", "MidiSample.vcproj", "{C44A457C-A47C-4606-90D9-8C6A2FCB1464}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinMiniMidi", "..\WinMiniMidi\WinMiniMidi.vcproj", "{B6E6C4DC-AF70-4B73-A0DF-E8F0913AC324}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MidiSound", "..\MidiSound\MidiSound.vcproj", "{F23BBA09-0201-44CF-AC24-EEE49DCBA419}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyMidiSample", "..\MyMidiSample\MyMidiSample.vcproj", "{F720EA53-0B1A-489A-8CB8-5A59A4CE63AA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VstxSynthDll", "..\VstxSynthDll\VstxSynthDll.vcproj", "{EB461AA2-52D2-4E0C-80C0-A3A02DA5651F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C44A457C-A47C-4606-90D9-8C6A2FCB1464}.Debug.ActiveCfg = Debug|Win32
+		{C44A457C-A47C-4606-90D9-8C6A2FCB1464}.Debug.Build.0 = Debug|Win32
+		{C44A457C-A47C-4606-90D9-8C6A2FCB1464}.Release.ActiveCfg = Release|Win32
+		{C44A457C-A47C-4606-90D9-8C6A2FCB1464}.Release.Build.0 = Release|Win32
+		{B6E6C4DC-AF70-4B73-A0DF-E8F0913AC324}.Debug.ActiveCfg = Debug|Win32
+		{B6E6C4DC-AF70-4B73-A0DF-E8F0913AC324}.Debug.Build.0 = Debug|Win32
+		{B6E6C4DC-AF70-4B73-A0DF-E8F0913AC324}.Release.ActiveCfg = Release|Win32
+		{B6E6C4DC-AF70-4B73-A0DF-E8F0913AC324}.Release.Build.0 = Release|Win32
+		{F23BBA09-0201-44CF-AC24-EEE49DCBA419}.Debug.ActiveCfg = Debug|Win32
+		{F23BBA09-0201-44CF-AC24-EEE49DCBA419}.Debug.Build.0 = Debug|Win32
+		{F23BBA09-0201-44CF-AC24-EEE49DCBA419}.Release.ActiveCfg = Release|Win32
+		{F23BBA09-0201-44CF-AC24-EEE49DCBA419}.Release.Build.0 = Release|Win32
+		{F720EA53-0B1A-489A-8CB8-5A59A4CE63AA}.Debug.ActiveCfg = Debug|Win32
+		{F720EA53-0B1A-489A-8CB8-5A59A4CE63AA}.Debug.Build.0 = Debug|Win32
+		{F720EA53-0B1A-489A-8CB8-5A59A4CE63AA}.Release.ActiveCfg = Release|Win32
+		{F720EA53-0B1A-489A-8CB8-5A59A4CE63AA}.Release.Build.0 = Release|Win32
+		{EB461AA2-52D2-4E0C-80C0-A3A02DA5651F}.Debug.ActiveCfg = Debug|Win32
+		{EB461AA2-52D2-4E0C-80C0-A3A02DA5651F}.Debug.Build.0 = Debug|Win32
+		{EB461AA2-52D2-4E0C-80C0-A3A02DA5651F}.Release.ActiveCfg = Release|Win32
+		{EB461AA2-52D2-4E0C-80C0-A3A02DA5651F}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

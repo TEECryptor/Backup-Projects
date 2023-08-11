@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{fb4443f8-fc1f-4756-990a-e8a70b839300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{82c15a23-dd8e-4bfa-bba9-f5ec4ecb9a81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SynoTFKey">
+      <UniqueIdentifier>{e0cff391-fcab-4f59-af1b-6a4bda30fac7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SynoTFKey">
+      <UniqueIdentifier>{f4ac1800-a028-428b-8961-4ac2328241b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\SynoMemory.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SynoLog.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SynoError.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SynoTFKey\device.c">
+      <Filter>Source Files\SynoTFKey</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SynoTFKey\skfsha1.c">
+      <Filter>Source Files\SynoTFKey</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SynoTFKey\skfsms4.c">
+      <Filter>Source Files\SynoTFKey</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SynoTFKey\smartcard.c">
+      <Filter>Source Files\SynoTFKey</Filter>
+    </ClCompile>
+    <ClCompile Include="SynoTFKeySKF.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SynoDataPadding.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\SynoMemory.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SynoLog.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SynoError.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SynoHeaders.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SynoType.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SynoTFKeySKF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SynoTFKey\device.h">
+      <Filter>Header Files\SynoTFKey</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SynoTFKey\skfsha1.h">
+      <Filter>Header Files\SynoTFKey</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SynoTFKey\skfsms4.h">
+      <Filter>Header Files\SynoTFKey</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SynoTFKey\smartcard.h">
+      <Filter>Header Files\SynoTFKey</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SynoDataPadding.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

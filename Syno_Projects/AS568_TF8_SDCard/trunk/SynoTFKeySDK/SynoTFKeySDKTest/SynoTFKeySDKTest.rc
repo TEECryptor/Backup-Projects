@@ -1,0 +1,453 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\SynoTFKeySDKTest.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SynoTFKeySDKTest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SYNOTFKEYSDKTEST_DIALOG DIALOGEX 0, 0, 531, 295
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SynoTFKeySDKTest"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "关    闭",IDOK,267,274,50,14
+    GROUPBOX        "设备列表",IDC_STATIC,7,7,134,177
+    PUSHBUTTON      "刷    新",IDC_MAINDLG_BTN_REFRESHLIST,14,17,50,14
+    CONTROL         "",IDC_MAINDLG_TREE_LIST,"SysTreeView32",TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_BORDER | WS_HSCROLL | WS_TABSTOP,14,32,118,148
+    GROUPBOX        "信息",IDC_STATIC,7,187,517,81
+    LISTBOX         IDC_MAINDLG_LIST_INFO,16,199,496,65,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    GROUPBOX        "设备管理",IDC_STATIC,145,7,379,29
+    PUSHBUTTON      "设备信息",IDC_MAINDLG_BTN_DEVINFO,150,17,50,14
+    PUSHBUTTON      "初始化",IDC_MAINDLG_BTN_DEVINIT,204,17,50,14
+    PUSHBUTTON      "设置标签",IDC_MAINDLG_BTN_SETLABEL,257,17,50,14
+    PUSHBUTTON      "设备认证",IDC_MAINDLG_BTN_DEVAUTH,310,17,50,14
+    PUSHBUTTON      "修改设备认证KEY",IDC_MAINDLG_BTN_CHANGEAUTHKEY,363,17,72,14
+    GROUPBOX        "应用/会话管理",IDC_STATIC,145,40,379,34
+    PUSHBUTTON      "打开会话",IDC_MAINDLG_BTN_OPENSESSION,150,54,50,14
+    PUSHBUTTON      "关闭会话",IDC_MAINDLG_BTN_CLOSESESSION,204,54,50,14
+    PUSHBUTTON      "会话信息",IDC_MAINDLG_BTN_SESSIONINFO,257,54,50,14
+    PUSHBUTTON      "登录会话",IDC_MAINDLG_BTN_LOGINSESSION,310,54,50,14
+    PUSHBUTTON      "登出会话",IDC_MAINDLG_BTN_LOGOUTSESSION,363,54,50,14
+    PUSHBUTTON      "修改PIN码",IDC_MAINDLG_BTN_CHANGEPIN,415,54,50,14
+    PUSHBUTTON      "解锁PIN码",IDC_MAINDLG_BTN_UNLOCKPIN,466,54,50,14
+    GROUPBOX        "密钥管理",IDC_STATIC,145,79,379,34
+    PUSHBUTTON      "生成密钥对",IDC_MAINDLG_BTN_GENKEYPAIR,150,93,50,14
+    PUSHBUTTON      "导入密钥对",IDC_MAINDLG_BTN_IMPORTKEYPAIR,204,93,50,14
+    PUSHBUTTON      "导出签名公钥",IDC_MAINDLG_EXPORTSIGNPUBKEY,257,93,50,14
+    PUSHBUTTON      "生成会话密钥",IDC_MAINDLG_BTN_GENERATEKEY,363,93,50,14
+    PUSHBUTTON      "清    除",IDC_MAINDLG_BTN_CLEARINFO,212,274,50,14
+    PUSHBUTTON      "导出加密公钥",IDC_MAINDLG_EXPORTEXCHPUBKEY,310,93,50,14
+    GROUPBOX        "功能测试",IDC_STATIC,146,119,378,31
+    PUSHBUTTON      "签名/验签",IDC_MAINDLG_BTN_SIGNVERIFY,150,130,50,14
+    PUSHBUTTON      "加密/解密",IDC_MAINDLG_BTN_CRYPTO,204,130,50,14
+    PUSHBUTTON      "数字信封",IDC_MAINDLG_BTN_ENVENLOP,257,130,50,14
+    PUSHBUTTON      "导入证书",IDC_MAINDLG_BTN_IMPORTCERT,310,130,50,14
+    PUSHBUTTON      "导出证书",IDC_MAINDLG_BTN_EXPORTCERT,363,130,50,14
+    GROUPBOX        "文件管理",IDC_STATIC,146,153,378,31
+    PUSHBUTTON      "枚举文件",IDC_MAINDLG_BTN_ENUMFILES,150,164,50,14
+    PUSHBUTTON      "创建文件",IDC_MAINDLG_BTN_CREATEFILE,204,164,50,14
+    PUSHBUTTON      "读取文件",IDC_MAINDLG_BTN_READFILE,257,164,50,14
+    PUSHBUTTON      "文件信息",IDC_MAINDLG_BTN_FILEINFO,310,164,50,14
+    PUSHBUTTON      "销毁会话密钥",IDC_MAINDLG_BTN_RELEASEKEY,415,93,50,14
+    CONTROL         "监控事件",IDC_MAINDLG_CHECK_LISTENEVENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,440,19,55,10
+END
+
+IDD_SELECTSDK_DIALOG DIALOGEX 0, 0, 271, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确    定",IDOK,83,62,50,14
+    PUSHBUTTON      "取    消",IDCANCEL,138,62,50,14
+    GROUPBOX        "SDK设置",IDC_STATIC,7,7,257,48
+    COMBOBOX        IDC_SELECTSDKDLG_COMBO_SDK,62,15,137,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "SDK类型：",IDC_STATIC,21,19,40,8
+    LTEXT           "SDK文件：",IDC_STATIC,21,37,40,8
+    EDITTEXT        IDC_SELECTSDKDLG_EDIT_FILE,62,33,137,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "选    择",IDC_SELECTSDKDLG_BTN_OPENFILE,204,31,50,14
+END
+
+IDD_LOGIN_DIALOG DIALOGEX 0, 0, 211, 84
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "登录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确    定",IDOK,53,63,50,14
+    PUSHBUTTON      "取    消",IDCANCEL,107,63,50,14
+    GROUPBOX        "校验PIN码",IDC_STATIC,7,7,196,50
+    RTEXT           "类型：",IDC_STATIC,30,22,39,10
+    RTEXT           "PIN码：",IDC_STATIC,30,38,39,10
+    COMBOBOX        IDC_LOGIN_COMBO_TYPE,71,18,78,64,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_LOGINDLG_EDIT_PIN,71,36,78,12,ES_AUTOHSCROLL
+    LTEXT           "4-15个字符",IDC_STATIC,155,38,44,10
+END
+
+IDD_CHANGEPIN_DIALOG DIALOGEX 0, 0, 208, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改PIN"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确    定",IDOK,51,59,50,14
+    PUSHBUTTON      "取    消 ",IDCANCEL,105,59,50,14
+    GROUPBOX        "输入PIN码",IDC_STATIC,7,7,194,48
+    RTEXT           "新PIN码：",IDC_STATIC,29,37,39,10
+    EDITTEXT        IDC_CHANGEPINDLG_EDIT_NEWPIN,70,35,78,12,ES_AUTOHSCROLL
+    RTEXT           "老PIN码：",IDC_STATIC,29,21,39,10
+    EDITTEXT        IDC_CHANGEPINDLG_EDIT_OLDPIN,70,19,78,12,ES_AUTOHSCROLL
+    LTEXT           "4-15个字符",IDC_STATIC,154,37,44,10
+END
+
+IDD_UNLOCKPIN_DIALOG DIALOGEX 0, 0, 218, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "解锁PIN"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确    定",IDOK,56,59,50,14
+    PUSHBUTTON      "取    消 ",IDCANCEL,110,59,50,14
+    GROUPBOX        "输入PIN码",IDC_STATIC,7,7,204,48
+    RTEXT           "新User PIN码：",IDC_STATIC,16,37,61,10
+    EDITTEXT        IDC_UNLOCKPINDLG_EDIT_NEWPIN,79,35,78,12,ES_AUTOHSCROLL
+    RTEXT           "SO PIN码：",IDC_STATIC,25,21,52,10
+    EDITTEXT        IDC_UNLOCKPINDLG_EDIT_SOPIN,79,19,78,12,ES_AUTOHSCROLL
+    LTEXT           "4-15个字符",IDC_STATIC,162,37,44,10
+END
+
+IDD_PLAINTEXT_DIALOG DIALOGEX 0, 0, 311, 154
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确  定",IDOK,103,134,50,14
+    PUSHBUTTON      "取  消",IDCANCEL,157,134,50,14
+    GROUPBOX        "原文",IDC_STATIC,7,45,297,82
+    EDITTEXT        IDC_PLAINTEXTDLG_EDIT_PLAIN,10,57,289,64,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    GROUPBOX        "算法",IDC_STATIC,7,7,297,33
+    COMBOBOX        IDC_PLAINTEXTDLG_COMBO_ALG,105,19,79,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "选择要测试的算法:",IDC_STATIC,16,23,82,8
+END
+
+IDD_NEWDATAFILE_DIALOG DIALOGEX 0, 0, 228, 112
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建文件"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确    定",IDOK,62,91,50,14
+    PUSHBUTTON      "取    消",IDCANCEL,116,91,50,14
+    GROUPBOX        "属性",IDC_STATIC,7,7,213,79
+    RTEXT           "文件名:",IDC_STATIC,17,20,44,8
+    RTEXT           "文件内容:",IDC_STATIC,17,34,44,8
+    EDITTEXT        IDC_NEWDATAFILEDLG_EDIT_FILENAME,70,15,133,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NEWDATAFILEDLG_EDIT_FILEDATA,69,34,133,46,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL
+END
+
+IDD_INPUTFILENAME_DIALOG DIALOGEX 0, 0, 202, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文件名"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确    定",IDOK,40,41,50,14
+    PUSHBUTTON      "取    消",IDCANCEL,94,41,50,14
+    GROUPBOX        "文件名",IDC_STATIC,7,7,187,30
+    RTEXT           "输入文件名:",IDC_STATIC,26,23,47,8
+    EDITTEXT        IDC_INPUTFILENAMEDLG_EDIT_FILENAME,79,17,101,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_DEVINIT DIALOGEX 0, 0, 227, 142
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "初始化设备"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_INITDLG_EDIT_LABEL,67,17,79,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INITDLG_EDIT_SOPIN,67,36,79,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INITDLG_EDIT_SOPIN_RETRYTIMES,68,55,79,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INITDLG_EDIT_USERPIN,67,75,79,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INITDLG_EDIT_USERPIN_RETRYTIMES,67,95,79,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "确  定",IDOK,61,121,50,14
+    PUSHBUTTON      "取  消",IDCANCEL,115,121,50,14
+    GROUPBOX        "参数",IDC_STATIC,7,7,204,107
+    RTEXT           "标签:",IDC_STATIC,27,21,37,9
+    RTEXT           "SO PIN:",IDC_STATIC,27,40,37,9
+    RTEXT           "User PIN:",IDC_STATIC,27,79,37,9
+    RTEXT           "重复次数:",IDC_STATIC,27,59,37,9
+    RTEXT           "重复次数:",IDC_STATIC,27,99,37,9
+    LTEXT           "(4-16字符)",IDC_STATIC,154,39,41,10
+    LTEXT           "(4-16字符)",IDC_STATIC,153,78,41,10
+    LTEXT           "(5-15次)",IDC_STATIC,154,57,41,10
+    LTEXT           "(5-15次)",IDC_STATIC,153,97,41,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SYNOTFKEYSDKTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 524
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 288
+    END
+
+    IDD_SELECTSDK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_LOGIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_CHANGEPIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_UNLOCKPIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_PLAINTEXT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_NEWDATAFILE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_INPUTFILENAME_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DIALOG_DEVINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About SynoTFKeySDKTest"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "SynoTFKeySDKTest, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2015",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SynoTFKeySDKTest.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "SynoTFKeySDKTest.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About SynoTFKeySDKTest..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\SynoTFKeySDKTest.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

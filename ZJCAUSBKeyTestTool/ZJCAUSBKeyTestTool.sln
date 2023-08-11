@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZJCAUSBKeyTestTool", "ZJCAUSBKeyTestTool\ZJCAUSBKeyTestTool.vcxproj", "{EAE19663-72BC-4655-9A1C-694B06033B6F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "USBKeyApi", "USBKeyApi\USBKeyApi.vcxproj", "{E0F8C36E-7216-454B-B141-DDC67C6DD67B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAE19663-72BC-4655-9A1C-694B06033B6F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EAE19663-72BC-4655-9A1C-694B06033B6F}.Debug|Win32.Build.0 = Debug|Win32
+		{EAE19663-72BC-4655-9A1C-694B06033B6F}.Release|Win32.ActiveCfg = Release|Win32
+		{EAE19663-72BC-4655-9A1C-694B06033B6F}.Release|Win32.Build.0 = Release|Win32
+		{E0F8C36E-7216-454B-B141-DDC67C6DD67B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E0F8C36E-7216-454B-B141-DDC67C6DD67B}.Debug|Win32.Build.0 = Debug|Win32
+		{E0F8C36E-7216-454B-B141-DDC67C6DD67B}.Release|Win32.ActiveCfg = Release|Win32
+		{E0F8C36E-7216-454B-B141-DDC67C6DD67B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

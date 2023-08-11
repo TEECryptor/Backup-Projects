@@ -1,0 +1,34 @@
+HKCR
+{
+	VGSATL2.VGS2.1 = s 'VGS2 Class'
+	{
+		CLSID = s '{046216A1-952E-486C-8598-4F2D0D0676F2}'
+	}
+	VGSATL2.VGS2 = s 'VGS2 Class'
+	{
+		CLSID = s '{046216A1-952E-486C-8598-4F2D0D0676F2}'
+		CurVer = s 'VGSATL2.VGS2.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {046216A1-952E-486C-8598-4F2D0D0676F2} = s 'VGS2 Class'
+		{
+			ProgID = s 'VGSATL2.VGS2.1'
+			VersionIndependentProgID = s 'VGSATL2.VGS2'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			ForceRemove 'Control'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 102'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '%OLEMISC%'
+			}
+			'TypeLib' = s '{A357793E-7647-47B3-8EB8-372432ABF6B2}'
+			'Version' = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VGS2ATL", "VGS2ATL.vcproj", "{48F62B8A-AD75-42A2-A742-E786F8F30090}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8CA031F9-B1FD-4E61-8068-0EE8699C913E} = {8CA031F9-B1FD-4E61-8068-0EE8699C913E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VGSCoreDLL", "..\VGS_Core\VGSCoreDLL\VGSCoreDLL.vcproj", "{55A77E3A-66FA-41A5-873F-CF9495751BDA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VGSCoreLib", "..\VGS_Core\VGSCoreLib\VGSCoreLib.vcproj", "{8CA031F9-B1FD-4E61-8068-0EE8699C913E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48F62B8A-AD75-42A2-A742-E786F8F30090}.Debug|Win32.ActiveCfg = Debug|Win32
+		{48F62B8A-AD75-42A2-A742-E786F8F30090}.Debug|Win32.Build.0 = Debug|Win32
+		{48F62B8A-AD75-42A2-A742-E786F8F30090}.Release|Win32.ActiveCfg = Release|Win32
+		{48F62B8A-AD75-42A2-A742-E786F8F30090}.Release|Win32.Build.0 = Release|Win32
+		{55A77E3A-66FA-41A5-873F-CF9495751BDA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{55A77E3A-66FA-41A5-873F-CF9495751BDA}.Debug|Win32.Build.0 = Debug|Win32
+		{55A77E3A-66FA-41A5-873F-CF9495751BDA}.Release|Win32.ActiveCfg = Release|Win32
+		{55A77E3A-66FA-41A5-873F-CF9495751BDA}.Release|Win32.Build.0 = Release|Win32
+		{8CA031F9-B1FD-4E61-8068-0EE8699C913E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8CA031F9-B1FD-4E61-8068-0EE8699C913E}.Debug|Win32.Build.0 = Debug|Win32
+		{8CA031F9-B1FD-4E61-8068-0EE8699C913E}.Release|Win32.ActiveCfg = Release|Win32
+		{8CA031F9-B1FD-4E61-8068-0EE8699C913E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

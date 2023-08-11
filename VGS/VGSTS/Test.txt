@@ -1,0 +1,7 @@
+Load Time = 0 : 0.000000%
+Decode Time = 0 : 0.000000%
+Copy Time = 0 : 0.000000%
+Calc Time = 78 : 0.157030%
+Rende Time = 495 : 0.996537%
+Draw Time = 21538 : 43.360445%
+Total Time = 49672

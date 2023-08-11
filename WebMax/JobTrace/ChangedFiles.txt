@@ -1,0 +1,27 @@
+Added files:
+FileLoadManager.cpp
+FileLoadManager.h
+
+Changed files:
+CScene.h
+CDownloadN3DFile.h
+GetV3DImpV2.cpp
+GetV3DImpV2.h
+GetV3DImpV3.cpp
+GetV3DImpV3.h
+SaveV3D.cpp
+SaveV3D.h
+V3D_Def.h
+V3D_DefV3.h
+N3D_DefV3.h
+N3DLoaderImpV3.cpp
+VGSDef.h
+CGUIObject.cpp
+VGSFileDownloadManager.cpp
+VGSFileDownloadManager.h
+VGS2Window.cpp
+VGS2Window.h
+VGSFileDownloadTask.h
+VGSFileDownloadTask.cpp
+CSysFunc.h
+

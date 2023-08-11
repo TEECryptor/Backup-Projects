@@ -1,0 +1,26 @@
+.\obj\serial.o: ..\HAL\Serial.c
+.\obj\serial.o: C:\Program Files\Keil\ARM\RV31\Inc\stdint.h
+.\obj\serial.o: ..\HDR\SY03_Device.h
+.\obj\serial.o: ..\HDR\Type.h
+.\obj\serial.o: ..\CMSIS\Core\CM0\core_cm0.h
+.\obj\serial.o: ..\HDR\SY03_SCM.h
+.\obj\serial.o: ..\HDR\SY03_TMR.h
+.\obj\serial.o: ..\HDR\SY03_USART.h
+.\obj\serial.o: ..\HDR\SY03_GPIO.h
+.\obj\serial.o: ..\HDR\SY03_SCI.h
+.\obj\serial.o: ..\HDR\SY03_ACMP.h
+.\obj\serial.o: ..\HDR\SY03_SWPS.h
+.\obj\serial.o: ..\HDR\SY03_SWPM.h
+.\obj\serial.o: ..\HDR\SY03_EFC.h
+.\obj\serial.o: ..\HDR\SY03_SDSI.h
+.\obj\serial.o: ..\HDR\SY03_SQI.h
+.\obj\serial.o: ..\HDR\SY03_SSI.h
+.\obj\serial.o: ..\HDR\SY03_RNG.h
+.\obj\serial.o: ..\HDR\SY03_USB.h
+.\obj\serial.o: ..\HDR\SY03_ISO7816.h
+.\obj\serial.o: ..\HDR\SY03_VPWM.h
+.\obj\serial.o: ..\HDR\SY03_RTC.h
+.\obj\serial.o: ..\HDR\SY03_CRC.h
+.\obj\serial.o: ..\HDR\SY03_BVD.h
+.\obj\serial.o: ..\HDR\SY03_SDI.h
+.\obj\serial.o: ..\HDR\SY03_ROM.h

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\TFKeySDKTester">
+      <UniqueIdentifier>{d78fd403-aefb-4b91-952d-06866d6a33f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\TFKeySDKTester">
+      <UniqueIdentifier>{f20c057b-5846-4958-aea4-ae2406d5b429}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{f6156012-f739-4753-8167-7bc16af972b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{b42125f3-18fc-4220-8cc0-6dc3687cd69e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Base64">
+      <UniqueIdentifier>{79c9872c-03f2-41a6-b1bf-3c9dc3fe0a11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Base64">
+      <UniqueIdentifier>{0004b506-87de-40be-b5f5-902efda54d33}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SelectSDKDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SynoTFKeySDKTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SynoTFKeySDKTestDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TFKeySDKTester\Pkcs11SDKTester.cpp">
+      <Filter>Source Files\TFKeySDKTester</Filter>
+    </ClCompile>
+    <ClCompile Include="TFKeySDKTester\SkfSDKTester.cpp">
+      <Filter>Source Files\TFKeySDKTester</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SynoConvert.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangePinDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UnlockPinDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlainTextDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base64\Base64.cpp">
+      <Filter>Source Files\Base64</Filter>
+    </ClCompile>
+    <ClCompile Include="NewDataFileDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputFileNameDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DevInitDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectSDKDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SynoTFKeySDKTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SynoTFKeySDKTestDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TFKeySDKTester\ISDKTester.h">
+      <Filter>Header Files\TFKeySDKTester</Filter>
+    </ClInclude>
+    <ClInclude Include="TFKeySDKTester\Pkcs11SDKTester.h">
+      <Filter>Header Files\TFKeySDKTester</Filter>
+    </ClInclude>
+    <ClInclude Include="TFKeySDKTester\SkfSDKTester.h">
+      <Filter>Header Files\TFKeySDKTester</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SynoConvert.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangePinDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UnlockPinDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TFKeySDKTester\Defs.h">
+      <Filter>Header Files\TFKeySDKTester</Filter>
+    </ClInclude>
+    <ClInclude Include="PlainTextDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base64\Base64.h">
+      <Filter>Header Files\Base64</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base64\MemoryBlock.h">
+      <Filter>Header Files\Base64</Filter>
+    </ClInclude>
+    <ClInclude Include="NewDataFileDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputFileNameDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DevInitDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\SynoTFKeySDKTest.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SynoTFKeySDKTest.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\SynoTFKeySDKTest.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

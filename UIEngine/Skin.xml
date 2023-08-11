@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UIEngine Author="BabyTree" Version="1.0">
+	<BK>
+		<BK_Img1 img="bk_green.jpg" color="green"/>
+		<BK_Img2 img="bk_orange.jpg" color="orange"/>
+		<BK_Img3 img="bk_blue.jpg" color="blue"/>
+		<BK_Img4 img="bk_purple.jpg" color="purple"/>
+	</BK>
+	<Images>
+		<Img_Frame img="frame.png" left="20" top="10"/>
+		<Img_Frog img="Frog.png" left="20" top="10"/>
+	</Images>
+	<Buttons>
+		<Btn_Min ID="100" left="10" top="10" normal="Btn_Min.png" selected="Btn_Min.png" down="Btn_Min.png" disable="Btn_Min.png" hitstr="Minimize"/>
+		<Btn_Close ID="101" left="50" top="10" normal="Btn_Close.png" selected="Btn_Close.png" down="Btn_Close.png" disable="Btn_Close.png" hitstr="Close"/>
+	</Buttons>
+</UIEngine>

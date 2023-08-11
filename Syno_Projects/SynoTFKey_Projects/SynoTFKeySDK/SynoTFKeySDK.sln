@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SynoTFKeySKFTest", "SynoTFKeySKFTest\SynoTFKeySKFTest.vcproj", "{FB1309E7-E3DB-44E3-B89E-37D349EBF523}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SynoTFKeySKF", "SynoTFKeySKF\SynoTFKeySKF.vcproj", "{FA4C0879-52DA-438B-98A4-2D6CDEF06A4B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SynoTFKeySKFLib", "SynoTFKeySKFLib\SynoTFKeySKFLib.vcproj", "{747A93A1-3768-40F0-9225-FE122638E816}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SynoTFKeyPkcs11", "SynoTFKeyPkcs11\SynoTFKeyPkcs11.vcproj", "{E8576745-7233-47D0-A253-DA11CCD0EA12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB1309E7-E3DB-44E3-B89E-37D349EBF523}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FB1309E7-E3DB-44E3-B89E-37D349EBF523}.Debug|Win32.Build.0 = Debug|Win32
+		{FB1309E7-E3DB-44E3-B89E-37D349EBF523}.Release|Win32.ActiveCfg = Release|Win32
+		{FB1309E7-E3DB-44E3-B89E-37D349EBF523}.Release|Win32.Build.0 = Release|Win32
+		{FA4C0879-52DA-438B-98A4-2D6CDEF06A4B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FA4C0879-52DA-438B-98A4-2D6CDEF06A4B}.Debug|Win32.Build.0 = Debug|Win32
+		{FA4C0879-52DA-438B-98A4-2D6CDEF06A4B}.Release|Win32.ActiveCfg = Release|Win32
+		{FA4C0879-52DA-438B-98A4-2D6CDEF06A4B}.Release|Win32.Build.0 = Release|Win32
+		{747A93A1-3768-40F0-9225-FE122638E816}.Debug|Win32.ActiveCfg = Debug|Win32
+		{747A93A1-3768-40F0-9225-FE122638E816}.Debug|Win32.Build.0 = Debug|Win32
+		{747A93A1-3768-40F0-9225-FE122638E816}.Release|Win32.ActiveCfg = Release|Win32
+		{747A93A1-3768-40F0-9225-FE122638E816}.Release|Win32.Build.0 = Release|Win32
+		{E8576745-7233-47D0-A253-DA11CCD0EA12}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8576745-7233-47D0-A253-DA11CCD0EA12}.Debug|Win32.Build.0 = Debug|Win32
+		{E8576745-7233-47D0-A253-DA11CCD0EA12}.Release|Win32.ActiveCfg = Release|Win32
+		{E8576745-7233-47D0-A253-DA11CCD0EA12}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

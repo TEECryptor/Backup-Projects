@@ -1,0 +1,77 @@
+﻿Build started 2016/3/13 16:38:03.
+     1>Project "D:\Syno_Projects\trunk\SynoTFKeySDK\SynoTFKeyPkcs11\SynoTFKeyPkcs11.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\Common /I.\PKCS11 /I..\SynoTFKey /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D CRYPTOKI_EXPORTS /D USE_ONE_FILE /D _WINDLL /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\Common\SynoConvert.c ..\Common\SynoDataPadding.c ..\Common\SynoError.c ..\Common\SynoLog.c ..\Common\SynoMemory.c ..\SynoTFKey\device.c ..\SynoTFKey\skfsha1.c ..\SynoTFKey\skfsms4.c ..\SynoTFKey\smartcard.c decrypt.c digest.c dual.c encrypt.c error.c getInfo.c hash.c init.c key_mng.c mutex.c objects.c other_fkts.c random.c sessions.c sign.c slot.c SynoTFKeyP11.c token.c utils.c verify.c
+         SynoConvert.c
+         SynoDataPadding.c
+         SynoError.c
+         SynoLog.c
+         SynoMemory.c
+         device.c
+         skfsha1.c
+         skfsms4.c
+         smartcard.c
+     1>..\SynoTFKey\smartcard.c(277): warning C4244: '=' : conversion from 'USHORT' to 'UCHAR', possible loss of data
+         decrypt.c
+         digest.c
+         dual.c
+         encrypt.c
+         error.c
+         getInfo.c
+         hash.c
+         init.c
+         key_mng.c
+         mutex.c
+         objects.c
+         Compiling...
+         other_fkts.c
+         random.c
+         sessions.c
+         sign.c
+         slot.c
+         SynoTFKeyP11.c
+     1>SynoTFKeyP11.c(184): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 11.0\VC\include\stdlib.h(881) : see declaration of '_sleep'
+         token.c
+     1>token.c(318): warning C4244: 'function' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         utils.c
+         verify.c
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeyPkcs11.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeyPkcs11.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeyPkcs11.lib" /MACHINE:X86 /SAFESEH /DLL Release\SynoConvert.obj
+         Release\SynoDataPadding.obj
+         Release\SynoError.obj
+         Release\SynoLog.obj
+         Release\SynoMemory.obj
+         Release\device.obj
+         Release\skfsha1.obj
+         Release\skfsms4.obj
+         Release\smartcard.obj
+         Release\decrypt.obj
+         Release\digest.obj
+         Release\dual.obj
+         Release\encrypt.obj
+         Release\error.obj
+         Release\getInfo.obj
+         Release\hash.obj
+         Release\init.obj
+         Release\key_mng.obj
+         Release\mutex.obj
+         Release\objects.obj
+         Release\other_fkts.obj
+         Release\random.obj
+         Release\sessions.obj
+         Release\sign.obj
+         Release\slot.obj
+         Release\SynoTFKeyP11.obj
+         Release\token.obj
+         Release\utils.obj
+         Release\verify.obj
+            Creating library D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeyPkcs11.lib and object D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeyPkcs11.exp
+         Generating code
+         Finished generating code
+         SynoTFKeyPkcs11.vcxproj -> D:\Syno_Projects\trunk\SynoTFKeySDK\Release\SynoTFKeyPkcs11.dll
+     1>Done Building Project "D:\Syno_Projects\trunk\SynoTFKeySDK\SynoTFKeyPkcs11\SynoTFKeyPkcs11.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.74

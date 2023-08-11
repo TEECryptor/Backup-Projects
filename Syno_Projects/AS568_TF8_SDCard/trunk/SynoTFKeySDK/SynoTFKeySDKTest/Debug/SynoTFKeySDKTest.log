@@ -1,0 +1,50 @@
+﻿Build started 2016/3/13 16:39:16.
+     1>Project "D:\Syno_Projects\trunk\SynoTFKeySDK\SynoTFKeySDKTest\SynoTFKeySDKTest.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\SynoTFKeySDKTest.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SynoTFKeySDKTest.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Base64\Base64.cpp ChangePinDlg.cpp DevInitDlg.cpp InputFileNameDlg.cpp LoginDlg.cpp NewDataFileDlg.cpp PlainTextDlg.cpp SelectSDKDlg.cpp SynoTFKeySDKTest.cpp SynoTFKeySDKTestDlg.cpp TFKeySDKTester\Pkcs11SDKTester.cpp TFKeySDKTester\SkfSDKTester.cpp UnlockPinDlg.cpp
+         UnlockPinDlg.cpp
+         SkfSDKTester.cpp
+         Pkcs11SDKTester.cpp
+     1>d:\syno_projects\trunk\synotfkeysdk\synotfkeysdktest\tfkeysdktester\pkcs11sdktester.cpp(889): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(288) : see declaration of 'wcscpy'
+         SynoTFKeySDKTestDlg.cpp
+         SynoTFKeySDKTest.cpp
+         SelectSDKDlg.cpp
+         PlainTextDlg.cpp
+         NewDataFileDlg.cpp
+         LoginDlg.cpp
+         InputFileNameDlg.cpp
+         DevInitDlg.cpp
+         ChangePinDlg.cpp
+         Base64.cpp
+         Generating Code...
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\Common\SynoConvert.c
+         SynoConvert.c
+       ResourceCompile:
+         C:\Program Files\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /l"0x0409" /IDebug\ /nologo /fo"Debug\SynoTFKeySDKTest.res" SynoTFKeySDKTest.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Syno_Projects\trunk\SynoTFKeySDK\Debug\SynoTFKeySDKTest.exe" /INCREMENTAL /NOLOGO uafxcwd.lib LIBCMTD.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\Syno_Projects\trunk\SynoTFKeySDK\Debug\SynoTFKeySDKTest.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Syno_Projects\trunk\SynoTFKeySDK\Debug\SynoTFKeySDKTest.lib" /MACHINE:X86 /SAFESEH Debug\SynoTFKeySDKTest.res
+         Debug\Base64.obj
+         Debug\SynoConvert.obj
+         Debug\ChangePinDlg.obj
+         Debug\DevInitDlg.obj
+         Debug\InputFileNameDlg.obj
+         Debug\LoginDlg.obj
+         Debug\NewDataFileDlg.obj
+         Debug\PlainTextDlg.obj
+         Debug\SelectSDKDlg.obj
+         Debug\stdafx.obj
+         Debug\SynoTFKeySDKTest.obj
+         Debug\SynoTFKeySDKTestDlg.obj
+         Debug\Pkcs11SDKTester.obj
+         Debug\SkfSDKTester.obj
+         Debug\UnlockPinDlg.obj
+     1>Base64.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         SynoTFKeySDKTest.vcxproj -> D:\Syno_Projects\trunk\SynoTFKeySDK\Debug\SynoTFKeySDKTest.exe
+     1>Done Building Project "D:\Syno_Projects\trunk\SynoTFKeySDK\SynoTFKeySDKTest\SynoTFKeySDKTest.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.69

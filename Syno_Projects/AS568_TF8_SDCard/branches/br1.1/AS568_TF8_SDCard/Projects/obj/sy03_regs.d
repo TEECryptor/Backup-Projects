@@ -1,0 +1,26 @@
+.\obj\sy03_regs.o: ..\HDR\SY03_Regs.c
+.\obj\sy03_regs.o: ..\HDR\SY03_Device.h
+.\obj\sy03_regs.o: ..\HDR\Type.h
+.\obj\sy03_regs.o: ..\CMSIS\Core\CM0\core_cm0.h
+.\obj\sy03_regs.o: C:\Program Files\Keil\ARM\RV31\Inc\stdint.h
+.\obj\sy03_regs.o: ..\HDR\SY03_SCM.h
+.\obj\sy03_regs.o: ..\HDR\SY03_TMR.h
+.\obj\sy03_regs.o: ..\HDR\SY03_USART.h
+.\obj\sy03_regs.o: ..\HDR\SY03_GPIO.h
+.\obj\sy03_regs.o: ..\HDR\SY03_SCI.h
+.\obj\sy03_regs.o: ..\HDR\SY03_ACMP.h
+.\obj\sy03_regs.o: ..\HDR\SY03_SWPS.h
+.\obj\sy03_regs.o: ..\HDR\SY03_SWPM.h
+.\obj\sy03_regs.o: ..\HDR\SY03_EFC.h
+.\obj\sy03_regs.o: ..\HDR\SY03_SDSI.h
+.\obj\sy03_regs.o: ..\HDR\SY03_SQI.h
+.\obj\sy03_regs.o: ..\HDR\SY03_SSI.h
+.\obj\sy03_regs.o: ..\HDR\SY03_RNG.h
+.\obj\sy03_regs.o: ..\HDR\SY03_USB.h
+.\obj\sy03_regs.o: ..\HDR\SY03_ISO7816.h
+.\obj\sy03_regs.o: ..\HDR\SY03_VPWM.h
+.\obj\sy03_regs.o: ..\HDR\SY03_RTC.h
+.\obj\sy03_regs.o: ..\HDR\SY03_CRC.h
+.\obj\sy03_regs.o: ..\HDR\SY03_BVD.h
+.\obj\sy03_regs.o: ..\HDR\SY03_SDI.h
+.\obj\sy03_regs.o: ..\HDR\SY03_ROM.h

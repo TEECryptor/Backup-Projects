@@ -1,0 +1,76 @@
+*** Creating Trace Output File '.\obj\AS568_TF8_SDCard.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\core_cm0.o"'
+### List of Objects: adding '".\obj\startup_sy03.o"'
+### List of Objects: adding '".\obj\system_sy03.o"'
+### List of Objects: adding '".\obj\sy03_regs.o"'
+### List of Objects: adding '".\obj\efc.o"'
+### List of Objects: adding '".\obj\retarget.o"'
+### List of Objects: adding '".\obj\sci.o"'
+### List of Objects: adding '".\obj\scm.o"'
+### List of Objects: adding '".\obj\serial.o"'
+### List of Objects: adding '".\obj\sqi.o"'
+### List of Objects: adding '".\obj\ssi.o"'
+### List of Objects: adding '".\obj\swpm.o"'
+### List of Objects: adding '".\obj\swps.o"'
+### List of Objects: adding '".\obj\gpio.o"'
+### List of Objects: adding '".\obj\spi.o"'
+### List of Objects: adding '".\obj\uart.o"'
+### List of Objects: adding '".\obj\i2c.o"'
+### List of Objects: adding '".\obj\acmp.o"'
+### List of Objects: adding '".\obj\vpwm.o"'
+### List of Objects: adding '".\obj\bvd.o"'
+### List of Objects: adding '".\obj\trng.o"'
+### List of Objects: adding '".\obj\tmr.o"'
+### List of Objects: adding '".\obj\rtc.o"'
+### List of Objects: adding '".\obj\crc.o"'
+### List of Objects: adding '".\obj\sflash.o"'
+### List of Objects: adding '".\obj\xflash.o"'
+### List of Objects: adding '".\obj\iso7816.o"'
+### List of Objects: adding '".\obj\sdsi.o"'
+### List of Objects: adding '".\obj\sdi.o"'
+### List of Objects: adding '"..\HAL\SY03_RomFunc.lib"'
+### List of Objects: adding '".\obj\bulkitem.o"'
+### List of Objects: adding '".\obj\bulkusb.o"'
+### List of Objects: adding '".\obj\ctrlitem.o"'
+### List of Objects: adding '".\obj\ctrlusb.o"'
+### List of Objects: adding '".\obj\usbbase.o"'
+### List of Objects: adding '".\obj\usbprotocol.o"'
+### List of Objects: adding '"..\HAL\ALG\SY03_CRYPT.lib"'
+### List of Objects: adding '".\obj\main.o"'
+### List of Objects: adding '"..\Source\SY06_FwLib.lib"'
+### List of Objects: adding '".\obj\command.o"'
+### List of Objects: adding '".\obj\sdmemacc.o"'
+### List of Objects: adding '".\obj\log.o"'
+### List of Objects: adding '".\obj\sd_systemapp.o"'
+### List of Objects: adding '".\obj\commandex.o"'
+### List of Objects: adding '".\obj\testssf33.o"'
+### List of Objects: adding '".\obj\testaes.o"'
+### List of Objects: adding '".\obj\testalg.o"'
+### List of Objects: adding '".\obj\testdes.o"'
+### List of Objects: adding '".\obj\testecc.o"'
+### List of Objects: adding '".\obj\testhash.o"'
+### List of Objects: adding '".\obj\testrandrom.o"'
+### List of Objects: adding '".\obj\testrsa.o"'
+### List of Objects: adding '".\obj\testsm1.o"'
+### List of Objects: adding '".\obj\testsm2.o"'
+### List of Objects: adding '".\obj\testsm3.o"'
+### List of Objects: adding '".\obj\testsms4.o"'
+### List of Objects: adding '".\obj\ff.o"'
+### List of Objects: adding '".\obj\diskio.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M0 ".\obj\core_cm0.o" ".\obj\startup_sy03.o" ".\obj\system_sy03.o" ".\obj\sy03_regs.o" ".\obj\efc.o" ".\obj\retarget.o" ".\obj\sci.o" ".\obj\scm.o" ".\obj\serial.o" ".\obj\sqi.o" ".\obj\ssi.o" ".\obj\swpm.o" ".\obj\swps.o" ".\obj\gpio.o" ".\obj\spi.o" ".\obj\uart.o" ".\obj\i2c.o" ".\obj\acmp.o" ".\obj\vpwm.o" ".\obj\bvd.o" ".\obj\trng.o" ".\obj\tmr.o" ".\obj\rtc.o" ".\obj\crc.o" ".\obj\sflash.o" ".\obj\xflash.o" ".\obj\iso7816.o" ".\obj\sdsi.o" ".\obj\sdi.o" D:\Syno_Projects\trunk\AS568_TF8_SDCard\HAL\SY03_RomFunc.lib ".\obj\bulkitem.o" ".\obj\bulkusb.o" ".\obj\ctrlitem.o" ".\obj\ctrlusb.o" ".\obj\usbbase.o" ".\obj\usbprotocol.o" D:\Syno_Projects\trunk\AS568_TF8_SDCard\HAL\ALG\SY03_CRYPT.lib ".\obj\main.o" D:\Syno_Projects\trunk\AS568_TF8_SDCard\Source\SY06_FwLib.lib ".\obj\command.o" ".\obj\sdmemacc.o" ".\obj\log.o" ".\obj\sd_systemapp.o" ".\obj\commandex.o" ".\obj\testssf33.o" ".\obj\testaes.o" ".\obj\testalg.o" ".\obj\testdes.o" ".\obj\testecc.o" ".\obj\testhash.o" ".\obj\testrandrom.o" ".\obj\testrsa.o" ".\obj\testsm1.o" ".\obj\testsm2.o" ".\obj\testsm3.o" ".\obj\testsms4.o" ".\obj\ff.o" ".\obj\diskio.o" --strict --scatter "..\SY03_FwLib.sct" 
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\obj\AS568_TF8_SDCard.map" -o ".\obj\AS568_TF8_SDCard.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\obj\AS568_TF8_SDCard.axf'
+### ADS-LD Command File: '.\obj\AS568_TF8_SDCard.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\obj\AS568_TF8_SDCard.lnp', Handle=0x00000598
+### Writing '.lnp' file
+### ADS-LD Command file '.\obj\AS568_TF8_SDCard.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

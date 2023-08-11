@@ -1,0 +1,375 @@
+// VGSATL2.idl : VGSATL2 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(VGSATL2.tlb)和封送处理代码。
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(F66246AF-D0D7-46D3-891F-9EFBC9FAC257),
+	dual,
+	nonextensible,
+	helpstring("IVGS2 接口"),
+	pointer_default(unique)
+]
+interface IVGS2 : IDispatch{
+			[id(1), helpstring("method SetModelVisibility")] HRESULT SetModelVisibility(BSTR modelName, BOOL visible);
+		[id(2), helpstring("method SetDynamicUV")] HRESULT SetDynamicUV(BSTR modelName,  FLOAT u, FLOAT v, FLOAT speed);
+		[id(3), helpstring("method AddFlashCtrl")] HRESULT AddFlashCtrl(BSTR flashName, BSTR flashFile, INT alignMode, INT left, INT top, INT width, INT height, BOOL loop);
+		[id(4), helpstring("method SetFlashRect")] HRESULT SetFlashRect(BSTR flashName, INT alignMode, INT left, INT top, INT width, INT height);
+		[id(5), helpstring("method SetFlashCtrlVisibility")] HRESULT SetFlashCtrlVisibility(BSTR flashName, BOOL status);
+		[id(6), helpstring("method SetRenderStatus")] HRESULT SetRenderStatus(BOOL status);
+		[id(7), helpstring("method SetFlashPlayStatus")] HRESULT SetFlashPlayStatus(BSTR flashName, INT status);
+		[id(8), helpstring("method DeleteFlashCtrl")] HRESULT DeleteFlashCtrl(BSTR flashName);
+		[id(9), helpstring("method MoveCamera")] HRESULT MoveCamera(BSTR cameraName, FLOAT x, FLOAT y, FLOAT z, INT stepCnt, INT coordEnum);
+		[id(10), helpstring("method MoveCurrentCamera")] HRESULT MoveCurrentCamera(FLOAT x, FLOAT y, FLOAT z, INT stepCnt, INT coordEnum);
+		[id(11), helpstring("method ShowDefaultLogo")] HRESULT ShowDefaultLogo(BOOL status);
+		[id(12), helpstring("method SetControlStatus")] HRESULT SetControlStatus(INT status);
+		[id(13), helpstring("method SetCameraClip")] HRESULT SetCameraClip(BSTR cameraName, FLOAT nearClip, FLOAT farClip);
+		[id(14), helpstring("method SetCurrentCameraClip")] HRESULT SetCurrentCameraClip(FLOAT nearClip, FLOAT farClip);
+		[id(15), helpstring("method DollyCurrentCamera")] HRESULT DollyCurrentCamera(FLOAT value, INT stepCnt);
+		[id(16), helpstring("method DollyCamera")] HRESULT DollyCamera(BSTR cameraName, FLOAT value, INT stepCnt);
+		[id(17), helpstring("method SetBackgroundColor")] HRESULT SetBackgroundColor(INT red, INT green, INT blue);
+		[id(18), helpstring("method PreloadN3DFile")] HRESULT PreloadN3DFile(BSTR strN3DFileName, BSTR N3DName);
+		[id(19), helpstring("method GotoN3D")] HRESULT GotoN3D(BSTR N3DName);
+		[id(20), helpstring("method SetCurrentCameraByName")] HRESULT SetCurrentCameraByName(BSTR camName);
+		[id(21), helpstring("method PlayCameraKfr")] HRESULT PlayCameraKfr(BSTR camName, INT repeatCnt);
+		[id(22), helpstring("method SetCurrentCameraFrom")] HRESULT SetCurrentCameraFrom(FLOAT x, FLOAT y, FLOAT z);
+		[id(23), helpstring("method SetCurrentCameraAt")] HRESULT SetCurrentCameraAt(FLOAT x, FLOAT y, FLOAT z);
+		[id(24), helpstring("method StopCameraKfr")] HRESULT StopCameraKfr(BSTR camName);
+		[id(25), helpstring("method SetServer")] HRESULT SetServer(BSTR strServer);
+		[id(26), helpstring("method SetModelClickable")] HRESULT SetModelClickable(BSTR modelName, BOOL clickable);
+		[id(27), helpstring("method CreateOverlayFromImage")] HRESULT CreateOverlayFromImage(BSTR overlayName, BSTR oriImageName, BSTR alphaImageName, INT alignMode, INT left, INT top, INT width, INT height);
+		[id(28), helpstring("method DeleteOverlay")] HRESULT DeleteOverlay(BSTR overlayName);
+		[id(29), helpstring("method SetOverlayOpacity")] HRESULT SetOverlayOpacity(BSTR overlayName, INT opacity);
+		[id(30), helpstring("method CreateButtonFromImage")] HRESULT CreateButtonFromImage(BSTR btnName, BSTR mouseUpImage, BSTR mouseUpImage_alpha, BSTR mouseOverImage, BSTR mouseOverImage_alpha, BSTR mouseDownImage, BSTR mouseDownImage_alpha, INT alignMode, INT x, INT y, INT width, INT height, BSTR callBackFunc);
+		[id(31), helpstring("method DeleteButton")] HRESULT DeleteButton(BSTR btnName);
+		[id(32), helpstring("method TranslateModel")] HRESULT TranslateModel(BSTR modelName, FLOAT x, FLOAT y, FLOAT z, INT coord);
+		//Edit Ctrl 模式的方法---------------------------------------------------------------------------------
+		[id(33), helpstring("method SetEditCtrl_DollySpeed")] HRESULT SetEditCtrl_DollySpeed(FLOAT dollySpeed);
+		[id(34), helpstring("method SetEditCtrl_RosAxis")] HRESULT SetEditCtrl_RosAxis(INT rosFlag);
+		[id(35), helpstring("method SetEditCtrl_DollyDistance")] HRESULT SetEditCtrl_DollyDistance(FLOAT nearDis, FLOAT farDis);
+		[id(36), helpstring("method SetEditCtrl_AutoPitchRoundRoll")] HRESULT SetEditCtrl_AutoPitchRoundRoll(BOOL status);
+		[id(37), helpstring("method SetEditCtrl_AutoParam")] HRESULT SetEditCtrl_AutoParam(FLOAT PitchSpeedValue, FLOAT RoundSpeedValue, FLOAT RollSpeedValue);
+		[id(38), helpstring("method SetEditCtrl_ManualParam")] HRESULT SetEditCtrl_ManualParam(FLOAT RoundSpeed, FLOAT RollSpeed);
+		//
+		[id(39), helpstring("method MoveCurrentCameraTo")] HRESULT MoveCurrentCameraTo(FLOAT from_x, FLOAT from_y, FLOAT from_z, FLOAT at_x, FLOAT at_y, FLOAT at_z, INT frameCnt, INT accType);
+		[id(40), helpstring("method SetFBL")] HRESULT SetFBL(FLOAT fblValue);
+		[id(41), helpstring("method SetOverlayWidth")] HRESULT SetOverlayWidth(BSTR overlayName, INT width);
+		[id(42), helpstring("method SetOverlayHeight")] HRESULT SetOverlayHeight(BSTR overlayName, INT height);
+		[id(43), helpstring("method SetOverlayAlignMode")] HRESULT SetOverlayAlignMode(BSTR overlayName, INT alignMode);
+		[id(44), helpstring("method SetOverlayRect")] HRESULT SetOverlayRect(BSTR overlayName, INT left, INT top, INT width, INT height);
+		[id(45), helpstring("method MoveOverlay")] HRESULT MoveOverlay(BSTR overlayName, INT x, INT y);
+		[id(46), helpstring("method MoveCurrentCameraFromTo")] HRESULT MoveCurrentCameraFromTo(FLOAT x, FLOAT y, FLOAT z);
+		[id(47), helpstring("method MoveCurrentCameraAtTo")] HRESULT MoveCurrentCameraAtTo(FLOAT x, FLOAT y, FLOAT z);
+		[id(48), helpstring("method MoveCurrentCameraFrom")] HRESULT MoveCurrentCameraFrom(FLOAT x, FLOAT y, FLOAT z);
+		[id(49), helpstring("method MoveCurrentCameraAt")] HRESULT MoveCurrentCameraAt(FLOAT x, FLOAT y, FLOAT z);
+		[id(50), helpstring("method LoadN3DFile")] HRESULT LoadN3DFile(BSTR strN3DFileName, BSTR N3DName);
+		[id(51), helpstring("method ResetScene")] HRESULT ResetScene();
+		[id(52), helpstring("method SetModelMtrl")] HRESULT SetModelMtrl(BSTR modelName, INT subMeshID, BSTR mtrlName);
+		[id(53), helpstring("method SetMtrlOpacity")] HRESULT SetMtrlOpacity(BSTR mtrlName, INT opacity);
+		[id(54), helpstring("method SetCurrentCameraByIndex")] HRESULT SetCurrentCameraByIndex(INT camIndex);
+		[id(55), helpstring("method SetWalkCtrl_ManualParam")] HRESULT SetWalkCtrl_ManualParam(FLOAT moveSpeed, FLOAT moveAcc, FLOAT rotateSpeed, FLOAT rotateAcc, FLOAT height);
+		[id(56), helpstring("method SetModelMouseHint")] HRESULT SetModelMouseHint(BSTR modelName, BOOL bFlag);
+		[id(57), helpstring("method EnableMouseDownCallback")] HRESULT EnableMouseDownCallback();
+		[id(58), helpstring("method DisableMouseDownCallback")] HRESULT DisableMouseDownCallback();
+		[id(59), helpstring("method EnableMouseUpCallback")] HRESULT EnableMouseUpCallback();
+		[id(60), helpstring("method DisableMouseUpCallback")] HRESULT DisableMouseUpCallback();
+		[id(61), helpstring("method EnableMouseDBClickCallback")] HRESULT EnableMouseDBClickCallback();
+		[id(62), helpstring("method DisableMouseDBClickCallback")] HRESULT DisableMouseDBClickCallback();
+		[id(63), helpstring("method EnableMouseMoveCallback")] HRESULT EnableMouseMoveCallback();
+		[id(64), helpstring("method DisableMouseMoveCallback")] HRESULT DisableMouseMoveCallback();
+		[id(65), helpstring("method SetModelMouseMtrl")] HRESULT SetModelMouseMtrl(BSTR modelName, BSTR mouseOverMtrl, BSTR mouseDownMtrl);
+		[id(66), helpstring("method SetModelOpacity")] HRESULT SetModelOpacity(BSTR modelName, INT opacity);
+		[id(67), helpstring("method CreateModelGroup")] HRESULT CreateModelGroup(BSTR modelGroupName);
+		[id(68), helpstring("method CreateBumpWaterTexture")] HRESULT CreateBumpWaterTexture(BSTR bumpWaterName, INT width, INT height, 
+																								INT xSize, INT ySize, FLOAT radius, FLOAT speed, 
+																								FLOAT centerX, FLOAT centerY);
+		[id(70), helpstring("method RotateCurrentCamera")] HRESULT RotateCurrentCamera(FLOAT x, FLOAT y, FLOAT z, INT stepCnt, INT coordEnum);
+		[id(71), helpstring("method RotateCamera")] HRESULT RotateCamera(BSTR cameraName, FLOAT x, FLOAT y, FLOAT z, INT stepCnt, INT coordEnum);
+		[id(72), helpstring("method FocusCurrentCameraTo")] HRESULT FocusCurrentCameraTo(BSTR model1Name, BSTR model2Name, FLOAT x, FLOAT y, FLOAT z, FLOAT distance, INT stepCnt);
+		[id(73), helpstring("method HideAllModels")] HRESULT HideAllModels();
+		[id(74), helpstring("method ShowAllModels")] HRESULT ShowAllModels();
+		[id(75), helpstring("method GetModelHandleByName")] HRESULT GetModelHandleByName(BSTR modelName, VARIANT* modelHandle);
+		[id(76), helpstring("method RestoreModelMtrl")] HRESULT RestoreModelMtrl(BSTR modelName);
+		[id(77), helpstring("method RestoreAllModelsMtrl")] HRESULT RestoreAllModelsMtrl();
+		[id(78), helpstring("method CreateMtrl")] HRESULT CreateMtrl(BSTR mtrlName, INT red, INT green, INT blue, INT alpha, INT selfIllu);
+		[id(79), helpstring("method SetMtrlColor")] HRESULT SetMtrlColor(BSTR mtrlName, INT red, INT green, INT blue, INT alpha);
+		[id(80), helpstring("method DeleteMtrl")] HRESULT DeleteMtrl(BSTR mtrlName);
+		[id(81), helpstring("method SetMtrlIllumination")] HRESULT SetMtrlIllumination(BSTR mtrlName, INT illumination);
+		[id(82), helpstring("method MoveModel")] HRESULT MoveModel(BSTR modelName, FLOAT x, FLOAT y, FLOAT z, INT coordEnum);
+		[id(83), helpstring("method MoveModelTo")] HRESULT MoveModelTo(BSTR modelName, FLOAT x, FLOAT y, FLOAT z, INT frameCnt, INT accModel);
+		[id(84), helpstring("method RestoreModelOpacity")] HRESULT RestoreModelOpacity(BSTR modelName);
+		[id(85), helpstring("method RestoreAllModelsOpacity")] HRESULT RestoreAllModelsOpacity();
+		[id(86), helpstring("method PlayerGoForward")] HRESULT PlayerGoForward();
+		[id(87), helpstring("method PlayerGoBackward")] HRESULT PlayerGoBackward();
+		[id(88), helpstring("method PlayerGoLeftward")] HRESULT PlayerGoLeftward();
+		[id(89), helpstring("method PlayerGoRightward")] HRESULT PlayerGoRightward();
+		[id(90), helpstring("method PlayerStop")] HRESULT PlayerStop();
+		[id(91), helpstring("method PlayerTurnLeft")] HRESULT PlayerTurnLeft();
+		[id(92), helpstring("method PlayerTurnRight")] HRESULT PlayerTurnRight();
+		[id(93), helpstring("method PlayerTurnUp")] HRESULT PlayerTurnUp();
+		[id(94), helpstring("method PlayerTurnDown")] HRESULT PlayerTurnDown();
+		[id(95), helpstring("method PlayerZoomIn")] HRESULT PlayerZoomIn();
+		[id(96), helpstring("method PlayerZoomOut")] HRESULT PlayerZoomOut();
+		[id(97), helpstring("method PlayerGoUp")] HRESULT PlayerGoUp();
+		[id(98), helpstring("method PlayerGoDown")] HRESULT PlayerGoDown();
+		[id(99), helpstring("method SetModelColor")] HRESULT SetModelColor(BSTR modelName, INT red, INT green, INT blue, INT alpha);
+		[id(100), helpstring("method SetModelFBLStatus")] HRESULT SetModelFBLStatus(BSTR modelName, BOOL status);
+		[id(101), helpstring("method SetBumpWaterSpeed")] HRESULT SetBumpWaterSpeed(BSTR waterName, FLOAT speed);
+		[id(102), helpstring("method SetBumpWaterRadius")] HRESULT SetBumpWaterRadius(BSTR waterName, FLOAT radius);
+		[id(103), helpstring("method SetSkyBoxModel")] HRESULT SetSkyBoxModel(BSTR modelName, BOOL status);
+		[id(104), helpstring("method SetCameraFrom")] HRESULT SetCameraFrom(BSTR cameraName, FLOAT x, FLOAT y, FLOAT z);
+		[id(105), helpstring("method SetCameraAt")] HRESULT SetCameraAt(BSTR cameraName, FLOAT x, FLOAT y, FLOAT z);
+		[id(106), helpstring("method SetCameraFov")] HRESULT SetCameraFov(BSTR cameraName, FLOAT fov);
+		[id(107), helpstring("method SetCurrentCameraFov")] HRESULT SetCurrentCameraFov(FLOAT fov);
+		[id(108), helpstring("method CreateFSMotionBlur")] HRESULT CreateFSMotionBlur(INT blurCount);
+		[id(109), helpstring("method SetFSMotionBlurPower")] HRESULT SetFSMotionBlurPower(INT value);
+		[id(110), helpstring("method StartFSMotionBlur")] HRESULT StartFSMotionBlur();
+		[id(111), helpstring("method StopFSMotionBlur")] HRESULT StopFSMotionBlur();
+		[id(112), helpstring("method SetCameraKFRFSMotionBlur")] HRESULT SetCameraKFRFSMotionBlur(BSTR camName, INT startFrame, INT endFrame, INT power, BOOL status);
+		[id(113), helpstring("method SetFlashCurrentFrame")] HRESULT SetFlashCurrentFrame(BSTR flashName, INT frameIndex);
+		[id(114), helpstring("method SetCameraKfrCallBackFunc")] HRESULT SetCameraKfrCallBackFunc(BSTR camName, INT frameIndex, BSTR funcName);
+		[id(115), helpstring("method CreateLensFlare")] HRESULT CreateLensFlare(FLOAT x, FLOAT y, FLOAT z, BOOL coverFlag);
+		[id(116), helpstring("method CreateFog")] HRESULT CreateFog(INT fogMode, INT red, INT green, INT blue, FLOAT density, FLOAT start, FLOAT end);
+		[id(117), helpstring("method SetFogMode")] HRESULT SetFogMode(INT mode);
+		[id(118), helpstring("method SetFogColor")] HRESULT SetFogColor(INT red, INT blue, INT green);
+		[id(119), helpstring("method SetFogDensity")] HRESULT SetFogDensity(FLOAT density);
+		[id(120), helpstring("method SetFogField")] HRESULT SetFogField(FLOAT start, FLOAT end);
+		[id(121), helpstring("method SetFogRenderStatus")] HRESULT SetFogRenderStatus(BOOL status);
+		[id(122), helpstring("method SetFilter")] HRESULT SetFilter(BSTR overlayName, BOOL status, INT opacity);
+		[id(123), helpstring("method SetModelMouseColor")] HRESULT SetModelMouseColor(BSTR modelName, 
+																					   INT mouseOver_Red, 
+																					   INT mouseOver_Green, 
+																					   INT mouseOver_Blue,
+																					   INT mouseOver_Alpha,
+																					   INT mouseClick_Red,
+																					   INT mouseClick_Green,
+																					   INT mouseClick_Blue,
+																					   INT mouseClick_Alpha);
+		[id(124), helpstring("method SetMouseMoveEventTimer")] HRESULT SetMouseMoveEventTimer(INT timeStep);
+		[id(125), helpstring("method SetNavigaterVisibility")] HRESULT SetNavigaterVisibility(BSTR navName, BOOL visible);
+		[id(126), helpstring("method RestoreModelColor")] HRESULT RestoreModelColor(BSTR modelName);
+		[id(127), helpstring("method RestoreAllModelsColor")] HRESULT RestoreAllModelsColor();
+		[id(128), helpstring("method SetAlphaTestStatus")] HRESULT SetAlphaTestStatus(BSTR mtrlName, BOOL status);
+		[id(129), helpstring("method SetZOneModel")] HRESULT SetZOneModel(BSTR modelName, BOOL status);
+		[id(130), helpstring("method SetLensFlareVisibility")] HRESULT SetLensFlareVisibility(BOOL status);
+		[id(131), helpstring("method SetCollisionDistance")] HRESULT SetCollisionDistance(FLOAT distance);
+		[id(132), helpstring("method CreateStaticCubeMap")] HRESULT CreateStaticCubeMap(BSTR name, BSTR frontImage, BSTR backImage, BSTR leftImage, BSTR rightImage, BSTR topImage, BSTR bottomImge, INT size);
+		[id(133), helpstring("method SetMtrlCubeMap")] HRESULT SetMtrlCubeMap(BSTR mtrlName, BSTR cubeMapName, FLOAT power);
+		[id(134), helpstring("method SetLightColor")] HRESULT SetLightColor(BSTR lightName, INT red, INT green, INT blue);
+		[id(135), helpstring("method SetLightPower")] HRESULT SetLightPower(BSTR lightName, FLOAT power);
+		[id(136), helpstring("method SetLightAmbient")] HRESULT SetLightAmbient(BSTR lightName, INT red, INT green, INT blue);
+		[id(137), helpstring("method SetLightPosition")] HRESULT SetLightPosition(BSTR lightName, FLOAT x , FLOAT y, FLOAT z);
+		[id(138), helpstring("method SetLightRange")] HRESULT SetLightRange(BSTR lightName, FLOAT range);
+		[id(139), helpstring("method SetLightAttenuation")] HRESULT SetLightAttenuation(BSTR lightName, FLOAT attenuation0, FLOAT attenuation1, FLOAT attenuation2);
+		[id(140), helpstring("method SetLightStatus")] HRESULT SetLightStatus(BSTR lightName, BOOL status);
+		[id(141), helpstring("method CreateMovieTexture")] HRESULT CreateMovieTexture(BSTR texName, BSTR moviePath, INT movieType, BOOL withAudio, INT repeatCnt, BSTR mtrlName);
+		[id(142), helpstring("method SetMovieMtrl")] HRESULT SetMovieMtrl(BSTR mtrlName, BSTR movieTexName);
+		[id(143), helpstring("method SetModelKfrRepeatCnt")] HRESULT SetModelKfrRepeatCnt(BSTR modelName, INT kfrRepeatCnt);
+		[id(144), helpstring("method SetAllModelKfrRepeatCnt")] HRESULT SetAllModelKfrRepeatCnt(INT kfrRepeatCnt);
+		[id(145), helpstring("method CreateBackdropFromImage")] HRESULT CreateBackdropFromImage(BSTR backdropName, BSTR oriImageName, BSTR alphaImageName, INT alignMode, INT left, INT top, INT width, INT height);
+		[id(146), helpstring("method CreateSpecularMap")] HRESULT CreateSpecularMap(BSTR name, BSTR imageName, INT width, INT height, INT mipLevel);
+		[id(147), helpstring("method SetSpecularMapMtrl")] HRESULT SetSpecularMapMtrl(BSTR mtrlName, BSTR specularMapName);
+		[id(148), helpstring("method CreateCamera")] HRESULT CreateCamera(BSTR name, FLOAT fromX, FLOAT fromY, FLOAT fromZ, FLOAT atX, FLOAT atY, FLOAT atZ, FLOAT fov, FLOAT nearClip, FLOAT farClip);
+		[id(149), helpstring("method DeleteModel")] HRESULT DeleteModel(BSTR modelName);
+		[id(150), helpstring("method SetCanNavigateByPointer")] HRESULT SetCanNavigateByPointer(BSTR navName, BOOL status);
+		[id(151), helpstring("method SetPlayerCanMove")] HRESULT SetPlayerCanMove(BOOL status);
+		[id(152), helpstring("method SetPlayerCanRos")] HRESULT SetPlayerCanRos(BOOL status);
+		[id(153), helpstring("method SetPlayerCanZoom")] HRESULT SetPlayerCanZoom(BOOL status);
+		[id(154), helpstring("method SetPlayerCanLift")] HRESULT SetPlayerCanLift(BOOL status);
+		[id(155), helpstring("method DeleteMovieTexture")] HRESULT DeleteMovieTexture(BSTR mtrlName, BSTR movieTexName);
+		[id(156), helpstring("method SetModelKfrPlayStatus")] HRESULT SetModelKfrPlayStatus(BSTR name, BOOL kfrPlay);
+		[id(157), helpstring("method PlayModelKfr")] HRESULT PlayModelKfr(BSTR modelName, INT startFrame, INT endFrame, INT repeatCnt);
+		[id(158), helpstring("method SetAllModelsKfrPlayStatus")] HRESULT SetAllModelsKfrPlayStatus(BOOL bKfrPlay);
+		[id(159), helpstring("method SetModelEventOnMouseMove")] HRESULT SetModelEventOnMouseMove(BOOL status);
+		[id(160), helpstring("method SetButtonVisibility")] HRESULT SetButtonVisibility(BSTR btnName, BOOL visible);
+		[id(161), helpstring("method SetAntiAliasLevel")] HRESULT SetAntiAliasLevel(INT level);
+		[id(162), helpstring("method SetMtrlSpecularCubeMap")] HRESULT SetMtrlSpecularCubeMap(BSTR mtrlName, BSTR specularCubeMapName);
+		[id(163), helpstring("method SetButtonActive")] HRESULT SetButtonActive(BSTR name, BOOL bActive);
+		[id(164), helpstring("method CreateSectionMap")] HRESULT CreateSectionMap(BSTR sectioMapName, 
+																				 INT width, INT height,
+																				 BSTR sliceModelName, 
+																				 FLOAT leftTopX, FLOAT leftTopY, FLOAT leftTopZ, 
+																				 FLOAT rightTopX, FLOAT rightTopY, FLOAT rightTopZ, 
+																				 FLOAT leftBottomX, FLOAT leftBottomY, FLOAT leftBottomZ, 
+																				 FLOAT rightBottomX, FLOAT rightBottomY, FLOAT rightBottomZ, 
+																				 BSTR imageName );
+		[id(165), helpstring("method ExecuteSlice")] HRESULT ExecuteSlice(BSTR sectionMapName);
+		[id(166), helpstring("method SetOverlayVisibility")] HRESULT SetOverlayVisibility(BSTR overlayName, BOOL visible);
+		[id(167), helpstring("method CreateAudio")] HRESULT CreateAudio(BSTR name, BSTR audioFile, INT repeatCnt);
+		[id(168), helpstring("method DeleteAudioByName")] HRESULT DeleteAudioByName(BSTR name);
+		[id(169), helpstring("method DeleteAudioByIndex")] HRESULT DeleteAudioByIndex(INT index);
+		[id(170), helpstring("method DeleteAllAudio")] HRESULT DeleteAllAudio();
+		[id(171), helpstring("method SetAudioFile")] HRESULT SetAudioFile(BSTR audioName, BSTR audioFile);
+		[id(172), helpstring("method SetAudioRepeatCount")] HRESULT SetAudioRepeatCount(BSTR audioName, INT repeatCnt);
+		[id(173), helpstring("method PlayAudio")] HRESULT PlayAudio(BSTR audioName);
+		[id(174), helpstring("method PauseAudio")] HRESULT PauseAudio(BSTR audioName);
+		[id(175), helpstring("method StopAudio")] HRESULT StopAudio(BSTR audioName);
+		[id(176), helpstring("method RewindAudio")] HRESULT RewindAudio(BSTR audioName);
+		[id(177), helpstring("method DeleteModelGroup")] HRESULT DeleteModelGroup(BSTR name);
+		[id(178), helpstring("method DeleteModelGroupByIndex")] HRESULT DeleteModelGroupByIndex(INT index);
+		[id(179), helpstring("method DeleteAllModelGroup")] HRESULT DeleteAllModelGroup();
+		[id(180), helpstring("method AddModelToModelGroup")] HRESULT AddModelToModelGroup(BSTR modelGroupName, BSTR modelName);
+		[id(181), helpstring("method DeleteModelFromModelGroup")] HRESULT DeleteModelFromModelGroup(BSTR modelGroupName, BSTR modelName);
+		[id(182), helpstring("method ClearModelGroup")] HRESULT ClearModelGroup(BSTR modelGroupName);
+		[id(183), helpstring("method SetModelMouseHintType")] HRESULT SetModelMouseHintType(BSTR modelName,  INT type);
+		[id(184), helpstring("method SetLightKfrPlayStatus")] HRESULT SetLightKfrPlayStatus(BSTR lightName, BOOL bFlag);
+		[id(185), helpstring("method SetAllLightKfrPlayStatus")] HRESULT SetAllLightKfrPlayStatus(BOOL bFlag);
+		[id(186), helpstring("method SetLightKfrRepeatCnt")] HRESULT SetLightKfrRepeatCnt(BSTR lightName, INT repeatCnt);
+		[id(187), helpstring("method SetAllLightKfrRepeatCnt")] HRESULT SetAllLightKfrRepeatCnt(INT repeatCnt);
+		[id(188), helpstring("method SetAllModelKfrPlayStatus")] HRESULT SetAllModelKfrPlayStatus(BOOL kfrPlay);
+		[id(189), helpstring("method SetModelPosition")] HRESULT SetModelPosition(BSTR modelName, FLOAT x, FLOAT y, FLOAT z);
+		[id(190), helpstring("method SetModelRotation")] HRESULT SetModelRotation(BSTR modelName, FLOAT x, FLOAT y, FLOAT z);
+		[id(191), helpstring("method AddNavigaterPointer")] HRESULT AddNavigaterPointer(BSTR navigaterName,
+																						BSTR navPointerName,  
+																						INT	 navPointerType,
+																						BSTR camOrModelName,
+																						BSTR navPointerOriImage, 
+																						BSTR navPointerAlphaImage, 
+																						INT  width, INT height);
+		[id(192), helpstring("method SetNavigaterPointerVisibility")] HRESULT SetNavigaterPointerVisibility(BSTR navigaterName, BSTR navPointerName, BOOL status);
+		[id(193), helpstring("method DeleteNavigaterPointer")] HRESULT DeleteNavigaterPointer(BSTR navigaterName, BSTR navPointerName);
+		[id(194), helpstring("method PauseCameraKfr")] HRESULT PauseCameraKfr(BSTR camName);
+		[id(195), helpstring("method ResumeCameraKfr")] HRESULT ResumeCameraKfr(BSTR cameraName);
+		[id(196), helpstring("method SetNavigaterPointerObject")] HRESULT SetNavigaterPointerObject(BSTR navName, BSTR navPointerName, INT objType, BSTR objName);
+		[id(197), helpstring("method SetPlayerZoomSpeed")] HRESULT SetPlayerZoomSpeed(FLOAT speed);
+		[id(198), helpstring("method SetOverlayFullScreen")] HRESULT SetOverlayFullScreen(BSTR OverlayName, BOOL xFull, BOOL yFull);
+		[id(199), helpstring("method PushOverlayFront")] HRESULT PushOverlayFront(BSTR OverlayName);
+		[id(200), helpstring("method PushOverlayBack")] HRESULT PushOverlayBack(BSTR overlayName);
+		[id(201), helpstring("method DeleteAllModel")] HRESULT DeleteAllModel();
+		[id(202), helpstring("method PlayKeyFrame")] HRESULT PlayKeyFrame();
+		[id(203), helpstring("method PauseKeyFrame")] HRESULT PauseKeyFrame();
+		[id(204), helpstring("method StopKeyFrame")] HRESULT StopKeyFrame();
+		[id(205), helpstring("method SetKeyFrameRepeatCount")] HRESULT SetKeyFrameRepeatCount(INT repeatCnt);
+		[id(206), helpstring("method GotoFrame")] HRESULT GotoFrame(INT frame);
+		[id(207), helpstring("method SetKeyFramePlaySpeed")] HRESULT SetKeyFramePlaySpeed(INT fps);
+		[id(208), helpstring("method CreateFSGlow")] HRESULT CreateFSGlow(FLOAT BloomValue, FLOAT BlurValue);
+		[id(209), helpstring("method SetFSGlowValue")] HRESULT SetFSGlowValue(FLOAT BloomValue, FLOAT BlurValue);
+		[id(210), helpstring("method StartFSGlow")] HRESULT StartFSGlow();
+		[id(211), helpstring("method EndFSGlow")] HRESULT EndFSGlow();
+		[id(212), helpstring("method SetMtrlSpecular")] HRESULT SetMtrlSpecular(BSTR mtrlName, INT red, INT green, INT blue);
+		[id(213), helpstring("method SetMtrlAmbient")] HRESULT SetMtrlAmbient(BSTR mtrlName, INT red, INT green, INT blue);
+		[id(214), helpstring("method SetMtrlSpecularLevel")] HRESULT SetMtrlSpecularLevel(BSTR mtrlName, INT level);
+		[id(215), helpstring("method SetMtrlSpecularPower")] HRESULT SetMtrlSpecularPower(BSTR mtrlName, INT power);
+		[id(216), helpstring("method PlayKeyFrame1")] HRESULT PlayKeyFrame1(INT startFrame, INT endFrame);
+		[id(217), helpstring("method SetCameraKfrPlayStatus")] HRESULT SetCameraKfrPlayStatus(BSTR camName, BOOL status);
+		[id(218), helpstring("method SetAllModelVisibility")] HRESULT SetAllModelVisibility(BOOL status);
+		[id(219), helpstring("method SetAllCameraKfrPlayStatus")] HRESULT SetAllCameraKfrPlayStatus(BOOL status);
+		[id(220), helpstring("method SetCameraKfrRepeatCnt")] HRESULT SetCameraKfrRepeatCnt(BSTR camName, INT repeatCnt);
+		[id(221), helpstring("method SetAllCameraKfrRepeatCnt")] HRESULT SetAllCameraKfrRepeatCnt(INT repeatCnt);
+		[id(222), helpstring("method SetDynamicTexPlaySpeed")] HRESULT SetDynamicTexPlaySpeed(BSTR UseDyTexMtrlName,INT texLayerIdx,INT fps);
+		[id(223), helpstring("method SetModelPositionByPivot")] HRESULT SetModelPositionByPivot(BSTR modelName, FLOAT x, FLOAT y, FLOAT z);
+		[id(224), helpstring("method SetDynamicUVStatus")] HRESULT SetDynamicUVStatus(BSTR modelName, BOOL status);
+		[id(225), helpstring("method MoveFlash")] HRESULT MoveFlash(BSTR flashName, INT x , INT y);
+		[id(226), helpstring("method SetOverlayMtrl")] HRESULT SetOverlayMtrl(BSTR overlayName,BSTR mtrlName);
+		[id(227), helpstring("method SetZoneTriggerModelCallBackFunc")] HRESULT SetZoneTriggerModelCallBackFunc(BSTR modelName,BSTR funcName);
+		[id(228), helpstring("method SetAlphaTestLevel")] HRESULT SetAlphaTestLevel(INT level);
+		[id(229), helpstring("method SetButtonOpacity")] HRESULT SetButtonOpacity(BSTR buttonName,INT opacity);
+		[id(230), helpstring("method CurCamGotoFrame")] HRESULT CurCamGotoFrame(INT frame);
+		[id(231), helpstring("method SetSceneEditMode")] HRESULT SetSceneEditMode(INT EditMode);
+		[id(232), helpstring("method CloneModel")] HRESULT CloneModel(BSTR oriModelName,BSTR desModelName,INT ID1,INT ID2,FLOAT  posX,FLOAT posY,FLOAT posZ);
+		[propget, id(233), helpstring("property theModelPosX")] HRESULT theModelPosX([out, retval] float *pVal);
+		[propget, id(234), helpstring("property theModelPosY")] HRESULT theModelPosY([out, retval] float *pVal);
+		[propget, id(235), helpstring("property theModelPosZ")] HRESULT theModelPosZ([out, retval] float *pVal);
+		[propget, id(236), helpstring("property theModelScreenPosX")] HRESULT theModelScreenPosX([out, retval] short *pVal);
+		[propget, id(237), helpstring("property theModelScreenPosY")] HRESULT theModelScreenPosY([out, retval] short *pVal);
+		[id(238), helpstring("method GetInfoFromModel")] HRESULT GetInfoFromModel(BSTR modelName);
+		[id(239), helpstring("method CreateNewText")] HRESULT CreateNewText(BSTR textString);
+		[propget, id(240), helpstring("property theTextHandle")] HRESULT theTextHandle([out, retval] long *pVal);
+		[id(241), helpstring("method SetTextPosition")] HRESULT SetTextPosition(long textHandle,UINT x,UINT y);
+		[id(242), helpstring("method SetTextColor")] HRESULT SetTextColor(long textHandle,INT red,INT green,INT blue,INT alpha);
+		[id(243), helpstring("method DeleteText")] HRESULT DeleteText(long textHandle);
+		[id(244), helpstring("method GetInfoFromCamera")] HRESULT GetInfoFromCamera(BSTR cameraName);
+		[propget, id(245), helpstring("property theCamFromPosX")] HRESULT theCamFromPosX([out, retval] float *pVal);
+		[propget, id(246), helpstring("property theCamFromPosY")] HRESULT theCamFromPosY([out, retval] float *pVal);
+		[propget, id(247), helpstring("property theCamFromPosZ")] HRESULT theCamFromPosZ([out, retval] float *pVal);
+		[propget, id(248), helpstring("property theCamAtPosX")] HRESULT theCamAtPosX([out, retval] float *pVal);
+		[propget, id(249), helpstring("property theCamAtPosY")] HRESULT theCamAtPosY([out, retval] float *pVal);
+		[propget, id(250), helpstring("property theCamAtPosZ")] HRESULT theCamAtPosZ([out, retval] float *pVal);
+		[id(251), helpstring("method SetTextString")] HRESULT SetTextString(long textHandle,BSTR textString);
+
+		//加载一个子场景到指定父场景
+		[id(252), helpstring("method LoadScene")] HRESULT LoadScene(BSTR SceneName, BSTR ParentSceneName, BSTR N3DFileURL, 
+																FLOAT m11, FLOAT m12, FLOAT m13,  FLOAT m14, 
+																FLOAT m21, FLOAT m22, FLOAT m23, FLOAT m24, 
+																FLOAT m31, FLOAT m32, FLOAT m33, FLOAT m34, 
+																FLOAT m41, FLOAT m42, FLOAT m43, FLOAT m44);
+		//删除指定场景
+		[id(253), helpstring("method DeleteScene")] HRESULT DeleteScene(BSTR SceneName);
+		[id(254), helpstring("method CloneScene")] HRESULT CloneScene(BSTR destSceneName, BSTR srcSceneName, BSTR ParentSceneName,  FLOAT m11, FLOAT m12, FLOAT m13, FLOAT m14, FLOAT m21, FLOAT m22, FLOAT m23, FLOAT m24, FLOAT m31, FLOAT m32, FLOAT m33, FLOAT m34, FLOAT m41, FLOAT m42, FLOAT m43, FLOAT m44);
+		//创建模型的反射属性
+		[id(255), helpstring("method CreateRTFTexture")] HRESULT CreateRTFTexture(BSTR TextureName, BSTR refPlaneName, INT height, INT width, FLOAT power);
+		[id(256), helpstring("method AddModelToRTFTexture")] HRESULT AddModelToRTFTexture(BSTR RTFTextureName, BSTR ModelName);
+		[id(257), helpstring("method CreateDynamicCubeMap")] HRESULT CreateDynamicCubeMap(BSTR cubeMapame, BSTR centerModelName, INT size, INT power);
+		[id(258), helpstring("method AddDynamicCubeMapReflectionModel")] HRESULT AddDynamicCubeMapReflectionModel(BSTR cubeMapName, BSTR ModelName);
+		[id(259), helpstring("method DeleteDynamicCubeMapReflectionModel")] HRESULT DeleteDynamicCubeMapReflectionModel(BSTR cubeMapName, BSTR modelName);
+		[id(260), helpstring("method CreateRealWater")] HRESULT CreateRealWater(BSTR name, FLOAT x, FLOAT y, FLOAT z, INT gridX, INT gridY);
+		[id(261), helpstring("method AddRealWaterRTTModel")] HRESULT AddRealWaterRTTModel(BSTR RealWaterName, BSTR ModelName);
+		[id(262), helpstring("method AddRealWaterRTFModel")] HRESULT AddRealWaterRTFModel(BSTR RealWaterName, BSTR ModelName);
+		[id(263), helpstring("method SetRealWaterCubeMap")] HRESULT SetRealWaterCubeMap(BSTR RealWaterName, BSTR CubeMapName);
+		[id(264), helpstring("method CreateColorEffect")] HRESULT CreateColorEffect();
+		[id(265), helpstring("method SetColorEffect")] HRESULT SetColorEffect(FLOAT brightness, FLOAT contrast, FLOAT red, FLOAT green, FLOAT blue);
+		[id(266), helpstring("method SetTextureImageFromURL")] HRESULT SetTextureImageFromURL(BSTR mtrlName, INT texLayerIdx, BSTR imageURL);
+		[id(267), helpstring("method SetEditCtrlMaxUpDownAngle")] HRESULT SetEditCtrlMaxUpDownAngle(FLOAT upAngle, FLOAT downAngle);
+		[id(268), helpstring("method SetMtrlTexture")] HRESULT SetMtrlTexture(BSTR mtrlName, INT textureLayerIndex, INT textureType, BSTR textureName);
+		[id(269), helpstring("method AddFlashCtrlSemaphore")] HRESULT AddFlashCtrlSemaphore(BSTR flashName,BSTR SemaphoreName,BSTR SemaphoreFunc);
+		[id(270), helpstring("method DeleteFlashCtrlSemaphore")] HRESULT DeleteFlashCtrlSemaphore(BSTR flashName, BSTR SemaphoreName);
+		[propget, id(271), helpstring("property theFlashVar")] HRESULT theFlashVar([out, retval] BSTR *pVal);
+		[id(272), helpstring("method GetFlashVaribleInfo")] HRESULT GetFlashVaribleInfo(BSTR flashName,BSTR varibleName);
+		[id(273), helpstring("method SetFlashVarible")] HRESULT SetFlashVarible(BSTR flashName,BSTR varibleName,BSTR varibleValue);
+		[id(274), helpstring("method LoadN3DScene")] HRESULT LoadN3DScene(BSTR SceneName, BSTR ParentSceneName, BSTR N3DFileURL,FLOAT posX,FLOAT posY,FLOAT posZ,FLOAT rotX,FLOAT rotY,FLOAT rotZ,FLOAT scaleX,FLOAT scaleY,FLOAT scaleZ);
+		[id(275), helpstring("method GetInfoFromSceneResource")] HRESULT GetInfoFromSceneResource(BSTR SceneName);
+		[propget, id(276), helpstring("property theScenePosX")] HRESULT theScenePosX([out, retval] float *pVal);
+		[propget, id(277), helpstring("property theScenePosY")] HRESULT theScenePosY([out, retval] float *pVal);
+		[propget, id(278), helpstring("property theScenePosZ")] HRESULT theScenePosZ([out, retval] float *pVal);
+		[propget, id(279), helpstring("property theSceneRotX")] HRESULT theSceneRotX([out, retval] float *pVal);
+		[propget, id(280), helpstring("property theSceneRotY")] HRESULT theSceneRotY([out, retval] float *pVal);
+		[propget, id(281), helpstring("property theSceneRotZ")] HRESULT theSceneRotZ([out, retval] float *pVal);
+		[propget, id(282), helpstring("property theSceneScaleX")] HRESULT theSceneScaleX([out, retval] float *pVal);
+		[propget, id(283), helpstring("property theSceneScaleY")] HRESULT theSceneScaleY([out, retval] float *pVal);
+		[propget, id(284), helpstring("property theSceneScaleZ")] HRESULT theSceneScaleZ([out, retval] float *pVal);
+		[id(285), helpstring("method SetSceneResColor")] HRESULT SetSceneResColor(BSTR SceneName,INT red,INT green,INT blue,INT alpha);
+		[id(286), helpstring("method SetButtonRect")] HRESULT SetButtonRect(BSTR buttonName, INT x, INT y, INT width, INT height);
+		[id(287), helpstring("method SetAddtionalKeys")] HRESULT SetAddtionalKeys([in]BYTE left, [in]BYTE right, [in]BYTE up, [in]BYTE down);
+		[id(288), helpstring("method SetAddtionalKeysStatus")] HRESULT SetAddtionalKeysStatus([in]BOOL bEnable);
+		
+		[id(289), helpstring("方法SetSubBrowserType")] HRESULT SetSubBrowserType([in] LONG subType);
+
+		[propget, id(290), helpstring("属性 wbType")] HRESULT wbType([out, retval] LONG* pVal);
+		[propput, id(290), helpstring("属性 wbType")] HRESULT wbType([in] LONG newVal);
+};
+
+[
+	uuid(A357793E-7647-47B3-8EB8-372432ABF6B2),
+	version(1.0),
+	helpstring("VGSATL2 1.0 类型库")
+]
+library VGSATL2Lib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(994E6C81-8A03-4313-9736-F6FAA1DEF95C),
+		helpstring("_IVGS2Events 接口")
+	]
+	dispinterface _IVGS2Events
+	{
+		properties:
+		methods:
+			[id(1), helpstring("方法DoScriptFunc")] HRESULT DoScriptFunc(VARIANT* pVar);
+	};
+	[
+		uuid(046216A1-952E-486C-8598-4F2D0D0676F2),
+		control,
+		helpstring("VGS2 Class")
+	]
+	coclass VGS2
+	{
+		[default] interface IVGS2;
+		[default, source] dispinterface _IVGS2Events;
+	};
+};

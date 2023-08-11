@@ -1,0 +1,27 @@
+// CModelGroup.cpp: implementation of the CModelGroup class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "CModelGroup.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CModelGroup::CModelGroup()
+{
+	index = -1;
+}
+
+CModelGroup::~CModelGroup()
+{
+
+}
+
+//ÊÍ·Å×ÊÔ´
+void CModelGroup::Release()
+{
+	model.clear();
+	modelGroup.clear();
+}

@@ -1,0 +1,97 @@
+/****************************************************************************
+* File name    :	SY03_FwLib.sct
+* Function     :	the Scatter File for SY03 Firmware Library
+* Author       : 	coins
+* Date         :	2013/04/07
+* Version      :    v1.0
+* Description  :
+* ModifyRecord :
+****************************************************************************/
+
+/***************************************************************************
+************************** Flash Memory Map ********************************
+***************************************************************************/
+/*			 ___________	0x1004_0000			
+**			|			|
+**			|			|
+**			|	CODE	|
+**			|			|
+**			|___________|	0x1000_0100
+**			|			|
+**			|	RESET	|
+**			|___________|	0x1000_0000
+***************************************************************************/
+
+/***************************************************************************
+************************** SRAM Memory Map ********************************
+***************************************************************************/
+/*			 ___________	0x2000_4000			
+**			|			|  	STACK_TOP
+**			|	STACK	|
+**			|___________|
+**			|			|	HEAP_TOP
+**			|	HEAP	|	
+**			|___________|	HEAP_BOTTOM
+**			|			|
+**			|			|
+**			|	DATA	|
+**			|			|
+**			|___________|	0x2000 0000
+***************************************************************************/
+
+
+
+LOAD_ROM 0x10000000 0x40000 	; Name of load region (LOAD_ROM),
+                             	; Start address for load region (0x10000000),
+                             	; Maximum size of load region (0x40000)
+{
+	EXEC_ROM 0x10000000 0x40000   	; Name of first exec region (EXEC_ROM),
+                             		; Start address for exec region (0x10000000),
+                             		; Maximum size of first exec region (0x40000)
+    {
+		* (RESET, +FIRST)		; Place RESET section at 0x10000000
+        * (+RO)              	; Place all code and RO data into
+                             	; this exec region
+    }
+
+
+	STACK_TOP 0x20004000 UNINIT 0x0 	; Stack top 
+	{
+		startup_SY03.o (STACK_TOP)	
+	}
+
+	STACK 0x20004000 EMPTY -0x1800		; Stack Space 									 
+	{	
+	}
+
+	HEAP_TOP ImageBase(STACK) UNINIT 0x0 	; Heap top
+	{
+		startup_SY03.o (HEAP_TOP)	
+	}
+
+	HEAP ImageBase(STACK) EMPTY -0x0 	; Heap Space
+	{			
+	}
+
+	HEAP_BOTTOM ImageBase(HEAP) UNINIT 0x0	; Heap Bottom
+	{
+		startup_SY03.o (HEAP_BOTTOM)	
+	}
+	
+	;0x20000000~0x20000030 USED BY ROM SPACE
+	;0x20000030~0x20000070 USED BY ROM FUNC 
+    DATA_UNINIT 0x20000030 UNINIT 0x40       
+								; DATA and BSS Space
+    {
+        * (NO_INIT)         	; Place all RW and ZI data into
+                             	; this exec region			 
+    }
+	 
+    DATA 0x20000070 (0x4000-0x70-ImageLength(STACK)-ImageLength(HEAP))       
+								; DATA and BSS Space
+    {
+        * (+RW, +ZI)         	; Place all RW and ZI data into
+                             	; this exec region			 
+    }	
+}
+

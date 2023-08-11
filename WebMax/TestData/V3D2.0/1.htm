@@ -1,0 +1,343 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0025)http://www.suntoward.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海创图WEBMAX作品</title>
+<style>
+body {
+	font-family:"宋体", "黑体";
+	font-size:12px;
+	font-weight:bold;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #000000;
+}
+body td {
+	font-family:"宋体", "黑体";
+	font-size:12px;
+}
+td img {
+	display: block;
+}
+.VgsCell {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.PanelCell {
+	width: 100%;
+	background-image: url(../image/PanelBackgroud.jpg);
+}
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+var BrowserType=0;
+var SubBrowserType=0;
+var VgsId = "VGS2";
+var VGS2;
+var bHasInstaller = false;  // installer 是否已经启动
+window.onload=function()
+{
+	var sInstallerHtml = "";
+	if (navigator.appName == "Microsoft Internet Explorer")
+	{
+		BrowserType=0; //"Microsoft Internet Explorer"
+		sInstallerHtml = '<object id="vgsInstaller" classid="CLSID:1E056D9B-7F62-4F9D-A0FC-AC3E433F3C77" codebase="http://www.suntoward.com/Download/VGS.CAB#version=2,0,0,9" height="0" width="0" style="width:0;height:0"></object>';
+		if (navigator.userAgent.indexOf("Mozilla/") > -1)
+		{
+			if (navigator.userAgent.indexOf("MAXTHON") > -1)
+			{
+					SubBrowserType = 1; // maxthon
+			}
+			else if (navigator.userAgent.indexOf("TencentTraveler") > -1)
+			{
+				 SubBrowserType = 2; // tt
+			}
+		}
+	}
+	else 
+	{
+			if (navigator.userAgent.indexOf("Mozilla/") > -1)
+			{
+					if (navigator.userAgent.indexOf("Firefox/") > -1)
+					{
+						BrowserType=1;//"Firefox";
+					}
+					else if (navigator.userAgent.indexOf("Chrome/") > -1)
+					{
+						BrowserType=2;//"Google Chrome";
+					}
+					else if (navigator.userAgent.indexOf("Safari/") > -1)
+					{
+						BrowserType=4;//"Safari";
+					}
+			}		
+			else if (navigator.userAgent.indexOf("Opera/") > -1)
+			{
+				BrowserType=3;//"Opera";
+			}				
+			sInstallerHtml = '<embed id="vgsInstaller" TYPE="application/vgs" clsid="{1E056D9B-7F62-4F9D-A0FC-AC3E433F3C77}" ';
+			sInstallerHtml += 'codeBaseUrl="http://www.suntoward.com/Download/VGS.CAB#version=2,0,0,9" ';
+			sInstallerHtml += 'pluginspage="http://www.suntoward.com/Download/vgsplayer.xpi" ';
+			sInstallerHtml += 'event_DoScriptFunc="OnVariantParam" ';
+			sInstallerHtml += 'param_wbType='+BrowserType+' ';
+			sInstallerHtml += 'ALIGN="baseline" BORDER="0" ';
+			sInstallerHtml += 'width="100%" height="100%" style="width:100%;height:100%"></embed>';				
+	}	
+	if (sInstallerHtml != '')
+	{			
+		 document.getElementById("divInstaller").innerHTML = sInstallerHtml;
+		 window.setTimeout('ShowCheckVGS()', 3000);  // 3秒后如果installer没有回调，就打开checkvgs页面
+	}
+	else
+	{
+		 window.setTimeout('ShowCheckVGS()', 10);
+	}
+}
+//新版本的检测函数
+function CheckPlayerVersion()
+{
+     //This is new Version
+}
+function OnVariantParam()
+{
+	var strFuncName;
+	strFuncName = arguments[0];
+	strFuncName += "(";
+	if (arguments.length > 1)
+	{
+		strFuncName += arguments[1];
+	}
+	for (var i = 2; i < arguments.length; i++)
+	{
+		strFuncName += ",";
+		strFuncName += arguments[i];
+	}
+	strFuncName += ")";
+	eval(strFuncName);
+}
+function AddVGS(sContainerId)
+{
+	//delete installer
+	var container = document.getElementById("divInstaller");
+	if (container)
+	{
+			removeChildNodes(container);
+	}
+	var sHtml = '';
+	container = document.getElementById(sContainerId);
+	if (container == null) return;	
+	removeChildNodes(container);	
+	if (BrowserType == 0)//"Microsoft Internet Explorer"
+	{
+		if (window.ActiveXObject)
+		{
+			sHtml += '<object id="' + VgsId + '" classid="CLSID:046216A1-952E-486C-8598-4F2D0D0676F2" ';
+			sHtml += 'width="100%" height="100%" style="width:100%;height:100%"></object>';
+			container.innerHTML = sHtml;
+		} 		
+	}
+	else if (BrowserType == 1 || BrowserType == 2 || BrowserType == 3 || BrowserType == 4)
+	{
+		sHtml += '<embed id="' + VgsId + '" clsid="{046216A1-952E-486C-8598-4F2D0D0676F2}" ';
+		sHtml += 'TYPE="application/vgs" ';
+		sHtml += 'pluginspage="http://www.suntoward.com/Download/vgsplayer.xpi" ';
+		sHtml += 'event_DoScriptFunc="OnVariantParam" ';
+		sHtml += 'param_wbType='+BrowserType+' ';
+		sHtml += 'ALIGN="baseline" BORDER="0" ';
+		sHtml += 'width="100%" height="100%" style="width:100%;height:100%"></embed>';
+		container.innerHTML = sHtml;
+	}   		
+}
+function removeChildNodes(oNode)
+{
+	if (!oNode) return;
+	while (oNode.hasChildNodes())
+	{
+		oNode.removeChild(oNode.firstChild);
+	}
+}
+function removeNode(sNodeId)
+{
+	var node = document.getElementById(sNodeId);
+	if (!node || !node.parentNode) return;
+	node.parentNode.removeChild(node);
+}
+function OnVGSReady(nReadyStatus)
+{		
+	bHasInstaller = true; // installer 已经启动
+	if (nReadyStatus > 0)
+	{
+		AddVGS('vgsContainer');
+	}
+}
+// 如果installer没有启动，显示checkvgs页面
+function ShowCheckVGS()
+{
+	if (!bHasInstaller)
+	{
+		var checkvgsHtm = document.getElementById("checkvgs");
+		if (navigator.userAgent.indexOf('Windows NT 6.0') != -1)
+		{//vista
+			checkvgsHtm.src="http://www.suntoward.com/go/GetVGS/CheckVGS_Vista.htm";
+		}
+		else //xp 2k
+		{
+			if(!document.all)
+			{ //firefox
+				checkvgsHtm.src="http://www.suntoward.com/go/GetVGS/CheckVGS_Firefox.htm";
+			}
+			else
+			{ //ie
+				checkvgsHtm.src="http://www.suntoward.com/go/GetVGS/CheckVGS_IE.htm";
+			}
+		}
+	}
+}
+//-->
+</script>
+</head>
+
+<body margin=0>
+<!--	<table cellpadding="0" cellspacing="0" border="0" style="width:100;height:100;">
+		<tr>
+			<td id="vgsContainer" style="width:100%;height:100%;">
+				<iframe id = "checkvgs" src="" style="width:100%;height:100%;" frameborder="0" scrolling="auto"></iframe>
+			</td>
+			<td id="divInstaller" style="width:0;height:0;">
+			</td>
+		</tr>
+	</table>
+!-->
+<table border="0" style="width:100%;height:100%" valign="middle" cellpadding="0" cellspacing="0" rules="none">
+  <tr valign="middle">
+    <td>
+      <table width="100%" height="100%" align="center" valign="middle" cellpadding="0" cellspacing="0" rules="none">
+        <tr> 
+          <td  id="vgsContainer"style="width:100%;height:100%">
+				<iframe id = "checkvgs" src="" style="width:100%;height:100%;" frameborder="0" scrolling="auto"></iframe>
+          </td>
+        </tr>
+		<td id="divInstaller" style="width:0;height:0;" >
+		</td>
+      </table>
+	</td>
+		</tr>
+	</table>
+
+<script type="text/javascript" language="javascript">
+//-----------------------------------------------------------------------------------------
+//服务器地址
+var webServer;
+
+//N3D文件地址
+var strN3DFile;
+var strN3DName;	
+var sceneIndex = 0;
+
+//----------------------------------------------------------------------------------------
+//函数名: SetEngineStart()
+//参  数: 在网页Load的时候自动调用
+//描  述: 设置N3D文件的地址
+//----------------------------------------------------------------------------------------
+function OnVGSStart()
+{	
+	if("undefined" != typeof(VGS2=document.getElementById(VgsId)))
+	{
+		if (BrowserType == 0)
+		{
+			VGS2.SetSubBrowserType(SubBrowserType);
+		}
+		
+		//设置服务器路径
+		webServer = location.href;
+		webServer = webServer.replace(/%20/ig, " ");
+		VGS2.SetServer(webServer);
+
+		//设置渲染的背景色
+		VGS2.SetBackgroundColor(0, 0, 0);
+
+		//暂停场景渲染
+		VGS2.SetFBL(0.005);
+
+		//设置N3D文件的路径
+		strN3DFile = "1.n3d";	
+		strN3DName = "1";
+		VGS2.LoadN3DFile(strN3DFile, strN3DName);
+
+		// 设置抗锯齿级别
+		VGS2.SetAntialiasLevel(2);
+	}
+	else
+	{
+		alert("中文: 您打开了一个三维网页，系统会自动提示安装VGS升级版，VGS经过微软认证，被认为是安全的。\nEnglish: Openning 3D website...,Operating system will setup VGS Engine, VGS is certificated by Microsoft, it's safty.");
+	}	
+}
+
+//----------------------------------------------------------------------------------------
+//函数名: SceneIsDown
+//参  数: sSceneName : 加载完成的场景名称
+//描  述: 这个方法为引擎自动调用的方法，当场景下载完毕，VGS引擎会自动调用这个方法
+//----------------------------------------------------------------------------------------
+function SceneIsDown(sSceneName)
+{
+	//设置当前相机
+	//VGS2.SetCurrentCameraByName("CAMERA01");
+	//设置相机的nearClip和farClip
+	//VGS2.SetCurrentCameraClip(20, 50000);
+}
+
+//----------------------------------------------------------------------------------------
+//函数名: AllIsDown
+//参  数: sSceneName : 加载完成的场景名称
+//描  述: 这个方法为引擎自动调用的方法，当场景和贴图均下载完毕，VGS引擎会自动调用这个方法
+//----------------------------------------------------------------------------------------
+function AllIsDown(sSceneName)
+{
+	//设置渲染的背景色
+	VGS2.SetBackgroundColor(128, 128, 128);
+	
+	//VGS2.EnableMouseUpCallback();       // 支持响应鼠标单击事件
+	//VGS2.EnableMouseDBClickCallback();  // 支持响应鼠标双击事件
+	
+	//VGS2.PlayKeyFrame();  // 播放所用模型/灯光/相机动画
+}
+//--button functions
+
+//----------------------------------------------------------------------------------------
+//函数名: VGSMouseDBClick()
+//参  数:  
+//    LocH为鼠标在渲染窗口中的水平位置，LocV为光标在渲染窗体中的垂直位置
+//	  type为鼠标点中的类型，0-overlay, 1-model, -1-none
+//	  modelUnderLoc为被鼠标点中的物体名称或Overlay名称，注意如果是Model则只有被设置为Clickabel的物体才会响应。
+//    ID1和ID2分别是Model的扩展ID1和扩展ID2
+//描  述: 当调用EnableMouseDBClickCallback()后，用户在VGS对象上双击鼠标时，引擎自动调用这个函数
+//--------------------------------------------------------------------------------------------
+function VGSMouseDBClick(LocH, LocV, type, modelUnderLoc, ID1, ID2)
+{
+	
+}
+//----------------------------------------------------------------------------------------
+//函数名: VGSMouseUp()
+//参  数: 
+//    LocH为鼠标在渲染窗口中的水平位置，LocV为光标在渲染窗体中的垂直位置
+//	  type为鼠标点中的类型，0-overlay, 1-model, -1-none
+//	  modelUnderLoc为被鼠标点中的物体名称或Overlay名称，注意如果是Model则只有被设置为Clickabel的物体才会响应。
+//    ID1和ID2分别是Model的扩展ID1和扩展ID2
+//描  述: 当调用EnableMouseUpCallback()后，用户在VGS对象上按下的鼠标左键弹起时，引擎自动调用这个函数
+//--------------------------------------------------------------------------------------------
+function VGSMouseUp(LocH, LocV, type, modelUnderLoc, ID1, ID2)
+{
+}
+
+// 其他函数可在下面添加 ----->>>>
+
+
+</script>
+</body>
+</html>
+

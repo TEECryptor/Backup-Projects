@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo Author="BabyTree" Version="1.0">
+	<Games>
+		<Memory type="0" displayname="大灰狼与小白兔" GUID="EB90B172-AE36-4F99-9B8D-AA73DB6EFBF6"/>
+		<Compare type="1" displayname="小白兔与蘑菇房" GUID="C47F078B-2BD8-46F3-ADE3-09B641708FCC"/>
+	</Games>
+</GameInfo>

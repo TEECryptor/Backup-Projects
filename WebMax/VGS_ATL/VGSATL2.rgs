@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'VGSATL2'
+		'VGSATL2.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

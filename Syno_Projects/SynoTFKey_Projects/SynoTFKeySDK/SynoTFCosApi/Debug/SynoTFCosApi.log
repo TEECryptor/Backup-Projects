@@ -1,0 +1,18 @@
+﻿Build started 2015/9/7 14:57:47.
+     1>Project "C:\Users\Administrator\Downloads\AS568_TF8_SDCard__20150824\SynoTF_COS_Test\SynoTFCosApi\SynoTFCosApi.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I.\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SYNOTFCOSAPI_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt src\device.c
+         device.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Downloads\AS568_TF8_SDCard__20150824\SynoTF_COS_Test\Debug\SynoTFCosApi.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Administrator\Downloads\AS568_TF8_SDCard__20150824\SynoTF_COS_Test\Debug\SynoTFCosApi.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Downloads\AS568_TF8_SDCard__20150824\SynoTF_COS_Test\Debug\SynoTFCosApi.lib" /MACHINE:X86 /SAFESEH /DLL Debug\common.obj
+         Debug\device.obj
+         Debug\skfsha1.obj
+         Debug\skfsms4.obj
+         Debug\smartcard.obj
+         Debug\SynoTFCosApi.obj
+         SynoTFCosApi.vcxproj -> C:\Users\Administrator\Downloads\AS568_TF8_SDCard__20150824\SynoTF_COS_Test\Debug\SynoTFCosApi.dll
+     1>Done Building Project "C:\Users\Administrator\Downloads\AS568_TF8_SDCard__20150824\SynoTF_COS_Test\SynoTFCosApi\SynoTFCosApi.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.87

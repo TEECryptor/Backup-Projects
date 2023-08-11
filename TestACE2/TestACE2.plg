@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TestACE2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Abby\LOCALS~1\Temp\RSPE3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TestACE2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"D:\VC Projects\TestACE2\TestACE2.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Abby\LOCALS~1\Temp\RSPE3.tmp" 
+Creating temporary file "C:\DOCUME~1\Abby\LOCALS~1\Temp\RSPE4.tmp" with contents
+[
+ACEd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/TestACE2.pdb" /debug /machine:I386 /out:"Debug/TestACE2.exe" /pdbtype:sept 
+".\Debug\StdAfx.obj"
+".\Debug\TestACE2.obj"
+".\Debug\net_command.obj"
+".\Debug\ACEClient.obj"
+".\Debug\income_msg.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Abby\LOCALS~1\Temp\RSPE4.tmp"
+<h3>Output Window</h3>
+Compiling...
+TestACE2.cpp
+c:\program files\microsoft visual studio\vc98\include\xtree(120) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+        d:\vc projects\testace2\net_command.h(97) : see reference to class template instantiation 'std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+c:\program files\microsoft visual studio\vc98\include\xtree(120) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::const_iterator' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+        d:\vc projects\testace2\net_command.h(97) : see reference to class template instantiation 'std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+c:\program files\microsoft visual studio\vc98\include\xtree(120) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::iterator' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+        d:\vc projects\testace2\net_command.h(97) : see reference to class template instantiation 'std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+c:\program files\microsoft visual studio\vc98\include\xtree(120) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Node' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+        d:\vc projects\testace2\net_command.h(97) : see reference to class template instantiation 'std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+c:\program files\microsoft visual studio\vc98\include\xtree(120) : warning C4786: 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::const_iterator' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,User_Info *>,std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >::_Kfn,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+        d:\vc projects\testace2\net_command.h(97) : see reference to class template instantiation 'std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,User_Info *,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >,std::allocator<User_Info *> >' being compiled
+Linking...
+
+
+
+<h3>Results</h3>
+TestACE2.exe - 0 error(s), 5 warning(s)
+</pre>
+</body>
+</html>

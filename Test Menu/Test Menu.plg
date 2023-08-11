@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Test Menu - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/Test Menu.res" /d "_DEBUG" /d "_AFXDLL" "D:\VC Projects\Test Menu\Test Menu.rc"" 
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP4C9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Test Menu.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"D:\VC Projects\Test Menu\Test Menu.cpp"
+"D:\VC Projects\Test Menu\MainFrm.cpp"
+"D:\VC Projects\Test Menu\Test MenuDoc.cpp"
+"D:\VC Projects\Test Menu\Test MenuView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP4C9.tmp" 
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP4CA.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Test Menu.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"D:\VC Projects\Test Menu\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP4CA.tmp" 
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP4CB.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Test Menu.pdb" /debug /machine:I386 /out:"Debug/Test Menu.exe" /pdbtype:sept 
+".\Debug\Test Menu.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MainFrm.obj"
+".\Debug\Test MenuDoc.obj"
+".\Debug\Test MenuView.obj"
+".\Debug\Test Menu.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP4CB.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Test Menu.cpp
+MainFrm.cpp
+Test MenuDoc.cpp
+Test MenuView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Test Menu.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

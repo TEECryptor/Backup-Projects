@@ -1,0 +1,20 @@
+// TestCOM.idl : IDL source for TestCOM.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TestCOM.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(0A9D22A7-1B0D-4B56-8A4A-8F33646EB131),
+	version(1.0),
+	helpstring("TestCOM 1.0 Type Library")
+]
+library TESTCOMLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

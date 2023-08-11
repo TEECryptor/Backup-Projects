@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: BabyTree_MediaLib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP192.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "BABYTREE_MEDIALIB_EXPORTS" /FR"Debug/" /Fp"Debug/MediaLib.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\VC Projects\TestMedia\MediaLib\MediaLib.cpp"
+"D:\VC Projects\TestMedia\MediaLib\MusicImpl.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP192.tmp" 
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP193.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "BABYTREE_MEDIALIB_EXPORTS" /FR"Debug/" /Fp"Debug/MediaLib.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\VC Projects\TestMedia\MediaLib\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP193.tmp" 
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+MediaLib.cpp
+MusicImpl.cpp
+Generating Code...
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP194.tmp" with contents
+[
+strmiids.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/MediaLib.pdb" /debug /machine:I386 /out:"../Bin/MediaLib.dll" /implib:"Debug/MediaLib.lib" /pdbtype:sept 
+".\Debug\MediaLib.obj"
+".\Debug\MusicImpl.obj"
+".\Debug\StdAfx.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP194.tmp"
+<h3>Output Window</h3>
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/MediaLib.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\MediaLib.sbr" ".\Debug\MusicImpl.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MediaLib.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

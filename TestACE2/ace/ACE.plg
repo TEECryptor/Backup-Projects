@@ -1,0 +1,956 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ACE - Win32 MFC Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Abby\LOCALS~1\Temp\RSP99.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /Zi /Gy /I ".." /D "_DEBUG" /D "_WINDLL" /D "_AFXDLL" /D ACE_HAS_MFC=1 /D "ACE_DOESNT_INSTANTIATE_NONSTATIC_OBJECT_MANAGER" /D "WIN32" /D "_WINDOWS" /D "ACE_HAS_ACE_TOKEN" /D "ACE_HAS_ACE_SVCCONF" /D "ACE_BUILD_DLL" /Fo"MFC_Debug\ACE/" /Fd"MFC_Debug\ACE/" /FD /c 
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ACE.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ACE_crc32.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ACE_crc_ccitt.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Activation_Queue.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Active_Map_Manager.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Arg_Shifter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ARGV.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Argv_Type_Converter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Assert.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Asynch_IO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Asynch_IO_Impl.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Asynch_Pseudo_Task.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ATM_Acceptor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ATM_Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ATM_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ATM_Params.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ATM_QoS.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ATM_Stream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Atomic_Op.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Auto_Event.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Barrier.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Base_Thread_Adapter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Based_Pointer_Repository.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Basic_Stats.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Basic_Types.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Capabilities.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\CDR_Base.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\CDR_Size.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\CDR_Stream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Cleanup.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Codecs.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Codeset_IBM1047.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Codeset_Registry.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Codeset_Registry_db.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Condition_Recursive_Thread_Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Condition_Thread_Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Configuration.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Configuration_Import_Export.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Connection_Recycling_Strategy.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Container_Instantiations.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Containers.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Copy_Disabled.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Countdown_Time.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Date_Time.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\DEV.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\DEV_Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\DEV_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\DEV_IO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Dev_Poll_Reactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Dirent.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Dirent_Selector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\DLL.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\DLL_Manager.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Dump.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Dynamic.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Dynamic_Service_Base.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Encoding_Converter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Encoding_Converter_Factory.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Event.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Event_Handler.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FIFO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FIFO_Recv.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FIFO_Recv_Msg.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FIFO_Send.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FIFO_Send_Msg.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FILE.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FILE_Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FILE_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\FILE_IO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\File_Lock.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Filecache.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Flag_Manip.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Framework_Component.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Functor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Functor_String.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Get_Opt.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\gethrtime.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Handle_Ops.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Handle_Set.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Hashable.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\High_Res_Timer.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\ICMP_Socket.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\INET_Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Init_ACE.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\IO_Cntl_Msg.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\IO_SAP.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\IOStream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\IPC_SAP.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Lib_Find.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Local_Memory_Pool.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Local_Name_Space.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Local_Tokens.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Lock.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Log_Msg.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Log_Msg_Backend.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Log_Msg_Callback.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Log_Msg_IPC.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Log_Msg_NT_Event_Log.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Log_Msg_UNIX_Syslog.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Log_Record.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Logging_Strategy.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\LSOCK.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\LSOCK_Acceptor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\LSOCK_CODgram.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\LSOCK_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\LSOCK_Dgram.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\LSOCK_Stream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Malloc.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Malloc_Allocator.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Malloc_Instantiations.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Manual_Event.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\MEM_Acceptor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\MEM_Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\MEM_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\MEM_IO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Mem_Map.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\MEM_SAP.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\MEM_Stream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Message_Block.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Message_Queue.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Method_Request.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Metrics_Cache.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\MMAP_Memory_Pool.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Msg_WFMO_Reactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Multihomed_INET_Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Name_Proxy.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Name_Request_Reply.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Name_Space.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Naming_Context.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Notification_Strategy.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\NT_Service.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Obchunk.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Object_Manager.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Object_Manager_Base.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Obstack.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_Errno.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_Log_Msg_Attributes.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_main.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_arpa_inet.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_ctype.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_dirent.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_dlfcn.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_errno.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_fcntl.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_math.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_netdb.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_poll.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_pwd.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_regex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_signal.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_stdio.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_stdlib.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_string.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_strings.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_stropts.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_mman.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_msg.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_resource.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_select.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_shm.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_socket.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_stat.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_time.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_uio.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_utsname.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_sys_wait.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_Thread.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_time.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_unistd.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_NS_wchar.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_QoS.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_Thread_Adapter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\OS_TLI.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Pagefile_Memory_Pool.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Parse_Node.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\PI_Malloc.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Ping_Socket.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Pipe.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\POSIX_Asynch_IO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\POSIX_CB_Proactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\POSIX_Proactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Priority_Reactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Proactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Proactor_Impl.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Process.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Process_Manager.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Process_Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Process_Semaphore.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Profile_Timer.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Reactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Reactor_Impl.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Reactor_Notification_Strategy.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Reactor_Timer_Interface.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Read_Buffer.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Recursive_Thread_Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Recyclable.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Refcountable.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Registry.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Registry_Name_Space.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Remote_Name_Space.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Remote_Tokens.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\RW_Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\RW_Process_Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\RW_Thread_Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Sample_History.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Sbrk_Memory_Pool.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Sched_Params.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Select_Reactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Select_Reactor_Base.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Semaphore.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Service_Config.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Service_Manager.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Service_Object.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Service_Repository.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Service_Templates.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Service_Types.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Shared_Memory.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Shared_Memory_MM.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Shared_Memory_Pool.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Shared_Memory_SV.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Shared_Object.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Signal.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_Acceptor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_CODgram.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Sock_Connect.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_Dgram.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_Dgram_Bcast.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_Dgram_Mcast.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_IO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_SEQPACK_Acceptor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_SEQPACK_Association.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_SEQPACK_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SOCK_Stream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SPIPE.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SPIPE_Acceptor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SPIPE_Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SPIPE_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SPIPE_Stream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SString.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Stats.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\String_Base_Const.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SUN_Proactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SV_Message.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SV_Message_Queue.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SV_Semaphore_Complex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SV_Semaphore_Simple.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\SV_Shared_Memory.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Svc_Conf_Lexer.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Svc_Conf_y.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Synch_Options.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\System_Time.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Task.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Thread.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Thread_Adapter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Thread_Control.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Thread_Exit.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Thread_Hook.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Thread_Manager.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Thread_Mutex.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Thread_Semaphore.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Time_Request_Reply.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Time_Value.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Timeprobe.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Timer_Hash.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Timer_Heap.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Timer_List.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Timer_Queue.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Timer_Wheel.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\TLI.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\TLI_Acceptor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\TLI_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\TLI_Stream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Token.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Token_Collection.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Token_Invariants.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Token_Manager.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Token_Request_Reply.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\TP_Reactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\Trace.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\TSS_Adapter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\TTY_IO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\UNIX_Addr.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\UPIPE_Acceptor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\UPIPE_Connector.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\UPIPE_Stream.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\UTF16_Encoding_Converter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\UTF32_Encoding_Converter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\UTF8_Encoding_Converter.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\UUID.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\WFMO_Reactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\WIN32_Asynch_IO.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\WIN32_Proactor.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\XML_Svc_Conf.cpp"
+"G:\Projects Backup\BabyTree\Form John\ACE-5.5\ACE_wrappers\ace\XTI_ATM_Mcast.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Abby\LOCALS~1\Temp\RSP99.tmp" 
+Creating temporary file "C:\DOCUME~1\Abby\LOCALS~1\Temp\RSP9A.tmp" with contents
+[
+advapi32.lib user32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"..\lib\ACEmfcd.pdb" /debug /machine:I386 /out:"..\lib\ACEmfcd.dll" /implib:"..\lib\ACEmfcd.lib" /libpath:"." /libpath:"..\lib" 
+".\MFC_Debug\ACE\ACE.obj"
+".\MFC_Debug\ACE\ACE_crc32.obj"
+".\MFC_Debug\ACE\ACE_crc_ccitt.obj"
+".\MFC_Debug\ACE\Activation_Queue.obj"
+".\MFC_Debug\ACE\Active_Map_Manager.obj"
+".\MFC_Debug\ACE\Addr.obj"
+".\MFC_Debug\ACE\Arg_Shifter.obj"
+".\MFC_Debug\ACE\ARGV.obj"
+".\MFC_Debug\ACE\Argv_Type_Converter.obj"
+".\MFC_Debug\ACE\Assert.obj"
+".\MFC_Debug\ACE\Asynch_IO.obj"
+".\MFC_Debug\ACE\Asynch_IO_Impl.obj"
+".\MFC_Debug\ACE\Asynch_Pseudo_Task.obj"
+".\MFC_Debug\ACE\ATM_Acceptor.obj"
+".\MFC_Debug\ACE\ATM_Addr.obj"
+".\MFC_Debug\ACE\ATM_Connector.obj"
+".\MFC_Debug\ACE\ATM_Params.obj"
+".\MFC_Debug\ACE\ATM_QoS.obj"
+".\MFC_Debug\ACE\ATM_Stream.obj"
+".\MFC_Debug\ACE\Atomic_Op.obj"
+".\MFC_Debug\ACE\Auto_Event.obj"
+".\MFC_Debug\ACE\Barrier.obj"
+".\MFC_Debug\ACE\Base_Thread_Adapter.obj"
+".\MFC_Debug\ACE\Based_Pointer_Repository.obj"
+".\MFC_Debug\ACE\Basic_Stats.obj"
+".\MFC_Debug\ACE\Basic_Types.obj"
+".\MFC_Debug\ACE\Capabilities.obj"
+".\MFC_Debug\ACE\CDR_Base.obj"
+".\MFC_Debug\ACE\CDR_Size.obj"
+".\MFC_Debug\ACE\CDR_Stream.obj"
+".\MFC_Debug\ACE\Cleanup.obj"
+".\MFC_Debug\ACE\Codecs.obj"
+".\MFC_Debug\ACE\Codeset_IBM1047.obj"
+".\MFC_Debug\ACE\Codeset_Registry.obj"
+".\MFC_Debug\ACE\Codeset_Registry_db.obj"
+".\MFC_Debug\ACE\Condition_Recursive_Thread_Mutex.obj"
+".\MFC_Debug\ACE\Condition_Thread_Mutex.obj"
+".\MFC_Debug\ACE\Configuration.obj"
+".\MFC_Debug\ACE\Configuration_Import_Export.obj"
+".\MFC_Debug\ACE\Connection_Recycling_Strategy.obj"
+".\MFC_Debug\ACE\Container_Instantiations.obj"
+".\MFC_Debug\ACE\Containers.obj"
+".\MFC_Debug\ACE\Copy_Disabled.obj"
+".\MFC_Debug\ACE\Countdown_Time.obj"
+".\MFC_Debug\ACE\Date_Time.obj"
+".\MFC_Debug\ACE\DEV.obj"
+".\MFC_Debug\ACE\DEV_Addr.obj"
+".\MFC_Debug\ACE\DEV_Connector.obj"
+".\MFC_Debug\ACE\DEV_IO.obj"
+".\MFC_Debug\ACE\Dev_Poll_Reactor.obj"
+".\MFC_Debug\ACE\Dirent.obj"
+".\MFC_Debug\ACE\Dirent_Selector.obj"
+".\MFC_Debug\ACE\DLL.obj"
+".\MFC_Debug\ACE\DLL_Manager.obj"
+".\MFC_Debug\ACE\Dump.obj"
+".\MFC_Debug\ACE\Dynamic.obj"
+".\MFC_Debug\ACE\Dynamic_Service_Base.obj"
+".\MFC_Debug\ACE\Encoding_Converter.obj"
+".\MFC_Debug\ACE\Encoding_Converter_Factory.obj"
+".\MFC_Debug\ACE\Event.obj"
+".\MFC_Debug\ACE\Event_Handler.obj"
+".\MFC_Debug\ACE\FIFO.obj"
+".\MFC_Debug\ACE\FIFO_Recv.obj"
+".\MFC_Debug\ACE\FIFO_Recv_Msg.obj"
+".\MFC_Debug\ACE\FIFO_Send.obj"
+".\MFC_Debug\ACE\FIFO_Send_Msg.obj"
+".\MFC_Debug\ACE\FILE.obj"
+".\MFC_Debug\ACE\FILE_Addr.obj"
+".\MFC_Debug\ACE\FILE_Connector.obj"
+".\MFC_Debug\ACE\FILE_IO.obj"
+".\MFC_Debug\ACE\File_Lock.obj"
+".\MFC_Debug\ACE\Filecache.obj"
+".\MFC_Debug\ACE\Flag_Manip.obj"
+".\MFC_Debug\ACE\Framework_Component.obj"
+".\MFC_Debug\ACE\Functor.obj"
+".\MFC_Debug\ACE\Functor_String.obj"
+".\MFC_Debug\ACE\Get_Opt.obj"
+".\MFC_Debug\ACE\gethrtime.obj"
+".\MFC_Debug\ACE\Handle_Ops.obj"
+".\MFC_Debug\ACE\Handle_Set.obj"
+".\MFC_Debug\ACE\Hashable.obj"
+".\MFC_Debug\ACE\High_Res_Timer.obj"
+".\MFC_Debug\ACE\ICMP_Socket.obj"
+".\MFC_Debug\ACE\INET_Addr.obj"
+".\MFC_Debug\ACE\Init_ACE.obj"
+".\MFC_Debug\ACE\IO_Cntl_Msg.obj"
+".\MFC_Debug\ACE\IO_SAP.obj"
+".\MFC_Debug\ACE\IOStream.obj"
+".\MFC_Debug\ACE\IPC_SAP.obj"
+".\MFC_Debug\ACE\Lib_Find.obj"
+".\MFC_Debug\ACE\Local_Memory_Pool.obj"
+".\MFC_Debug\ACE\Local_Name_Space.obj"
+".\MFC_Debug\ACE\Local_Tokens.obj"
+".\MFC_Debug\ACE\Lock.obj"
+".\MFC_Debug\ACE\Log_Msg.obj"
+".\MFC_Debug\ACE\Log_Msg_Backend.obj"
+".\MFC_Debug\ACE\Log_Msg_Callback.obj"
+".\MFC_Debug\ACE\Log_Msg_IPC.obj"
+".\MFC_Debug\ACE\Log_Msg_NT_Event_Log.obj"
+".\MFC_Debug\ACE\Log_Msg_UNIX_Syslog.obj"
+".\MFC_Debug\ACE\Log_Record.obj"
+".\MFC_Debug\ACE\Logging_Strategy.obj"
+".\MFC_Debug\ACE\LSOCK.obj"
+".\MFC_Debug\ACE\LSOCK_Acceptor.obj"
+".\MFC_Debug\ACE\LSOCK_CODgram.obj"
+".\MFC_Debug\ACE\LSOCK_Connector.obj"
+".\MFC_Debug\ACE\LSOCK_Dgram.obj"
+".\MFC_Debug\ACE\LSOCK_Stream.obj"
+".\MFC_Debug\ACE\Malloc.obj"
+".\MFC_Debug\ACE\Malloc_Allocator.obj"
+".\MFC_Debug\ACE\Malloc_Instantiations.obj"
+".\MFC_Debug\ACE\Manual_Event.obj"
+".\MFC_Debug\ACE\MEM_Acceptor.obj"
+".\MFC_Debug\ACE\MEM_Addr.obj"
+".\MFC_Debug\ACE\MEM_Connector.obj"
+".\MFC_Debug\ACE\MEM_IO.obj"
+".\MFC_Debug\ACE\Mem_Map.obj"
+".\MFC_Debug\ACE\MEM_SAP.obj"
+".\MFC_Debug\ACE\MEM_Stream.obj"
+".\MFC_Debug\ACE\Message_Block.obj"
+".\MFC_Debug\ACE\Message_Queue.obj"
+".\MFC_Debug\ACE\Method_Request.obj"
+".\MFC_Debug\ACE\Metrics_Cache.obj"
+".\MFC_Debug\ACE\MMAP_Memory_Pool.obj"
+".\MFC_Debug\ACE\Msg_WFMO_Reactor.obj"
+".\MFC_Debug\ACE\Multihomed_INET_Addr.obj"
+".\MFC_Debug\ACE\Mutex.obj"
+".\MFC_Debug\ACE\Name_Proxy.obj"
+".\MFC_Debug\ACE\Name_Request_Reply.obj"
+".\MFC_Debug\ACE\Name_Space.obj"
+".\MFC_Debug\ACE\Naming_Context.obj"
+".\MFC_Debug\ACE\Notification_Strategy.obj"
+".\MFC_Debug\ACE\NT_Service.obj"
+".\MFC_Debug\ACE\Obchunk.obj"
+".\MFC_Debug\ACE\Object_Manager.obj"
+".\MFC_Debug\ACE\Object_Manager_Base.obj"
+".\MFC_Debug\ACE\Obstack.obj"
+".\MFC_Debug\ACE\OS_Errno.obj"
+".\MFC_Debug\ACE\OS_Log_Msg_Attributes.obj"
+".\MFC_Debug\ACE\OS_main.obj"
+".\MFC_Debug\ACE\OS_NS_arpa_inet.obj"
+".\MFC_Debug\ACE\OS_NS_ctype.obj"
+".\MFC_Debug\ACE\OS_NS_dirent.obj"
+".\MFC_Debug\ACE\OS_NS_dlfcn.obj"
+".\MFC_Debug\ACE\OS_NS_errno.obj"
+".\MFC_Debug\ACE\OS_NS_fcntl.obj"
+".\MFC_Debug\ACE\OS_NS_math.obj"
+".\MFC_Debug\ACE\OS_NS_netdb.obj"
+".\MFC_Debug\ACE\OS_NS_poll.obj"
+".\MFC_Debug\ACE\OS_NS_pwd.obj"
+".\MFC_Debug\ACE\OS_NS_regex.obj"
+".\MFC_Debug\ACE\OS_NS_signal.obj"
+".\MFC_Debug\ACE\OS_NS_stdio.obj"
+".\MFC_Debug\ACE\OS_NS_stdlib.obj"
+".\MFC_Debug\ACE\OS_NS_string.obj"
+".\MFC_Debug\ACE\OS_NS_strings.obj"
+".\MFC_Debug\ACE\OS_NS_stropts.obj"
+".\MFC_Debug\ACE\OS_NS_sys_mman.obj"
+".\MFC_Debug\ACE\OS_NS_sys_msg.obj"
+".\MFC_Debug\ACE\OS_NS_sys_resource.obj"
+".\MFC_Debug\ACE\OS_NS_sys_select.obj"
+".\MFC_Debug\ACE\OS_NS_sys_shm.obj"
+".\MFC_Debug\ACE\OS_NS_sys_socket.obj"
+".\MFC_Debug\ACE\OS_NS_sys_stat.obj"
+".\MFC_Debug\ACE\OS_NS_sys_time.obj"
+".\MFC_Debug\ACE\OS_NS_sys_uio.obj"
+".\MFC_Debug\ACE\OS_NS_sys_utsname.obj"
+".\MFC_Debug\ACE\OS_NS_sys_wait.obj"
+".\MFC_Debug\ACE\OS_NS_Thread.obj"
+".\MFC_Debug\ACE\OS_NS_time.obj"
+".\MFC_Debug\ACE\OS_NS_unistd.obj"
+".\MFC_Debug\ACE\OS_NS_wchar.obj"
+".\MFC_Debug\ACE\OS_QoS.obj"
+".\MFC_Debug\ACE\OS_Thread_Adapter.obj"
+".\MFC_Debug\ACE\OS_TLI.obj"
+".\MFC_Debug\ACE\Pagefile_Memory_Pool.obj"
+".\MFC_Debug\ACE\Parse_Node.obj"
+".\MFC_Debug\ACE\PI_Malloc.obj"
+".\MFC_Debug\ACE\Ping_Socket.obj"
+".\MFC_Debug\ACE\Pipe.obj"
+".\MFC_Debug\ACE\POSIX_Asynch_IO.obj"
+".\MFC_Debug\ACE\POSIX_CB_Proactor.obj"
+".\MFC_Debug\ACE\POSIX_Proactor.obj"
+".\MFC_Debug\ACE\Priority_Reactor.obj"
+".\MFC_Debug\ACE\Proactor.obj"
+".\MFC_Debug\ACE\Proactor_Impl.obj"
+".\MFC_Debug\ACE\Process.obj"
+".\MFC_Debug\ACE\Process_Manager.obj"
+".\MFC_Debug\ACE\Process_Mutex.obj"
+".\MFC_Debug\ACE\Process_Semaphore.obj"
+".\MFC_Debug\ACE\Profile_Timer.obj"
+".\MFC_Debug\ACE\Reactor.obj"
+".\MFC_Debug\ACE\Reactor_Impl.obj"
+".\MFC_Debug\ACE\Reactor_Notification_Strategy.obj"
+".\MFC_Debug\ACE\Reactor_Timer_Interface.obj"
+".\MFC_Debug\ACE\Read_Buffer.obj"
+".\MFC_Debug\ACE\Recursive_Thread_Mutex.obj"
+".\MFC_Debug\ACE\Recyclable.obj"
+".\MFC_Debug\ACE\Refcountable.obj"
+".\MFC_Debug\ACE\Registry.obj"
+".\MFC_Debug\ACE\Registry_Name_Space.obj"
+".\MFC_Debug\ACE\Remote_Name_Space.obj"
+".\MFC_Debug\ACE\Remote_Tokens.obj"
+".\MFC_Debug\ACE\RW_Mutex.obj"
+".\MFC_Debug\ACE\RW_Process_Mutex.obj"
+".\MFC_Debug\ACE\RW_Thread_Mutex.obj"
+".\MFC_Debug\ACE\Sample_History.obj"
+".\MFC_Debug\ACE\Sbrk_Memory_Pool.obj"
+".\MFC_Debug\ACE\Sched_Params.obj"
+".\MFC_Debug\ACE\Select_Reactor.obj"
+".\MFC_Debug\ACE\Select_Reactor_Base.obj"
+".\MFC_Debug\ACE\Semaphore.obj"
+".\MFC_Debug\ACE\Service_Config.obj"
+".\MFC_Debug\ACE\Service_Manager.obj"
+".\MFC_Debug\ACE\Service_Object.obj"
+".\MFC_Debug\ACE\Service_Repository.obj"
+".\MFC_Debug\ACE\Service_Templates.obj"
+".\MFC_Debug\ACE\Service_Types.obj"
+".\MFC_Debug\ACE\Shared_Memory.obj"
+".\MFC_Debug\ACE\Shared_Memory_MM.obj"
+".\MFC_Debug\ACE\Shared_Memory_Pool.obj"
+".\MFC_Debug\ACE\Shared_Memory_SV.obj"
+".\MFC_Debug\ACE\Shared_Object.obj"
+".\MFC_Debug\ACE\Signal.obj"
+".\MFC_Debug\ACE\SOCK.obj"
+".\MFC_Debug\ACE\SOCK_Acceptor.obj"
+".\MFC_Debug\ACE\SOCK_CODgram.obj"
+".\MFC_Debug\ACE\Sock_Connect.obj"
+".\MFC_Debug\ACE\SOCK_Connector.obj"
+".\MFC_Debug\ACE\SOCK_Dgram.obj"
+".\MFC_Debug\ACE\SOCK_Dgram_Bcast.obj"
+".\MFC_Debug\ACE\SOCK_Dgram_Mcast.obj"
+".\MFC_Debug\ACE\SOCK_IO.obj"
+".\MFC_Debug\ACE\SOCK_SEQPACK_Acceptor.obj"
+".\MFC_Debug\ACE\SOCK_SEQPACK_Association.obj"
+".\MFC_Debug\ACE\SOCK_SEQPACK_Connector.obj"
+".\MFC_Debug\ACE\SOCK_Stream.obj"
+".\MFC_Debug\ACE\SPIPE.obj"
+".\MFC_Debug\ACE\SPIPE_Acceptor.obj"
+".\MFC_Debug\ACE\SPIPE_Addr.obj"
+".\MFC_Debug\ACE\SPIPE_Connector.obj"
+".\MFC_Debug\ACE\SPIPE_Stream.obj"
+".\MFC_Debug\ACE\SString.obj"
+".\MFC_Debug\ACE\Stats.obj"
+".\MFC_Debug\ACE\String_Base_Const.obj"
+".\MFC_Debug\ACE\SUN_Proactor.obj"
+".\MFC_Debug\ACE\SV_Message.obj"
+".\MFC_Debug\ACE\SV_Message_Queue.obj"
+".\MFC_Debug\ACE\SV_Semaphore_Complex.obj"
+".\MFC_Debug\ACE\SV_Semaphore_Simple.obj"
+".\MFC_Debug\ACE\SV_Shared_Memory.obj"
+".\MFC_Debug\ACE\Svc_Conf_Lexer.obj"
+".\MFC_Debug\ACE\Svc_Conf_y.obj"
+".\MFC_Debug\ACE\Synch_Options.obj"
+".\MFC_Debug\ACE\System_Time.obj"
+".\MFC_Debug\ACE\Task.obj"
+".\MFC_Debug\ACE\Thread.obj"
+".\MFC_Debug\ACE\Thread_Adapter.obj"
+".\MFC_Debug\ACE\Thread_Control.obj"
+".\MFC_Debug\ACE\Thread_Exit.obj"
+".\MFC_Debug\ACE\Thread_Hook.obj"
+".\MFC_Debug\ACE\Thread_Manager.obj"
+".\MFC_Debug\ACE\Thread_Mutex.obj"
+".\MFC_Debug\ACE\Thread_Semaphore.obj"
+".\MFC_Debug\ACE\Time_Request_Reply.obj"
+".\MFC_Debug\ACE\Time_Value.obj"
+".\MFC_Debug\ACE\Timeprobe.obj"
+".\MFC_Debug\ACE\Timer_Hash.obj"
+".\MFC_Debug\ACE\Timer_Heap.obj"
+".\MFC_Debug\ACE\Timer_List.obj"
+".\MFC_Debug\ACE\Timer_Queue.obj"
+".\MFC_Debug\ACE\Timer_Wheel.obj"
+".\MFC_Debug\ACE\TLI.obj"
+".\MFC_Debug\ACE\TLI_Acceptor.obj"
+".\MFC_Debug\ACE\TLI_Connector.obj"
+".\MFC_Debug\ACE\TLI_Stream.obj"
+".\MFC_Debug\ACE\Token.obj"
+".\MFC_Debug\ACE\Token_Collection.obj"
+".\MFC_Debug\ACE\Token_Invariants.obj"
+".\MFC_Debug\ACE\Token_Manager.obj"
+".\MFC_Debug\ACE\Token_Request_Reply.obj"
+".\MFC_Debug\ACE\TP_Reactor.obj"
+".\MFC_Debug\ACE\Trace.obj"
+".\MFC_Debug\ACE\TSS_Adapter.obj"
+".\MFC_Debug\ACE\TTY_IO.obj"
+".\MFC_Debug\ACE\UNIX_Addr.obj"
+".\MFC_Debug\ACE\UPIPE_Acceptor.obj"
+".\MFC_Debug\ACE\UPIPE_Connector.obj"
+".\MFC_Debug\ACE\UPIPE_Stream.obj"
+".\MFC_Debug\ACE\UTF16_Encoding_Converter.obj"
+".\MFC_Debug\ACE\UTF32_Encoding_Converter.obj"
+".\MFC_Debug\ACE\UTF8_Encoding_Converter.obj"
+".\MFC_Debug\ACE\UUID.obj"
+".\MFC_Debug\ACE\WFMO_Reactor.obj"
+".\MFC_Debug\ACE\WIN32_Asynch_IO.obj"
+".\MFC_Debug\ACE\WIN32_Proactor.obj"
+".\MFC_Debug\ACE\XML_Svc_Conf.obj"
+".\MFC_Debug\ACE\XTI_ATM_Mcast.obj"
+".\MFC_Debug\ACE\ace.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Abby\LOCALS~1\Temp\RSP9A.tmp"
+<h3>Output Window</h3>
+Compiling...
+ACE.cpp
+Generating Code...
+Compiling...
+ACE_crc32.cpp
+ACE_crc_ccitt.cpp
+Activation_Queue.cpp
+Active_Map_Manager.cpp
+Addr.cpp
+Arg_Shifter.cpp
+ARGV.cpp
+Argv_Type_Converter.cpp
+Assert.cpp
+Asynch_IO.cpp
+Asynch_IO_Impl.cpp
+Asynch_Pseudo_Task.cpp
+ATM_Acceptor.cpp
+ATM_Addr.cpp
+ATM_Connector.cpp
+ATM_Params.cpp
+ATM_QoS.cpp
+ATM_Stream.cpp
+Atomic_Op.cpp
+Auto_Event.cpp
+Generating Code...
+Compiling...
+Barrier.cpp
+Base_Thread_Adapter.cpp
+Based_Pointer_Repository.cpp
+Basic_Stats.cpp
+Basic_Types.cpp
+Capabilities.cpp
+CDR_Base.cpp
+CDR_Size.cpp
+CDR_Stream.cpp
+Cleanup.cpp
+Codecs.cpp
+Codeset_IBM1047.cpp
+Codeset_Registry.cpp
+Codeset_Registry_db.cpp
+Condition_Recursive_Thread_Mutex.cpp
+Condition_Thread_Mutex.cpp
+Configuration.cpp
+Configuration_Import_Export.cpp
+Connection_Recycling_Strategy.cpp
+Container_Instantiations.cpp
+Generating Code...
+Compiling...
+Containers.cpp
+Copy_Disabled.cpp
+Countdown_Time.cpp
+Date_Time.cpp
+DEV.cpp
+DEV_Addr.cpp
+DEV_Connector.cpp
+DEV_IO.cpp
+Dev_Poll_Reactor.cpp
+Dirent.cpp
+Dirent_Selector.cpp
+DLL.cpp
+DLL_Manager.cpp
+Dump.cpp
+Dynamic.cpp
+Dynamic_Service_Base.cpp
+Encoding_Converter.cpp
+Encoding_Converter_Factory.cpp
+Event.cpp
+Event_Handler.cpp
+Generating Code...
+Compiling...
+FIFO.cpp
+FIFO_Recv.cpp
+FIFO_Recv_Msg.cpp
+FIFO_Send.cpp
+FIFO_Send_Msg.cpp
+FILE.cpp
+FILE_Addr.cpp
+FILE_Connector.cpp
+FILE_IO.cpp
+File_Lock.cpp
+Filecache.cpp
+Flag_Manip.cpp
+Framework_Component.cpp
+Functor.cpp
+Functor_String.cpp
+Get_Opt.cpp
+gethrtime.cpp
+Handle_Ops.cpp
+Handle_Set.cpp
+Hashable.cpp
+Generating Code...
+Compiling...
+High_Res_Timer.cpp
+ICMP_Socket.cpp
+INET_Addr.cpp
+Init_ACE.cpp
+IO_Cntl_Msg.cpp
+IO_SAP.cpp
+IOStream.cpp
+IPC_SAP.cpp
+Lib_Find.cpp
+Local_Memory_Pool.cpp
+Local_Name_Space.cpp
+Local_Tokens.cpp
+Lock.cpp
+Log_Msg.cpp
+Log_Msg_Backend.cpp
+Log_Msg_Callback.cpp
+Log_Msg_IPC.cpp
+Log_Msg_NT_Event_Log.cpp
+Log_Msg_UNIX_Syslog.cpp
+Log_Record.cpp
+Generating Code...
+Compiling...
+Logging_Strategy.cpp
+LSOCK.cpp
+LSOCK_Acceptor.cpp
+LSOCK_CODgram.cpp
+LSOCK_Connector.cpp
+LSOCK_Dgram.cpp
+LSOCK_Stream.cpp
+Malloc.cpp
+Malloc_Allocator.cpp
+Malloc_Instantiations.cpp
+Manual_Event.cpp
+MEM_Acceptor.cpp
+MEM_Addr.cpp
+MEM_Connector.cpp
+MEM_IO.cpp
+Mem_Map.cpp
+MEM_SAP.cpp
+MEM_Stream.cpp
+Message_Block.cpp
+Message_Queue.cpp
+Generating Code...
+Compiling...
+Method_Request.cpp
+Metrics_Cache.cpp
+MMAP_Memory_Pool.cpp
+Msg_WFMO_Reactor.cpp
+Multihomed_INET_Addr.cpp
+Mutex.cpp
+Name_Proxy.cpp
+Name_Request_Reply.cpp
+Name_Space.cpp
+Naming_Context.cpp
+Notification_Strategy.cpp
+NT_Service.cpp
+Obchunk.cpp
+Object_Manager.cpp
+Object_Manager_Base.cpp
+Obstack.cpp
+OS_Errno.cpp
+OS_Log_Msg_Attributes.cpp
+OS_main.cpp
+OS_NS_arpa_inet.cpp
+Generating Code...
+Compiling...
+OS_NS_ctype.cpp
+OS_NS_dirent.cpp
+OS_NS_dlfcn.cpp
+OS_NS_errno.cpp
+OS_NS_fcntl.cpp
+OS_NS_math.cpp
+OS_NS_netdb.cpp
+OS_NS_poll.cpp
+OS_NS_pwd.cpp
+OS_NS_regex.cpp
+OS_NS_signal.cpp
+OS_NS_stdio.cpp
+OS_NS_stdlib.cpp
+OS_NS_string.cpp
+OS_NS_strings.cpp
+OS_NS_stropts.cpp
+OS_NS_sys_mman.cpp
+OS_NS_sys_msg.cpp
+OS_NS_sys_resource.cpp
+OS_NS_sys_select.cpp
+Generating Code...
+Compiling...
+OS_NS_sys_shm.cpp
+OS_NS_sys_socket.cpp
+OS_NS_sys_stat.cpp
+OS_NS_sys_time.cpp
+OS_NS_sys_uio.cpp
+OS_NS_sys_utsname.cpp
+OS_NS_sys_wait.cpp
+OS_NS_Thread.cpp
+OS_NS_time.cpp
+OS_NS_unistd.cpp
+OS_NS_wchar.cpp
+OS_QoS.cpp
+OS_Thread_Adapter.cpp
+OS_TLI.cpp
+Pagefile_Memory_Pool.cpp
+Parse_Node.cpp
+PI_Malloc.cpp
+Ping_Socket.cpp
+Pipe.cpp
+POSIX_Asynch_IO.cpp
+Generating Code...
+Compiling...
+POSIX_CB_Proactor.cpp
+POSIX_Proactor.cpp
+Priority_Reactor.cpp
+Proactor.cpp
+Proactor_Impl.cpp
+Process.cpp
+Process_Manager.cpp
+Process_Mutex.cpp
+Process_Semaphore.cpp
+Profile_Timer.cpp
+Reactor.cpp
+Reactor_Impl.cpp
+Reactor_Notification_Strategy.cpp
+Reactor_Timer_Interface.cpp
+Read_Buffer.cpp
+Recursive_Thread_Mutex.cpp
+Recyclable.cpp
+Refcountable.cpp
+Registry.cpp
+Registry_Name_Space.cpp
+Generating Code...
+Compiling...
+Remote_Name_Space.cpp
+Remote_Tokens.cpp
+RW_Mutex.cpp
+RW_Process_Mutex.cpp
+RW_Thread_Mutex.cpp
+Sample_History.cpp
+Sbrk_Memory_Pool.cpp
+Sched_Params.cpp
+Select_Reactor.cpp
+Select_Reactor_Base.cpp
+Semaphore.cpp
+Service_Config.cpp
+Service_Manager.cpp
+Service_Object.cpp
+Service_Repository.cpp
+Service_Templates.cpp
+Service_Types.cpp
+Shared_Memory.cpp
+Shared_Memory_MM.cpp
+Shared_Memory_Pool.cpp
+Generating Code...
+Compiling...
+Shared_Memory_SV.cpp
+Shared_Object.cpp
+Signal.cpp
+SOCK.cpp
+SOCK_Acceptor.cpp
+SOCK_CODgram.cpp
+Sock_Connect.cpp
+SOCK_Connector.cpp
+SOCK_Dgram.cpp
+SOCK_Dgram_Bcast.cpp
+SOCK_Dgram_Mcast.cpp
+SOCK_IO.cpp
+SOCK_SEQPACK_Acceptor.cpp
+SOCK_SEQPACK_Association.cpp
+SOCK_SEQPACK_Connector.cpp
+SOCK_Stream.cpp
+SPIPE.cpp
+SPIPE_Acceptor.cpp
+SPIPE_Addr.cpp
+SPIPE_Connector.cpp
+Generating Code...
+Compiling...
+SPIPE_Stream.cpp
+SString.cpp
+Stats.cpp
+String_Base_Const.cpp
+SUN_Proactor.cpp
+SV_Message.cpp
+SV_Message_Queue.cpp
+SV_Semaphore_Complex.cpp
+SV_Semaphore_Simple.cpp
+SV_Shared_Memory.cpp
+Svc_Conf_Lexer.cpp
+Svc_Conf_y.cpp
+Synch_Options.cpp
+System_Time.cpp
+Task.cpp
+Thread.cpp
+Thread_Adapter.cpp
+Thread_Control.cpp
+Thread_Exit.cpp
+Thread_Hook.cpp
+Generating Code...
+Compiling...
+Thread_Manager.cpp
+Thread_Mutex.cpp
+Thread_Semaphore.cpp
+Time_Request_Reply.cpp
+Time_Value.cpp
+Timeprobe.cpp
+Timer_Hash.cpp
+Timer_Heap.cpp
+Timer_List.cpp
+Timer_Queue.cpp
+Timer_Wheel.cpp
+TLI.cpp
+TLI_Acceptor.cpp
+TLI_Connector.cpp
+TLI_Stream.cpp
+Token.cpp
+Token_Collection.cpp
+Token_Invariants.cpp
+Token_Manager.cpp
+Token_Request_Reply.cpp
+Generating Code...
+Compiling...
+TP_Reactor.cpp
+Trace.cpp
+TSS_Adapter.cpp
+TTY_IO.cpp
+UNIX_Addr.cpp
+UPIPE_Acceptor.cpp
+UPIPE_Connector.cpp
+UPIPE_Stream.cpp
+UTF16_Encoding_Converter.cpp
+UTF32_Encoding_Converter.cpp
+UTF8_Encoding_Converter.cpp
+UUID.cpp
+WFMO_Reactor.cpp
+WIN32_Asynch_IO.cpp
+WIN32_Proactor.cpp
+XML_Svc_Conf.cpp
+XTI_ATM_Mcast.cpp
+Generating Code...
+Linking...
+   Creating library ..\lib\ACEmfcd.lib and object ..\lib\ACEmfcd.exp
+
+
+
+<h3>Results</h3>
+ACEmfcd.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

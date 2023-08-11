@@ -1,0 +1,76 @@
+﻿Build started 2018/12/3 15:04:26.
+     1>Project "D:\Projects\D2018-237-zjcavpn\build\win32\lzo\lzo.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"D:\Projects\D2018-237-zjcavpn\build\win32\output\Debug\lzo.lib" /NOLOGO Debug\lzo1.obj
+         Debug\lzo1a.obj
+         Debug\lzo1a_99.obj
+         Debug\lzo1b_1.obj
+         Debug\lzo1b_2.obj
+         Debug\lzo1b_3.obj
+         Debug\lzo1b_4.obj
+         Debug\lzo1b_5.obj
+         Debug\lzo1b_6.obj
+         Debug\lzo1b_7.obj
+         Debug\lzo1b_8.obj
+         Debug\lzo1b_9.obj
+         Debug\lzo1b_99.obj
+         Debug\lzo1b_9x.obj
+         Debug\lzo1b_cc.obj
+         Debug\lzo1b_d1.obj
+         Debug\lzo1b_d2.obj
+         Debug\lzo1b_rr.obj
+         Debug\lzo1b_xx.obj
+         Debug\lzo1c_1.obj
+         Debug\lzo1c_2.obj
+         Debug\lzo1c_3.obj
+         Debug\lzo1c_4.obj
+         Debug\lzo1c_5.obj
+         Debug\lzo1c_6.obj
+         Debug\lzo1c_7.obj
+         Debug\lzo1c_8.obj
+         Debug\lzo1c_9.obj
+         Debug\lzo1c_99.obj
+         Debug\lzo1c_9x.obj
+         Debug\lzo1c_cc.obj
+         Debug\lzo1c_d1.obj
+         Debug\lzo1c_d2.obj
+         Debug\lzo1c_rr.obj
+         Debug\lzo1c_xx.obj
+         Debug\lzo1f_1.obj
+         Debug\lzo1f_9x.obj
+         Debug\lzo1f_d1.obj
+         Debug\lzo1f_d2.obj
+         Debug\lzo1x_1.obj
+         Debug\lzo1x_1k.obj
+         Debug\lzo1x_1l.obj
+         Debug\lzo1x_1o.obj
+         Debug\lzo1x_9x.obj
+         Debug\lzo1x_d1.obj
+         Debug\lzo1x_d2.obj
+         Debug\lzo1x_d3.obj
+         Debug\lzo1x_o.obj
+         Debug\lzo1y_1.obj
+         Debug\lzo1y_9x.obj
+         Debug\lzo1y_d1.obj
+         Debug\lzo1y_d2.obj
+         Debug\lzo1y_d3.obj
+         Debug\lzo1y_o.obj
+         Debug\lzo1z_9x.obj
+         Debug\lzo1z_d1.obj
+         Debug\lzo1z_d2.obj
+         Debug\lzo1z_d3.obj
+         Debug\lzo1_99.obj
+         Debug\lzo2a_9x.obj
+         Debug\lzo2a_d1.obj
+         Debug\lzo2a_d2.obj
+         Debug\lzo_crc.obj
+         Debug\lzo_init.obj
+         Debug\lzo_ptr.obj
+         Debug\lzo_str.obj
+         Debug\lzo_util.obj
+         lzo.vcxproj -> D:\Projects\D2018-237-zjcavpn\build\win32\output\Debug\lzo.lib
+     1>Done Building Project "D:\Projects\D2018-237-zjcavpn\build\win32\lzo\lzo.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.09

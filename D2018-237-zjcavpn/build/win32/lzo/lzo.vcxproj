@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8B104BF2-F102-42E2-9738-EE2B4F5C16BC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>lzo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)output\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)output\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../src/lzo/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../src/lzo/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\lzo\compr1b.h" />
+    <ClInclude Include="..\..\..\src\lzo\compr1c.h" />
+    <ClInclude Include="..\..\..\src\lzo\config1.h" />
+    <ClInclude Include="..\..\..\src\lzo\config1a.h" />
+    <ClInclude Include="..\..\..\src\lzo\config1b.h" />
+    <ClInclude Include="..\..\..\src\lzo\config1c.h" />
+    <ClInclude Include="..\..\..\src\lzo\config1f.h" />
+    <ClInclude Include="..\..\..\src\lzo\config1x.h" />
+    <ClInclude Include="..\..\..\src\lzo\config1y.h" />
+    <ClInclude Include="..\..\..\src\lzo\config1z.h" />
+    <ClInclude Include="..\..\..\src\lzo\config2a.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo1.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo1a.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo1b.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo1c.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo1f.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo1x.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo1y.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo1z.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo2a.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzoconf.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzodefs.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzoutil.h" />
+    <ClInclude Include="..\..\..\src\lzo\include\lzo_asm.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo1a_de.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo1b_cc.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo1b_de.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo1c_cc.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo_conf.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo_dict.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo_func.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo_ptr.h" />
+    <ClInclude Include="..\..\..\src\lzo\lzo_supp.h" />
+    <ClInclude Include="..\..\..\src\lzo\stats1a.h" />
+    <ClInclude Include="..\..\..\src\lzo\stats1b.h" />
+    <ClInclude Include="..\..\..\src\lzo\stats1c.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\lzo\lzo1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1a.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1a_99.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_3.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_4.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_5.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_6.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_7.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_8.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_9.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_99.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_9x.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_cc.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_d1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_d2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_rr.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1b_xx.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_3.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_4.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_5.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_6.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_7.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_8.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_9.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_99.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_9x.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_cc.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_d1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_d2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_rr.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1c_xx.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1f_1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1f_9x.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1f_d1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1f_d2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_1k.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_1l.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_1o.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_9x.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_d1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_d2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_d3.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1x_o.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1y_1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1y_9x.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1y_d1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1y_d2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1y_d3.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1y_o.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1z_9x.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1z_d1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1z_d2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1z_d3.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo1_99.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo2a_9x.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo2a_d1.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo2a_d2.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo_crc.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo_init.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo_ptr.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo_str.c" />
+    <ClCompile Include="..\..\..\src\lzo\lzo_util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\lzo\lzo1a_cm.ch" />
+    <None Include="..\..\..\src\lzo\lzo1a_cr.ch" />
+    <None Include="..\..\..\src\lzo\lzo1b_c.ch" />
+    <None Include="..\..\..\src\lzo\lzo1b_cm.ch" />
+    <None Include="..\..\..\src\lzo\lzo1b_cr.ch" />
+    <None Include="..\..\..\src\lzo\lzo1b_d.ch" />
+    <None Include="..\..\..\src\lzo\lzo1b_r.ch" />
+    <None Include="..\..\..\src\lzo\lzo1b_sm.ch" />
+    <None Include="..\..\..\src\lzo\lzo1b_tm.ch" />
+    <None Include="..\..\..\src\lzo\lzo1f_d.ch" />
+    <None Include="..\..\..\src\lzo\lzo1x_c.ch" />
+    <None Include="..\..\..\src\lzo\lzo1x_d.ch" />
+    <None Include="..\..\..\src\lzo\lzo1x_oo.ch" />
+    <None Include="..\..\..\src\lzo\lzo1_cm.ch" />
+    <None Include="..\..\..\src\lzo\lzo1_d.ch" />
+    <None Include="..\..\..\src\lzo\lzo2a_d.ch" />
+    <None Include="..\..\..\src\lzo\lzo_dll.ch" />
+    <None Include="..\..\..\src\lzo\lzo_mchw.ch" />
+    <None Include="..\..\..\src\lzo\lzo_swd.ch" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{646E03B7-C11E-4139-A91E-ECD1C518F6F5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>zjcavpn</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)output\$(Configuration)\</OutDir>
+    <IncludePath>$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)output\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../;../../../src/include;../../../src/compat/include;../../../src/lzo/include;../../../thirdpart/tap-windows/include;../../../thirdpart/openssl.1.0.1h/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wininet.lib;crypt32.lib;iphlpapi.lib;winmm.lib;ws2_32.lib;Fwpuclnt.lib;libeay32.lib;ssleay32.lib;compat.lib;lzo.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../output/debug/;../../../thirdpart/openssl.1.0.1h/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../;../../../src/include;../../../src/compat/include;../../../src/lzo/include;../../../thirdpart/tap-windows/include;../../../thirdpart/openssl.1.0.1h/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wininet.lib;crypt32.lib;iphlpapi.lib;winmm.lib;ws2_32.lib;Fwpuclnt.lib;libeay32.lib;ssleay32.lib;compat.lib;lzo.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../output/release/;../../../thirdpart/openssl.1.0.1h/lib;</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\zjcavpn\argv.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\base64.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\block_dns.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\buffer.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\clinat.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\comp-lz4.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\comp.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\compstub.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\console.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\console_builtin.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\console_systemd.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\crypto.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\cryptoapi.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\crypto_mbedtls.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\crypto_openssl.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\dhcp.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\error.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\event.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\fdmisc.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\forward.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\fragment.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\gremlin.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\helper.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\httpdigest.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\init.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\interval.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\list.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\lladdr.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\lzo.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\manage.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\mbuf.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\misc.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\mroute.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\mss.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\mstats.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\mtcp.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\mtu.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\mudp.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\multi.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ntlm.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\occ.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\openvpn.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\options.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\otime.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\packet_id.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\perf.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\pf.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ping.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\pkcs11.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\pkcs11_mbedtls.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\pkcs11_openssl.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\platform.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\plugin.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\pool.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\proto.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\proxy.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ps.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\push.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\reliable.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\route.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\schedule.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\session_id.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\shaper.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\sig.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\socket.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\socks.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ssl.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ssl_mbedtls.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ssl_openssl.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ssl_verify.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ssl_verify_mbedtls.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\ssl_verify_openssl.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\status.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\tls_crypt.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\tun.c" />
+    <ClCompile Include="..\..\..\src\zjcavpn\win32.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\zjcavpn\argv.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\base64.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\basic.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\block_dns.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\buffer.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\circ_list.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\clinat.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\common.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\comp-lz4.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\comp.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\console.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\crypto.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\cryptoapi.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\crypto_backend.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\crypto_mbedtls.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\crypto_openssl.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\dhcp.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\errlevel.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\error.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\event.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\fdmisc.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\forward-inline.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\forward.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\fragment.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\gremlin.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\helper.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\httpdigest.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\init.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\integer.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\interval.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\list.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\lladdr.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\lzo.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\manage.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\mbuf.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\memdbg.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\misc.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\mroute.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\mss.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\mstats.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\mtcp.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\mtu.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\mudp.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\multi.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ntlm.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\occ-inline.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\occ.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\openssl_compat.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\openvpn.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\options.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\otime.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\packet_id.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\perf.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\pf-inline.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\pf.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ping-inline.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ping.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\pkcs11.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\pkcs11_backend.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\platform.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\plugin.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\pool.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\proto.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\proxy.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ps.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\push.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\pushlist.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\reliable.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\route.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\schedule.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\session_id.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\shaper.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\sig.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\socket.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\socks.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl_backend.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl_common.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl_mbedtls.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl_openssl.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl_verify.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl_verify_backend.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl_verify_mbedtls.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\ssl_verify_openssl.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\status.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\syshead.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\tls_crypt.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\tun.h" />
+    <ClInclude Include="..\..\..\src\zjcavpn\win32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="zjcavpn.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

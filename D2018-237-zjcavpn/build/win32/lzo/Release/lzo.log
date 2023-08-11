@@ -1,0 +1,76 @@
+﻿Build started 2018/12/3 15:03:38.
+     1>Project "D:\Projects\D2018-237-zjcavpn\build\win32\lzo\lzo.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"D:\Projects\D2018-237-zjcavpn\build\win32\output\Release\lzo.lib" /NOLOGO /LTCG Release\lzo1.obj
+         Release\lzo1a.obj
+         Release\lzo1a_99.obj
+         Release\lzo1b_1.obj
+         Release\lzo1b_2.obj
+         Release\lzo1b_3.obj
+         Release\lzo1b_4.obj
+         Release\lzo1b_5.obj
+         Release\lzo1b_6.obj
+         Release\lzo1b_7.obj
+         Release\lzo1b_8.obj
+         Release\lzo1b_9.obj
+         Release\lzo1b_99.obj
+         Release\lzo1b_9x.obj
+         Release\lzo1b_cc.obj
+         Release\lzo1b_d1.obj
+         Release\lzo1b_d2.obj
+         Release\lzo1b_rr.obj
+         Release\lzo1b_xx.obj
+         Release\lzo1c_1.obj
+         Release\lzo1c_2.obj
+         Release\lzo1c_3.obj
+         Release\lzo1c_4.obj
+         Release\lzo1c_5.obj
+         Release\lzo1c_6.obj
+         Release\lzo1c_7.obj
+         Release\lzo1c_8.obj
+         Release\lzo1c_9.obj
+         Release\lzo1c_99.obj
+         Release\lzo1c_9x.obj
+         Release\lzo1c_cc.obj
+         Release\lzo1c_d1.obj
+         Release\lzo1c_d2.obj
+         Release\lzo1c_rr.obj
+         Release\lzo1c_xx.obj
+         Release\lzo1f_1.obj
+         Release\lzo1f_9x.obj
+         Release\lzo1f_d1.obj
+         Release\lzo1f_d2.obj
+         Release\lzo1x_1.obj
+         Release\lzo1x_1k.obj
+         Release\lzo1x_1l.obj
+         Release\lzo1x_1o.obj
+         Release\lzo1x_9x.obj
+         Release\lzo1x_d1.obj
+         Release\lzo1x_d2.obj
+         Release\lzo1x_d3.obj
+         Release\lzo1x_o.obj
+         Release\lzo1y_1.obj
+         Release\lzo1y_9x.obj
+         Release\lzo1y_d1.obj
+         Release\lzo1y_d2.obj
+         Release\lzo1y_d3.obj
+         Release\lzo1y_o.obj
+         Release\lzo1z_9x.obj
+         Release\lzo1z_d1.obj
+         Release\lzo1z_d2.obj
+         Release\lzo1z_d3.obj
+         Release\lzo1_99.obj
+         Release\lzo2a_9x.obj
+         Release\lzo2a_d1.obj
+         Release\lzo2a_d2.obj
+         Release\lzo_crc.obj
+         Release\lzo_init.obj
+         Release\lzo_ptr.obj
+         Release\lzo_str.obj
+         Release\lzo_util.obj
+         lzo.vcxproj -> D:\Projects\D2018-237-zjcavpn\build\win32\output\Release\lzo.lib
+     1>Done Building Project "D:\Projects\D2018-237-zjcavpn\build\win32\lzo\lzo.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.11

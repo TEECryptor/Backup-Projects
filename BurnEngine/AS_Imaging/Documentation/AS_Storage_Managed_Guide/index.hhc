@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Audio"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_audio.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Audio::TrackEncoderSettings"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_audio_1_1_track_encoder_settings.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Audio::TrackTags"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_audio_1_1_track_tags.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Device"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_device.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Device::BusData"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_device_1_1_bus_data.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Device::Progress"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_device_1_1_progress.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_format.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format::CSSKeyInfo"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_format_1_1_c_s_s_key_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format::LogicalLayerBreak"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_format_1_1_logical_layer_break.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format::TitleKeySetInfo"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_format_1_1_title_key_set_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format::TrailerReplacementInfo"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_format_1_1_trailer_replacement_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::RTFile"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_r_t_file.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::RTFile::CgmsInfo"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_r_t_file_1_1_cgms_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::RTFile::MacExtHFSType"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_r_t_file_1_1_mac_ext_h_f_s_type.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::RTFile::MacExtProDosType"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_r_t_file_1_1_mac_ext_pro_dos_type.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::SDKProperties"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_s_d_k_properties.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::StorageError"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_storage_error.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Volume"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_volume.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Volume::DateTime"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_volume_1_1_date_time.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Volume::Progress"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_volume_1_1_progress.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Audio"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_audio.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Audio::TrackEncoderSettings"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_audio_1_1_track_encoder_settings.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Audio::TrackTags"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_audio_1_1_track_tags.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Device"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_device.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Device::BusData"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_device_1_1_bus_data.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Device::Progress"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_device_1_1_progress.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format::CSSKeyInfo"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_format_1_1_c_s_s_key_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format::LogicalLayerBreak"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_format_1_1_logical_layer_break.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format::TitleKeySetInfo"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_format_1_1_title_key_set_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format::TrailerReplacementInfo"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_format_1_1_trailer_replacement_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::RTFile"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_r_t_file.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::RTFile::CgmsInfo"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_r_t_file_1_1_cgms_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::RTFile::MacExtHFSType"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_r_t_file_1_1_mac_ext_h_f_s_type.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::RTFile::MacExtProDosType"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_r_t_file_1_1_mac_ext_pro_dos_type.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::SDKProperties"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_s_d_k_properties.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::StorageError"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_storage_error.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Volume"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_volume.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Format"><param name="Local" value="class_sonic_1_1_managed_storage_1_1_format.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Volume::DateTime"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_volume_1_1_date_time.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Sonic::ManagedStorage::Volume::Progress"><param name="Local" value="struct_sonic_1_1_managed_storage_1_1_volume_1_1_progress.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+</UL>

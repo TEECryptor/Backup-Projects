@@ -1,0 +1,1454 @@
+package JSTestApp;
+
+import System.Console;
+import System.UInt32;
+import System.UInt64;
+import System.Decimal;
+import System.SByte;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.io.File;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.FileDescriptor;
+
+import java.io.Serializable;
+//import java.util.List;
+import java.util.Vector;
+import java.util.Enumeration;
+import java.lang.Exception;
+import System.Array;
+import System.IO.FileStream;
+import System.IO.FileMode;
+import System.IO.FileAccess;
+import System.IO.BinaryReader;
+import com.ms.vjsharp.*;
+//import System.Runtime.ConstrainedExecution;
+import Microsoft.Win32.SafeHandles.SafeFileHandle;
+
+
+// import our managed lib
+import Sonic.ManagedStorage.*;
+
+
+/**
+ * Summary description for Program
+ */
+
+public class DelegateClass
+{
+
+	private String GetStatusFromValue(int status)
+	{
+		if (status == (int)Device.JobStatusAborted)
+			return "Aborted";
+		else if (status == (int)Device.JobStatusBusyAborting)
+			return "BusyAborting";
+		else if (status == (int)Device.JobStatusError)
+			return "Error";
+		else if (status == (int)Device.JobStatusIdle)
+			return "Idle";
+		else if (status == (int)Device.JobStatusPartialSuccess)
+			return "Partial Success";
+		else if (status == (int)Device.JobStatusRunning)
+			return "Running";
+		else if (status == (int)Device.JobStatusSuccess)
+			return "Success";
+		return "Unknown";
+	}
+
+	private String GetOperationTypeFromValue(int type)
+	{
+		if (type == (int)Device.JobTypeAborting)
+			return "Aborting";
+		else if (type == (int)Device.JobTypeComparing)
+			return "Comparing";
+		else if (type == (int)Device.JobTypeErasing)
+			return "Erasing";
+		else if (type == (int)Device.JobTypeFinalizing)
+			return "Finalizing";
+		else if (type == (int)Device.JobTypeFormatting)
+			return "Formatting";
+		else if (type == (int)Device.JobTypeInitializing)
+			return "Initializing";
+		else if (type == (int)Device.JobTypeReading)
+			return "Reading";
+		else if (type == (int)Device.JobTypeSeek)
+			return "Seeking";
+		else if (type == (int)Device.JobTypeWriteFilemark)
+			return "Writing Filemark";
+		else if (type == (int)Device.JobTypeWriting)
+			return "Writing";
+
+		return "Unknown";
+	}
+	int deviceCallback(System.IntPtr info, System.UInt32 infoDword, System.IntPtr infoPtr, System.IntPtr callerUse)
+	{
+		if (infoPtr != System.IntPtr.Zero)
+		{
+			Device.Progress details = new Device.Progress();
+			try
+			{
+				details = (Device.Progress)System.Runtime.InteropServices.Marshal.PtrToStructure(infoPtr, Device.Progress.class.ToType());
+				int mgdsz = System.Runtime.InteropServices.Marshal.SizeOf(Device.Progress.class.ToType());
+				if ((int)(details.ValidBytes) > 0 && (int)(details.ValidBytes) <= mgdsz)
+				{
+					Console.WriteLine("Detailed info is CurSector: {0}, Total: {1},", details.CurrentSector, details.TotalSectors);
+					Console.WriteLine("Operation: {0}, Status: {1}", GetOperationTypeFromValue((int)details.CurrentOperation), GetStatusFromValue((int)details.ProgressStatus));
+				}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+
+		}
+		Console.WriteLine("Completed: {0} %", infoDword);
+		return 0;
+	}
+
+	int VolumeCallback(System.IntPtr info, System.UInt32 infoDword, System.IntPtr infoPtr, System.IntPtr callerUse)
+	{
+		if (info != System.IntPtr.Zero)
+		{
+			Volume.Info updateType = (Volume.Info)(int)(System.Runtime.InteropServices.Marshal.ReadInt32(info));
+
+			if (updateType == Volume.Info.ProgressUpdate)
+			{
+				if (infoPtr != System.IntPtr.Zero)
+				{
+					Volume.Progress details = new Volume.Progress();
+					try
+					{
+						details = (Volume.Progress)System.Runtime.InteropServices.Marshal.PtrToStructure(infoPtr, Volume.Progress.class.ToType());
+						int mgdsz = System.Runtime.InteropServices.Marshal.SizeOf(Volume.Progress.class.ToType());
+						if ((int)(details.ValidBytes) > 0 && (int)(details.ValidBytes) <= mgdsz)
+						{
+							Console.WriteLine("Detailed info is CurSector: {0}, Total: {1},", details.CurrentSector, details.TotalSectors);
+							Console.WriteLine("Operation: {0}", details.ProgressType);
+						}
+					}
+					catch (Exception e)
+					{
+						e.printStackTrace();
+					}
+
+				}
+				Console.WriteLine("Completed: {0} %", infoDword);
+			}
+		}
+		return 0;
+	}
+    public int StreamCallback(long pos, ubyte[] pBuffer,
+                            int bytesRequested,
+                            System.IntPtr pBytesGiven, System.IntPtr callerUse)
+        {
+            try
+            {
+				Microsoft.Win32.SafeHandles.SafeFileHandle safehdl = new Microsoft.Win32.SafeHandles.SafeFileHandle(callerUse, false);
+				System.IO.FileStream strm = new System.IO.FileStream(safehdl, System.IO.FileAccess.Read);
+                System.IO.BinaryReader bsr = new System.IO.BinaryReader(strm);
+				if (bsr != null)
+				{
+					strm.Seek(pos, System.IO.SeekOrigin.Begin);
+                    pBuffer = bsr.ReadBytes(bytesRequested);
+					System.Runtime.InteropServices.Marshal.WriteInt32(pBytesGiven, bytesRequested);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                // write zeroes to buffer and continue on error
+                byte[] zeroes = new byte[(int)bytesRequested];
+                zeroes.CopyTo(pBuffer, 0);
+				System.Runtime.InteropServices.Marshal.WriteInt32(pBytesGiven, bytesRequested);
+            }
+
+            return 0;
+        }
+
+
+};
+public class FileStreamListing implements Serializable
+{
+	Vector readers = new Vector();
+	public int AddStream(FileStream rdr)
+	{
+		readers.add(rdr);
+		try
+		{
+			//FileChannel strm = getFileChannel(rdr.getFD());
+			//if (strm != null)
+			//{
+				//  GC.SuppressFinalize(strm);
+
+				//  GC.SuppressFinalize(strm.SafeFileHandle);
+			//}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		return readers.size();
+
+	}
+
+	public FileStream getFileInputStream(Microsoft.Win32.SafeHandles.SafeFileHandle fd)
+        {
+        	try
+        	{
+				Enumeration e = readers.elements();
+				while (e.hasMoreElements())
+				{
+					FileStream rdr = (FileStream)e.nextElement();
+	        	   if (rdr.get_SafeFileHandle() == fd)
+	        		   return rdr;
+	           }
+        	}
+        	catch (Exception e)
+        	{
+        		e.printStackTrace();
+        	}
+        	
+           return null;
+        }
+
+	protected void finalize()
+        {
+			Enumeration e = readers.elements();
+            while (e.hasMoreElements())
+            {
+
+					FileStream rdr = (FileStream)e.nextElement();
+					rdr.Dispose();
+                readers.remove(rdr);
+            }
+        }
+}	
+public class Program
+{
+	 System.UInt32 FSType;
+	 System.UInt32 VolAccessMode;
+	 System.UInt32 operation;
+	 System.UInt32 deviceIndex;
+	 String cmdDevicePath;
+	 String cmdSrcPath;
+	 String cmdDstPath;
+	 Device.EraseType EraseOption;
+	 UInt32 VerifyOption;
+	 Volume.FlushBorderOptions VolFlushOption;
+	 static Device[] destDeviceList;
+	 static String[] destDevicePaths;
+	 Volume.FormatType VolFormatType;
+	 boolean isStreaming = false;
+	 Volume.StreamCallback streamcb = null;
+	 UInt32 AudioNumTracks = (UInt32)0;
+     private static FileStreamListing myList;
+	 private static System.Diagnostics.TextWriterTraceListener traceListener;
+	 private static FileStream traceStream;
+	 private static System.Diagnostics.TraceListenerCollection coll;
+	Program(){
+		FSType = Volume.FSUDF15;
+		VolAccessMode = Volume.Mastering;
+		operation = (System.UInt32)99;// just output device info and exit without user cmd line
+		deviceIndex = (System.UInt32)1;
+		cmdDevicePath = ""; cmdSrcPath = ""; cmdDstPath = "";
+		EraseOption = Device.EraseType.Quick;
+		VerifyOption = (UInt32)0;
+		VolFlushOption = Volume.FlushBorderOptions.Close;
+		destDevicePaths = new String[64];
+		VolFormatType = Volume.FormatType.Type_Unknown;
+
+	
+	}
+
+
+	void SDKProperties()
+	{
+		SDKProperties sdk = new SDKProperties();
+
+		sdk.set_LogFolder("c:" + "\\" + "logs");
+
+
+	}
+    int GetDeviceInfo(Device mgr)
+	{
+		int err = 0;
+
+		err = mgr.TrayControl(Device.TrayCtrl.CloseSync);
+
+		String currUsedApp = "";
+		err = mgr.ExclusiveAccess(Device.ExclusiveAccessType.Obtain, "TestManagedCode", currUsedApp);
+        if (err != 0)
+        {
+            currUsedApp = mgr.get_CurrUsedApp();
+        }
+		String devName = mgr.get_DeviceName();
+		String devVendor = mgr.get_DeviceVendor();
+		String devProd = mgr.get_DeviceProduct();
+		String devVersion = mgr.get_DeviceVersion();
+		String devSerialNum = mgr.get_DeviceSerialNo();
+
+		Console.WriteLine("Device name is: {0}", devName.ToString());
+		Console.WriteLine("DeviceVendor is: {0}",devVendor);
+		Console.WriteLine("DeviceProduct is: {0}",devProd);
+		Console.WriteLine("DeviceVersion is: {0}",devVersion);
+		Console.WriteLine("DeviceSerialNo is: {0}",devSerialNum);
+		Device.BusData info = new Device.BusData();
+		info = mgr.get_DeviceBusInfo();
+
+		System.UInt32 DevType = mgr.get_DeviceType();
+		Device.State st = mgr.get_DeviceState();
+
+		if (st == Device.State.Ready)
+		{
+			Console.WriteLine("State is Ready");
+		}
+		else
+			err = mgr.TrayControl(Device.TrayCtrl.Open);
+
+		return err;
+
+
+	}
+	int getMediaInfo(Device device)
+    {       
+        int err = 0;
+        // this code will provide all the possible enum values for props
+		Array ary = Array.CreateInstance(System.Int32.class.ToType(), 100);
+		ary = Device.MediaProp_Type.GetValues(Device.MediaProp_Type.class.ToType());
+		System.Collections.IEnumerator myEnumerator = ary.GetEnumerator();
+//		Enumeration enumMediaProps = ary.elements();
+		//= availTypes.elements();
+        while (myEnumerator.MoveNext())
+        {
+			Device.MediaProp_Type ourType = (Device.MediaProp_Type)myEnumerator.get_Current();
+        	Console.Write(ourType);
+			Console.Write(" is:");
+        	Object mediaPropVal = device.GetMediaObjectProperty(ourType);
+			if (mediaPropVal != null)
+			{
+				if (ourType == Device.MediaProp_Type.MedProp_State)
+					Console.WriteLine(GetMediaStateString((System.UInt32)mediaPropVal));
+				else if (ourType == Device.MediaProp_Type.MedProp_CopyProtection)
+					Console.WriteLine(GetDeviceCopyProtString((System.UInt32)mediaPropVal));
+				else if (ourType == Device.MediaProp_Type.MedProp_Kind)
+					Console.WriteLine(GetMediaTypeString((UInt64)mediaPropVal));
+				else if (ourType == Device.MediaProp_Type.MedProp_Manufacturer)
+				{
+					Object[] manufacturer = new Object[48];
+					manufacturer = (Object[])mediaPropVal;
+					// lets print out bytes of a byteArray here
+					for (int i = 0; i < manufacturer.length; i++)
+					{
+						if (manufacturer[i].ToString() == "0")
+							break;
+						byte thisBit = (byte)(System.Byte)manufacturer[i];
+						Console.Write((char)thisBit);
+					}
+					System.out.println();
+
+				}
+				else if ((ourType == Device.MediaProp_Type.MedProp_WriteList_DataRates) ||
+						(ourType == Device.MediaProp_Type.MedProp_WriteList_Hundredth_X))
+				{
+					System.ValueType[] writeList = new System.ValueType[128];
+					writeList = (System.ValueType[])mediaPropVal;
+					for (int i = 0; i < writeList.length; i++)
+					{
+						if (writeList[i] == (System.UInt32)0)
+							break;
+						if (ourType == Device.MediaProp_Type.MedProp_WriteList_Hundredth_X)
+						{
+							int xValue = (int)((System.UInt32)writeList[i]) / 100;
+							Console.Write(" Rate: {0}X", (System.UInt32)xValue);
+						}
+						else
+							Console.Write(" Rate: {0} Kbps", (System.UInt32)writeList[i]);
+					}
+					System.out.println();
+				}
+				else
+					Console.WriteLine(mediaPropVal);
+			}
+			else
+				Console.WriteLine("Value returned is NULL");
+        		
+        }
+		return 0;
+	}
+	int doWriteVolume(Device mgr, String srcPath, String destPath)
+	{
+		Volume mgdVol = new Volume(mgr);
+
+		System.UInt32 fstype=(System.UInt32)0;
+		Volume.InfoCallback cb = new Volume.InfoCallback(new DelegateClass().VolumeCallback);
+		int err = mgdVol.Open(cb, System.IntPtr.Zero);
+        fstype = mgdVol.get_FileSystemType();
+		
+
+		if (fstype == Volume.FSNone)
+			err = mgdVol.Create(FSType, "TestMgdVolume", VolAccessMode, cb, System.IntPtr.Zero);
+		else
+			err = mgdVol.Mount(VolAccessMode, cb, System.IntPtr.Zero);
+
+		//if (VolAccessMode == Volume.RTTD)
+			err = TraverseDirectory(mgdVol, srcPath, destPath);
+		//else
+		//	err = mgdVol.CreateEntryFromHD(srcPath, destPath, (System.UInt32)0);
+
+		Volume.FlushBorderOptions options = Volume.FlushBorderOptions.Close;
+		err = mgdVol.Flush(options, Volume.FlushVerify, cb, System.IntPtr.Zero);
+
+		err = mgdVol.Close();
+
+		return err;
+	}
+
+	int doCopy(Device mgr)
+	{
+
+		int err = 0;
+		Device destone = new Device();
+		destone.Open((System.UInt32)2, "");
+		String devName = destone.get_DeviceName();
+		String devVendor = destone.get_DeviceVendor();
+		String devProd = destone.get_DeviceProduct();
+		String devVersion = destone.get_DeviceVersion();
+		String devSerialNum = destone.get_DeviceSerialNo();
+
+		Device[] destArrayList = new Device[1];
+		destArrayList[0] = destone;
+		Device.Callback cb = new Device.Callback(new DelegateClass().deviceCallback);
+		err = destone.EraseMedia(Device.EraseType.Quick, cb, System.IntPtr.Zero);
+
+		err = mgr.Copy((System.UInt32)0, (System.UInt32)0, (System.UInt32)0, (System.UInt32)1, destArrayList, cb, System.IntPtr.Zero);
+
+
+		return err;
+	}
+
+	int doReadFile(Volume mgdVol, String Path)
+	{
+		int err = 0;
+
+		RTFile mgdFile = new RTFile(mgdVol);
+
+		RTFile.OpenMode access = RTFile.OpenMode.Read;
+		mgdFile.Open(Path, access);
+
+		long size = (long)(mgdFile.get_Size());
+		int readSize = 32768;
+		long curPos = 0;
+		System.UInt32 numread = (System.UInt32)0;
+		System.UInt32 numwrote = (System.UInt32)0;
+		while (curPos < size)
+		{
+			if (readSize > (size - curPos))
+				readSize = (int)(size - curPos);
+			ubyte[] byteArray = new ubyte[(int)readSize];
+			//char[] outArray = new char[(int)readSize];
+			//System.Convert.ToBase64CharArray(byteArray, 0, readSize, outArray, 0);
+
+			mgdFile.Read((System.UInt32)readSize, byteArray, numread);
+
+			curPos += readSize;
+			double pctDone = curPos * (long)100 / size;
+			if ((pctDone % 10) == 0)
+			{
+				Decimal curPct = Decimal.FromOACurrency((long)pctDone);
+				Console.WriteLine("Read {0} %d"+curPct.ToString());
+			}
+		}
+		mgdFile.Close();
+
+
+		return err;
+	}
+	boolean Equivalent(ubyte[] lhs,
+					ubyte[] rhs)
+	{
+		boolean equivalent = true;
+
+		if (lhs != rhs)
+		{
+			if (null == lhs || 
+				null == rhs ||
+				lhs.length != rhs.length)
+			{
+				equivalent = false;
+			}
+			else
+			{
+				for (int index = 0; equivalent && index != lhs.length; ++index)
+				{
+					equivalent = lhs[index] == rhs[index];
+				}
+			}
+		}
+
+		return equivalent;
+	}
+
+	int doWriteFile(Volume mgdVol, String srcPath, String destPath)
+	{
+
+		int err = 0;
+		RTFile mgdFile = new RTFile(mgdVol);
+        File srcfileTest = new File(srcPath);
+
+        if (!srcfileTest.exists())
+            return -1;
+		try
+		{
+		FileInputStream Fstream = new FileInputStream(srcPath);
+		java.io.BufferedInputStream bsr = new java.io.BufferedInputStream(Fstream);
+		
+		RTFile.OpenMode access = RTFile.OpenMode.Append;
+
+		Console.WriteLine("Writing to file: {0}",destPath);
+		err = mgdFile.Open(destPath, access);
+
+
+		long srcSize = srcfileTest.length(); // this can't return 64bit length??
+
+//			System.UInt64 size = mgdFile.FileSize[srcPath];
+		long readSize = 32768;
+		long curPos = 0;
+		System.UInt32 numread = (System.UInt32)0;
+		System.UInt32 numwrote = (System.UInt32)0;
+		while (curPos < srcSize)
+		{
+			if (readSize > srcSize - curPos)
+				readSize = (srcSize - curPos);
+
+			ubyte[] srcbyteArray = new ubyte[(int)readSize];
+			bsr.read((byte[])(Object)srcbyteArray, (int)curPos, (int)readSize);
+
+			//array<unsigned char>^ byteArray = gcnew array<unsigned char>(readSize);
+//				array<unsigned char>^ byteArray = gcnew array<unsigned char>(readSize);
+			err = mgdFile.Write((System.UInt32)readSize, srcbyteArray, numwrote);
+
+			//if (!Equivalent(byteArray, srcbyteArray))
+			//	break;
+
+
+			//Console.WriteLine("Wrote {0}", curPos.ToString(), " to {0}", (curPos+readSize).ToString());
+			curPos += readSize;
+			Decimal pctDone = Decimal.FromOACurrency(curPos * 100 / srcSize);
+			Decimal reportTime = Decimal.Parse("10");
+			if (((int)(Decimal.ToUInt32(pctDone)) % (int)(Decimal.ToUInt32(reportTime))) == 0)
+				Console.WriteLine("Wrote {0} %", pctDone.ToString());
+
+		}
+
+		err = mgdFile.Close();
+
+		bsr.close();
+		Fstream.close();
+		}
+
+		catch (Exception e)
+		{
+				e.printStackTrace();
+		}
+		return err;
+	}
+
+	int doVerifyFile(Volume mgdVol, String srcPath, String destPath)
+	{
+
+		int err = 0;
+		RTFile mgdFile = new RTFile(mgdVol);
+        File srcfileTest = new File(destPath);
+
+        if (!srcfileTest.exists())
+            return -1;
+		try
+		{
+			FileInputStream Fstream = new FileInputStream(destPath);
+			//ByteArrayInputStream bsr = new ByteArrayInputStream(Fstream);
+
+			RTFile.OpenMode access = RTFile.OpenMode.Read;
+			mgdFile.Open(srcPath, access);
+
+
+			long srcSize = srcfileTest.length();   // this can't return 64bit length??
+
+			long size = (long)mgdFile.get_Size();
+			long readSize = 32768;
+			long curPos = 0;
+			System.UInt32 numread = (System.UInt32)0;
+			while (curPos < size)
+			{
+				if (readSize > (size - curPos))
+					readSize = (size - curPos);
+
+				ubyte[] srcbyteArray = new ubyte[(int)readSize];
+				Fstream.read((byte[])(Object)srcbyteArray, (int)curPos, (int)readSize);
+
+				//array<unsigned char>^ byteArray = gcnew array<unsigned char>(readSize);
+				ubyte[] byteArray = new ubyte[(int)readSize];
+				mgdFile.Read((System.UInt32)readSize, byteArray, numread);
+
+				if (!Equivalent(byteArray, srcbyteArray))
+					break;
+
+				curPos += readSize;
+
+				Decimal pctDone = Decimal.FromOACurrency(curPos * (long)100 / size);
+				Decimal reportTime = Decimal.Parse("10");
+				if (((int)(Decimal.ToUInt32(pctDone))% (int)(Decimal.ToUInt32(reportTime))) == 0)
+					Console.WriteLine("Verified {0} %"+ pctDone.ToString());
+			}
+			mgdFile.Close();
+
+			//bsr.close();
+			Fstream.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		return err;
+	}
+	int TraverseDirectory(Volume mgdVol, String rootPath, String destPath)
+	{
+
+		UInt64 numChildren = (System.UInt64)0;
+
+		int err = 0;
+		String curPath = rootPath;
+		String delim = "\\";
+		boolean isFile = false;
+		if (operation != (System.UInt32)0)
+		{
+            delim = "/";
+			if (mgdVol.get_EntryKind(rootPath) == RTFile.FileIsDir)
+			{
+				numChildren = mgdVol.get_EntrySize(curPath);
+				isFile = false;
+			}
+			else
+				isFile = true;	
+
+			if (isFile)
+			{
+				// root provided was a file
+				Console.WriteLine("Found file: {0}", curPath);
+				if (operation == (System.UInt32)3)
+					// read file
+					err = doReadFile(mgdVol, curPath);
+				else if (operation == (System.UInt32)2)
+					// verifyFile
+					err = doVerifyFile(mgdVol, curPath, destPath);
+				//else if (operation == 0)
+				//	err = doWriteFile(mgdVol, curPath, destPath);
+				else
+					Console.WriteLine("Failed to traverse - invalid operation");
+			}
+
+			for (int i=0; i<(int)numChildren; i++)
+			{
+				String  newPath = "";
+                newPath = mgdVol.get_Entry(curPath, i);
+                String  newDestPath = "";
+                if (destPath != "")
+                    newDestPath = destPath + delim + newPath;
+                else
+                    newDestPath = "";
+
+				if (mgdVol.get_EntryKind(newPath) == RTFile.FileIsFile)
+					isFile = true;
+				else
+					isFile = false;
+				if (isFile)
+				{
+					Console.WriteLine("Found file: {0}", newPath);
+					if (operation == (System.UInt32) 3)
+						// read file
+						err = doReadFile(mgdVol, newPath);
+					else if (operation == (System.UInt32)2)
+						// verifyFile
+						err = doVerifyFile(mgdVol, newPath, newDestPath);
+					else
+						Console.WriteLine("Failed to traverse - invalid operation");
+				}
+				else
+				{
+					err = TraverseDirectory(mgdVol, newPath, newDestPath);
+				}
+			}
+		}
+		else
+		{
+			File dirInfo = new File(rootPath);
+			if (!dirInfo.isDirectory())
+			{
+				if (!dirInfo.isDirectory())
+					return -1;  // error path is neither file nor dir
+
+				if (VolAccessMode == Volume.Mastering)
+                {
+                    if (isStreaming)
+                        err = doWriteFileFromStream(mgdVol, rootPath, destPath);
+                    else
+                        err = doWriteFileFromHD(mgdVol, rootPath, destPath);
+                }
+                else if (VolAccessMode == Volume.RTTD)
+                {
+                    err = doWriteFile(mgdVol, rootPath, destPath);
+                }
+
+			}
+			else
+			{
+				// traverse all of a directory's entries at this level and recurse subdirs
+				String[] subdirList = dirInfo.list();
+				File[] subfileList = dirInfo.listFiles();
+
+				String newPath = "";
+
+				for (int i=0; i<subfileList.length; i++)
+				{
+					newPath = subfileList[i].ToString().substring(3);		// TODO - fix for file and / or dir
+					String newDestPath = destPath + "\\" + newPath;
+					Console.WriteLine("Found file: {0}", newPath);
+					err = doWriteFile(mgdVol, subfileList[i].getAbsolutePath(), newDestPath);
+				}
+
+				for (int i=0; i<subdirList.length; i++)
+				{
+					newPath = subdirList[i].ToString();		// TODO - fix for file and / or dir
+					String newDestPath = destPath + "\\" + newPath;
+					// CreateEntry for this directory path
+					err = mgdVol.CreateEntry(newDestPath, RTFile.FileIsDir, (UInt32)((int)RTFile.CreateParents|(int)RTFile.CreateOverwrite));
+					err = TraverseDirectory(mgdVol, newPath, newDestPath);
+				}
+			}
+		}
+		return err;
+	}
+
+	int doRead(Device mgr)
+	{
+
+		int err = 0;
+		Volume mgdVol = new Volume(mgr);
+
+		System.UInt32 fstype = (System.UInt32)0;
+		DelegateClass dlg = new DelegateClass();
+		Volume.InfoCallback cb = new Volume.InfoCallback(dlg.VolumeCallback); 
+		err = mgdVol.Open(cb, System.IntPtr.Zero);
+        fstype = mgdVol.get_FileSystemType();
+
+
+		err = mgdVol.Mount(Volume.ReadOnly, cb, System.IntPtr.Zero);
+
+		String destPath = "/";
+		System.UInt16 kind = mgdVol.get_EntryKind(destPath);
+        if (kind == RTFile.FileIsDir)
+        {
+            String empty = "";
+            TraverseDirectory(mgdVol, destPath, empty);
+        }
+
+		err = mgdVol.Close();
+
+		return err;
+
+	}
+
+
+	int doVerify(Device mgr, String srcPath, String destPath)
+	{
+
+		int err = 0;
+		Volume mgdVol = new Volume(mgr);
+
+		System.UInt32 fstype = (System.UInt32)0;
+		// native open calls to srcpath
+		DelegateClass dlg = new DelegateClass();
+		Volume.InfoCallback cb = new Volume.InfoCallback(dlg.VolumeCallback);
+		err = mgdVol.Open(cb, System.IntPtr.Zero);
+        fstype = mgdVol.get_FileSystemType();
+
+
+		err = mgdVol.Mount(Volume.ReadOnly, cb, System.IntPtr.Zero);
+
+		System.UInt16 kind = mgdVol.get_EntryKind(destPath);
+		if (kind == RTFile.FileIsFile)
+			TraverseDirectory(mgdVol, destPath, srcPath);
+		// add in dir traversing volume calls from /destPath
+
+				// add in file stuff to read each file
+
+				// add in native file stuff to compare to each file read
+
+		// close native calls
+
+
+		err = mgdVol.Close();
+
+		return err;
+
+	}
+	int doWriteFileFromStream(Volume mgdVol, String srcPath, String destPath)
+    {
+        File srcfileTest = new File(srcPath);
+        if (!srcfileTest.exists())
+            return -1;
+        System.UInt64 streamLen = (System.UInt64)srcfileTest.length();
+        FileStream Fstream = new FileStream(srcPath, FileMode.Open, FileAccess.Read);
+        //BinaryReader rdr = new BinaryReader(Fstream);
+		myList.AddStream(Fstream);
+
+        SafeFileHandle handle = Fstream.get_SafeFileHandle();
+
+		System.IntPtr ptr = handle.DangerousGetHandle();
+
+		int err = mgdVol.CreateFileFromStream(destPath, streamLen, streamcb, ptr, (UInt32)((int)RTFile.CreateOverwrite | (int)RTFile.CreateParents));
+
+        return err;
+    }
+    int doWriteFileFromHD(Volume mgdVol, String srcPath, String destPath)
+    {
+		int err = mgdVol.CreateEntryFromHD(srcPath, destPath, (UInt32)0);
+        return err;
+    }
+
+	int doWriteAudioFileFromStream(Format mgdFormat, Audio mgdAudio, String srcPath, Audio.FileType fileType)
+    {
+        File srcfileTest = new File(srcPath);
+        if (!srcfileTest.exists())
+            return -1;
+        System.UInt64 streamLen = (System.UInt64)srcfileTest.length();
+		int err = 0;
+		try
+		{
+			FileStream Fstream = new FileStream(srcPath, System.IO.FileMode.Open);
+			//BinaryReader rdr = new BinaryReader(Fstream);
+			myList.AddStream(Fstream);
+
+			Microsoft.Win32.SafeHandles.SafeFileHandle handle = Fstream.get_SafeFileHandle();
+
+
+			System.IntPtr ptr = handle.DangerousGetHandle();
+			System.UInt32 trk = (System.UInt32)0;
+			err = mgdAudio.AddAudioTrackFromStream(streamLen, streamcb, ptr, fileType, trk);
+		}
+		catch(Exception e)
+		{
+
+		}
+
+        return err;
+    }
+	int doWriteFormat(Device mgr, String srcPath)
+    {
+        Format mgdFormat = new Format(mgr);
+        Volume.InfoCallback cb = new Volume.InfoCallback(new DelegateClass().VolumeCallback);
+        int err = mgdFormat.Open(cb, System.IntPtr.Zero);
+
+        err = mgdFormat.Create(FSType, VolFormatType, "FormatCSTestApp", VolAccessMode, cb, System.IntPtr.Zero);
+
+        switch (VolFormatType)
+        {
+			case Volume.FormatType.Type_AudioCD:
+                {
+                    Audio audioCD = new Audio(mgdFormat);
+                    File dirInfo = new File(srcPath);
+                    if (!dirInfo.exists())
+                        return -1;
+                    File[] subfileList = dirInfo.listFiles();
+                    for (int i = 0; i < subfileList.length; i++)
+                    {
+                        String audioFileName = subfileList[i].getAbsolutePath();
+                        Audio.FileType fileType = Audio.FileType.AutoDetect;
+                        if (isStreaming)
+                            // streaming only does PCM for now
+                            fileType = Audio.FileType.PCM;
+                        else
+                        {
+                            // get file type based on extension of file
+							char[] seps = new char[1];
+							String[] fileNameParser = subfileList[i].getAbsolutePath().Split(seps);
+							String ext = "";
+							if (fileNameParser.length > 1)
+								ext = fileNameParser[2];
+							String upperExtension = ext.ToUpper();
+                            if (upperExtension == "WAV")
+                               fileType = Audio.FileType.WAV;
+                            else if (upperExtension == "RAW")
+                               fileType = Audio.FileType.PCM;
+                            else if (upperExtension == "MP3")
+                               fileType = Audio.FileType.MP3;
+
+                        }
+
+                        if (isStreaming)
+                        {
+                            doWriteAudioFileFromStream(mgdFormat, audioCD, audioFileName, fileType);
+                        }
+                        else
+                        {
+                            System.UInt32 trk = (System.UInt32)0;
+                            err = audioCD.AddAudioTrackFromFile(audioFileName, fileType, trk);
+                            System.Console.WriteLine("Added track {0} as filename {1}", trk, audioFileName);
+                        }
+                    }
+                }
+                break;
+			case Volume.FormatType.Type_DVD:
+                {
+                    err = mgdFormat.CreateEntryFromHD(srcPath, "/VIDEO_TS", RTFile.CreateParents);
+                }
+                break;
+        }
+
+        err = mgdFormat.Prepare(VolFlushOption, VerifyOption, cb, System.IntPtr.Zero);
+
+        err = mgdFormat.Flush(VolFlushOption, VerifyOption, cb, System.IntPtr.Zero);
+
+        err = mgdFormat.Close();
+
+        return err;
+    }
+
+	int doExtractVolumeToHD(Device dev, String srcPath, String destPath)
+    {
+        int err = 0;
+
+        Format mgdFormat = new Format(dev);
+        Volume.InfoCallback cb = new Volume.InfoCallback(new DelegateClass().VolumeCallback);
+        err = mgdFormat.Open(cb, System.IntPtr.Zero);
+
+        err = mgdFormat.Mount(Volume.ReadOnly, cb, System.IntPtr.Zero);
+
+        UInt64 numFiles = mgdFormat.get_EntrySize(srcPath);
+        Audio audioCD = new Audio(mgdFormat);
+        for (int i = 1; i <= (int)numFiles; i++)
+        {
+            String thisFileName = "ExtractedTrack" + ((UInt32)i).ToString() + ".wav";
+            String destFilePath = destPath + "\\" + thisFileName;
+            Audio.TrackEncoderSettings encodeSettings = new Audio.TrackEncoderSettings();
+            encodeSettings.type = Audio.FileType.WAV;
+            encodeSettings.structSizeBytes = (System.UInt32)System.Runtime.InteropServices.Marshal.SizeOf(encodeSettings);
+
+            Audio.TrackTags tags = new Audio.TrackTags();
+
+			int[] someIndex = new int[1];
+			err = audioCD.ExtractAudioTrackToFile((UInt32)i, destFilePath, (UInt32)0, 0, -1, tags, encodeSettings, cb, System.IntPtr.Zero, someIndex);
+        }
+
+        err = mgdFormat.Close();
+        return err;
+    }
+	public static void DisplayError(int err)
+	{
+		StorageError ourErr = new StorageError(err);
+
+		String ErrorString = "";
+		if (err == StorageError.None)
+			ErrorString = "None";
+		else if (err == StorageError.BufferOverflow)
+				ErrorString = "BufferOverflow";
+		else if (err == StorageError.DataMiscompare)
+				ErrorString = "DataMiscompare";
+		else if (err == StorageError.DeviceError)
+				ErrorString = "DeviceError";
+		else if (err == StorageError.DeviceInUse)
+				ErrorString = "DeviceInUse";
+		else if (err == StorageError.DeviceInQuickUse)
+				ErrorString = "DeviceInQuickUse";
+		else if (err == StorageError.DeviceSenseError)
+				ErrorString = "DeviceSenseError";
+		else if (err == StorageError.DeviceNotReady)
+				ErrorString = "DeviceNotReady";
+		else if (err == StorageError.DeviceSelected)
+				ErrorString = "DeviceSelected";
+		else if (err == StorageError.Fatal)
+				ErrorString = "Fatal";
+		else if (err == StorageError.FileExists)
+				ErrorString = "FileExists";
+		else if (err == StorageError.FileNotFound)
+				ErrorString = "FileNotFound";
+		else if (err == StorageError.FileOpenFailed)
+				ErrorString = "FileOpenFailed";
+		else if (err ==  StorageError.FolderExists)
+				ErrorString = "FolderExists";
+		else if (err == StorageError.FolderNotFound)
+				ErrorString = "FolderNotFound";
+		else if (err == StorageError.FullEraseNeeded)
+				ErrorString = "FullEraseNeeded";
+		else if (err == StorageError.InvalidAccess)
+				ErrorString = "InvalidAccess";
+		else if (err == StorageError.InvalidFile)
+				ErrorString = "InvalidFile";
+		else if (err == StorageError.InvalidFolder)
+				ErrorString = "InvalidFolder";
+		else if (err == StorageError.InvalidHandle)
+				ErrorString = "InvalidHandle";
+		else if (err == StorageError.InvalidIndex)
+				ErrorString = "InvalidIndex";
+		else if (err == StorageError.InvalidLanguageCode)
+				ErrorString = "InvalidLanguageCode";
+		else if (err == StorageError.InvalidMediaType)
+				ErrorString = "InvalidMediaType";
+		else if (err == StorageError.InvalidMetadata)
+				ErrorString = "InvalidMetadata";
+		else if (err == StorageError.InvalidMetadataName)
+				ErrorString = "InvalidMetadataName";
+		else if (err == StorageError.InvalidOperation)
+				ErrorString = "InvalidOperation";
+		else if (err == StorageError.InvalidParameter)
+				ErrorString = "InvalidParameter";
+		else if (err == StorageError.InvalidProjectType)
+				ErrorString = "InvalidProjectType";
+		else if (err == StorageError.InvalidSequence)
+				ErrorString = "InvalidSequence";
+		else if (err == StorageError.InvalidStringType)
+				ErrorString = "InvalidStringType";
+		else if (err == StorageError.InvalidTime)
+				ErrorString = "InvalidTime";
+		else if (err == StorageError.InvalidTimeUnit)
+				ErrorString = "InvalidTimeUnit";
+		else if (err == StorageError.InvalidTrackType)
+				ErrorString = "InvalidTrackType";
+		else if (err == StorageError.MediaFull)
+				ErrorString = "MediaFull";
+		else if (err == StorageError.MetadataNotFound)
+				ErrorString = "MetadataNotFound";
+		else if (err == StorageError.MetadataTypeMismatch)
+				ErrorString = "MetadataTypeMismatch";
+		else if (err == StorageError.NotEnoughStorage)
+				ErrorString = "NotEnoughStorage";
+		else if (err == StorageError.NotFound)
+				ErrorString = "NotFound";
+		else if (err == StorageError.NotImplemented)
+				ErrorString = "NotImplemented";
+		else if (err == StorageError.NotInitialized)
+				ErrorString = "NotInitialized";
+		else if (err == StorageError.NotSupported)
+				ErrorString = "NotSupported";
+		else if (err == StorageError.ReadError)
+				ErrorString = "ReadError";
+		else if (err == StorageError.ReentrantCall)
+				ErrorString = "ReentrantCall";
+		else if (err == StorageError.StreamCallbackError)
+				ErrorString = "StreamCallbackError";
+		else if (err == StorageError.TrackCountOverflow)
+				ErrorString = "TrackCountOverflow";
+		else if (err == StorageError.UnsupportedVersion)
+				ErrorString = "UnsupportedVersion";
+		else if (err == StorageError.UserCancelled)
+				ErrorString = "UserCancelled";
+		else if (err == StorageError.WriteError)
+				ErrorString = "WriteError";
+		else
+				Console.WriteLine("Missing error text in app: {0}\n", ((System.UInt32)err).ToString());
+
+
+		Console.Write("Error received: [ {0} ], errorCode is:[{1}]\n", ErrorString, ((System.UInt32)err).ToString());
+	}
+    
+    void ParseArgs(String[] args)
+	{
+
+		Console.WriteLine("Found " + args.length + "arguments in command line");
+		// add more args parsing here for add'l arguments
+		// current syntax:  <device> <FSType> <VolAccessMode> <src> <dst>
+		// where
+		//      <DestDevice> is device index as # from 1...N, or a path to a file
+		//      <SrcPath>    is the source fullpath
+		//      <DstPath>    is the destination fullpath
+		//      <FSType> is a constant from the Volume fs consts
+		//      <VolAccess> is consts for ReadOnly, Mastering, RTTD        
+		//      <Operation> is the current operation to run
+		//                  list currently includes:
+		//                      0 - write
+		//                      1 - copy
+		//                      2 - verify
+		//                      3 - read
+		//						4 - erase
+		//                      5 - write format
+		//                      6 - extract volume to hdd
+		//      <Options>
+		//                  FlushBorder=1    for FlushBorderOptions.BorderOpen
+		//                  FlushBorder=2    for FlushBorderOptions.BorderFinal
+		//                  FlushBorder=3    for FlushBorderOptions.BorderClosed
+		//
+		//                  FlushVerify=1    for FlushVerify turned on
+		//                  FlushVerify=0    for FlushVerify turned off
+		//
+		//                  EraseOption=0    for QuickErase
+		//                  EraseOption=1    for FullErase
+		//
+		//                  StreamData=1    for using Streamed source files, default is from HDD
+		//                  
+		//                  Format=<formatType>, where <formatType> can be any of the following:
+		//                         DVD, AudioCD, HDDVD, DDP, DDP2, DDP3, BDCMF
+
+			int numArguments = 0;
+            if (args.length > 0)
+                numArguments = args.length;
+            for  (int strIndex = 0; strIndex < numArguments; strIndex++)
+            {
+				String thisArg = args[strIndex];
+                Console.Write("{0} ", thisArg);
+
+                if (thisArg.StartsWith("DestDevice"))
+                {
+                    String option = thisArg.Substring(thisArg.LastIndexOf('=') + 1);
+                    try
+                    {
+                        deviceIndex = UInt32.Parse(option);
+                        cmdDevicePath = option;
+                    }
+                    catch (System.Exception e)
+                    {
+                        Console.WriteLine("{0}", e.ToString());
+
+                        // must be a file device path
+                        deviceIndex = (System.UInt32)0;
+                        cmdDevicePath = option;
+
+                        // if cmdDevicePath = "", then we're assuming a null device
+
+                    }
+                }
+                else if (thisArg.StartsWith("SrcPath"))
+                {
+                    cmdSrcPath = thisArg.Substring(thisArg.LastIndexOf('=') + 1);
+                }
+                else if (thisArg.StartsWith("DstPath"))
+                {
+                    cmdDstPath = thisArg.Substring(thisArg.LastIndexOf('=') + 1);
+                }
+                else if (thisArg.StartsWith("FSType"))
+                {
+                    FSType = UInt32.Parse(thisArg.Substring(thisArg.LastIndexOf('=') + 1));
+                }
+                else if (thisArg.StartsWith("VolAccessMode"))
+                {
+                    VolAccessMode = UInt32.Parse(thisArg.Substring(thisArg.LastIndexOf('=') + 1));
+                }
+                else if (thisArg.StartsWith("Operation"))
+                {
+                    operation = UInt32.Parse(thisArg.Substring(thisArg.LastIndexOf('=') + 1));
+                }
+				else if (thisArg.StartsWith("FlushBorder"))
+				{
+					String option = thisArg.Substring(thisArg.LastIndexOf('=') + 1);
+					UInt32 addlOpt = UInt32.Parse(option);
+					if (addlOpt == (System.UInt32)1)
+						VolFlushOption = Volume.FlushBorderOptions.Open;
+					else if (addlOpt == (System.UInt32)3)
+						VolFlushOption = Volume.FlushBorderOptions.Final;
+					// otherwise continue with default (Border_Close)
+				}
+				else if (thisArg.StartsWith("FlushVerify"))
+				{
+					String option = thisArg.Substring(thisArg.LastIndexOf('=') + 1);
+					UInt32 addlOpt = UInt32.Parse(option);
+					if (addlOpt == (System.UInt32)1)
+						VerifyOption = (System.UInt32)1;
+					// otherwise we'll keep default for no verify
+
+				}
+				else if (thisArg.StartsWith("EraseOption") &&
+						operation == (System.UInt32)4)
+				{
+					String option = thisArg.Substring(thisArg.LastIndexOf('=') + 1);
+					UInt32 addlOpt = UInt32.Parse(option);
+					if (addlOpt == (System.UInt32)1)
+						EraseOption = Device.EraseType.Long;
+					// otherwise we'll keep default for Quick_Erase
+				}
+				else if (thisArg.StartsWith("MultipleTargets") &&
+						(operation == (System.UInt32)0 || operation == (System.UInt32)1))
+				{
+					int addlLen = thisArg.get_Length();
+					int foundIdx = thisArg.IndexOf("=");
+					String option = "";
+					option = thisArg.Substring(foundIdx + 1);
+					UInt32 numTargets = (System.UInt32)0;
+					char[] targetseps = new char[3];
+
+					targetseps[0] = ' ';
+					targetseps[1] = ';';
+					targetseps[2] = ',';
+					destDevicePaths = option.Split(targetseps, 64);
+				}
+				else if (thisArg.StartsWith("StreamData") && operation == (System.UInt32)0)
+				{
+					int lastIdx = thisArg.LastIndexOf('=');
+					int len = thisArg.get_Length();
+					String option = thisArg.Substring(lastIdx + 1);
+					UInt32 addlOpt = UInt32.Parse(option);
+					if (addlOpt == (System.UInt32)1)
+						isStreaming = true;
+					else
+						isStreaming = false;
+					// otherwise we'll keep default for reading from HDD and not 
+					// use callback for streaming data from client
+
+				}
+				else if (thisArg.StartsWith("Format") &&
+						operation == (System.UInt32)5)
+				{
+					String option = thisArg.Substring(thisArg.LastIndexOf('=') + 1);
+					UInt32 addlOpt = UInt32.Parse(option);
+					if (System.Enum.GetValues(VolFormatType.GetType()).Contains(addlOpt))
+						VolFormatType = (Volume.FormatType)(int)addlOpt;
+
+				}
+
+			}
+
+	}
+	public static void main(String[] args)
+    {
+
+		traceStream = new FileStream("JSharpTrace.txt", FileMode.OpenOrCreate);
+		if (traceStream.get_CanWrite())
+		{
+			traceListener = new System.Diagnostics.TextWriterTraceListener(traceStream);
+			
+			coll = System.Diagnostics.Trace.get_Listeners();
+			coll.Add(traceListener);
+
+
+
+		}
+
+        Program app = new Program();
+        app.SDKProperties();
+
+        if (args.length > 1)
+	        app.ParseArgs(args);
+        else
+        {
+	        app.cmdDevicePath = "";
+			app.deviceIndex = (System.UInt32)2;
+        }
+        //	Device^ mgr = gcnew Device(0, "I:\\dump\\cdrw.gi");
+        Device mgr = new Device();
+		System.UInt32 flags = (System.UInt32)0;
+		System.UInt32 count = mgr.get_DeviceCount(flags);
+		Console.WriteLine("Found {0} devices", count);
+
+		mgr.Open(app.deviceIndex, app.cmdDevicePath);
+	    String currUsedApp = "";
+        mgr.ExclusiveAccess(Device.ExclusiveAccessType.Obtain, "CSTestApp", currUsedApp);
+
+        mgr.ExclusiveAccess(Device.ExclusiveAccessType.Query, "", currUsedApp);
+        int err = 0;
+        err = app.GetDeviceInfo(mgr);
+		err = app.getMediaInfo(mgr);
+
+
+		if (app.operation == (System.UInt32)0)
+        {
+	        // do master volume
+	        err = app.doWriteVolume(mgr, app.cmdSrcPath, app.cmdDstPath);
+        }
+		else if (app.operation == (System.UInt32)1)
+        {
+	        err = app.doCopy(mgr);
+        }
+		else if (app.operation == (System.UInt32)2)
+        {
+	        err = app.doVerify(mgr, app.cmdSrcPath, app.cmdDstPath);
+        }
+		else if (app.operation == (System.UInt32)3)
+        {
+	        err = app.doRead(mgr);
+        }
+		else if (app.operation == (System.UInt32)4)
+        {
+			DelegateClass dlg = new DelegateClass();
+			Device.Callback cb = new Device.Callback(dlg.deviceCallback);
+			err = mgr.EraseMedia(Device.EraseType.Quick, cb, System.IntPtr.Zero);
+        }
+		else if (app.operation == (System.UInt32)5)
+        {
+            app.doWriteFormat(mgr, app.cmdSrcPath);
+        }
+		else if (app.operation == (System.UInt32)6)
+        {
+            app.doExtractVolumeToHD(mgr, app.cmdSrcPath, app.cmdDstPath);
+        }
+
+        mgr.ExclusiveAccess(Device.ExclusiveAccessType.Release, "CSTestApp", currUsedApp);
+
+		mgr.Close();
+
+		mgr.Dispose();
+
+		coll.Remove(traceListener);
+		traceStream.Close();
+    }
+
+
+	String GetMediaStateString(System.UInt32 medState)
+	{
+		String medStr = "";
+
+		if ((UInt32)((int)medState & (int)Device.MediaIsReadable) == Device.MediaIsReadable)
+			medStr += "Readable ";
+		if ((UInt32)((int)medState & (int)Device.MediaIsAppendable) == Device.MediaIsAppendable)
+			medStr += "Appendable ";
+		if ((UInt32)((int)medState & (int)Device.MediaIsBlank) == Device.MediaIsBlank)
+			medStr += "Blank ";
+		if ((UInt32)((int)medState & (int)Device.MediaIsErasable) == Device.MediaIsErasable)
+			medStr += "Eraseable ";
+		if ((UInt32)((int)medState & (int)Device.MediaIsWritable) == Device.MediaIsWritable)
+			medStr += "Writable ";
+		if ((UInt32)((int)medState & (int)Device.MediaIsInvisible) == Device.MediaIsInvisible)
+			medStr += "Invisible ";
+		if ((UInt32)((int)medState & (int)Device.MediaIsRewritable) == Device.MediaIsRewritable)
+			medStr += "Rewritable ";
+		if ((UInt32)((int)medState & (int)Device.MediaIsProtected) == Device.MediaIsProtected)
+			medStr += "Protected ";
+
+		return medStr;
+	}
+
+	String GetMediaTypeString(UInt64 medType)
+	{
+		if (medType == Device.MediaIsBdr)
+			return "BDR";
+		else if (medType == Device.MediaIsBdre)
+			return "BDRE";
+		else if (medType == Device.MediaIsBdrom)
+			return "BDROM";
+		else if (medType == Device.MediaIsCdRom)
+			return "CDRom";
+		else if (medType == Device.MediaIsCdr)
+			return "CDR";
+		else if (medType == Device.MediaIsCdrw)
+			return "CDRW";
+		else if (medType == Device.MediaIsDvdRam)
+			return "DVD-RAM";
+		else if (medType == Device.MediaIsDvdRom)
+			return "DVD-Rom";
+		else if (medType == Device.MediaIsDvdpr)
+			return "DVD+R";
+		else if (medType == Device.MediaIsDvdpr9)
+			return "DVD+R9";
+		else if (medType == Device.MediaIsDvdprw)
+			return "DVD+RW";
+		else if (medType == Device.MediaIsDvdr)
+			return "DVD-R";
+		else if (medType == Device.MediaIsDvdr9)
+			return "DVD-R9";
+		else if (medType == Device.MediaIsDvdrw)
+			return "DVD-RW";
+		else if (medType == Device.MediaIsHdDvdRom)
+			return "HD DVD-Rom";
+		else if (medType == Device.MediaIsHdDvdr)
+			return "HD DVD-R";
+		else if (medType == Device.MediaIsHdDvdrw)
+			return "HD DVD-RW";
+
+		return "";
+	}
+
+
+	String GetDeviceMedCapableString(long medType)
+	{
+		String retVal = "";
+		if ((UInt64)(medType & (long)Device.MediaIsBdr) == Device.MediaIsBdr)
+			retVal += "BDR ";
+		if ((UInt64)(medType & (long)Device.MediaIsBdre) == Device.MediaIsBdre)
+			retVal += "BDRE ";
+		if ((UInt64)(medType & (long)Device.MediaIsBdrom) == Device.MediaIsBdrom)
+			retVal += "BDROM ";
+		if ((UInt64)(medType & (long)Device.MediaIsCdRom) == Device.MediaIsCdRom)
+			retVal += "CDRom ";
+		if ((UInt64)(medType & (long)Device.MediaIsCdr) == Device.MediaIsCdr)
+			retVal += "CDR ";
+		if ((UInt64)(medType & (long)Device.MediaIsCdrw) == Device.MediaIsCdrw)
+			retVal += "CDRW ";
+		if ((UInt64)(medType & (long)Device.MediaIsDvdRam) == Device.MediaIsDvdRam)
+			retVal += "DVD-RAM ";
+		if ((UInt64)(medType & (long)Device.MediaIsDvdRom) == Device.MediaIsDvdRom)
+			retVal += "DVD-Rom ";
+		if ((UInt64)(medType & (long)Device.MediaIsDvdpr) == Device.MediaIsDvdpr)
+			retVal += "DVD+R ";
+		if ((UInt64)(medType & (long)Device.MediaIsDvdpr9) == Device.MediaIsDvdpr9)
+			retVal += "DVD+R9 ";
+		if ((UInt64)(medType & (long)Device.MediaIsDvdprw) == Device.MediaIsDvdprw)
+			retVal += "DVD+RW ";
+		if ((UInt64)(medType & (long)Device.MediaIsDvdr) == Device.MediaIsDvdr)
+			retVal += "DVD-R ";
+		if ((UInt64)(medType & (long)Device.MediaIsDvdr9) == Device.MediaIsDvdr9)
+			retVal += "DVD-R9 ";
+		if ((UInt64)(medType & (long)Device.MediaIsDvdrw) == Device.MediaIsDvdrw)
+			retVal += "DVD-RW ";
+		if ((UInt64)(medType & (long)Device.MediaIsHdDvdRom) == Device.MediaIsHdDvdRom)
+			retVal += "HD DVD-Rom ";
+		if ((UInt64)(medType & (long)Device.MediaIsHdDvdr) == Device.MediaIsHdDvdr)
+			retVal += "HD DVD-R ";
+		if ((UInt64)(medType & (long)Device.MediaIsHdDvdrw) == Device.MediaIsHdDvdrw)
+			retVal += "HD DVD-RW ";
+		return retVal;
+	}
+	public static String GetDeviceAuthString(Integer value)
+	{
+		String retVal = "";
+		if ((UInt32)(value.intValue() & (int)Device.Authentication_AACS) == Device.Authentication_AACS)
+			retVal += "AACS ";
+		if ((UInt32)(value.intValue() & (int)Device.Authentication_CPPM) == Device.Authentication_CPPM)
+			retVal += "CPPM ";
+		if ((UInt32)(value.intValue() & (int)Device.Authentication_CPRM) == Device.Authentication_CPRM)
+			retVal += "CPRM ";
+		if ((UInt32)(value.intValue() & (int)Device.Authentication_None) == Device.Authentication_None)
+			retVal += "None ";
+		return retVal;
+	}
+
+	public static String GetDeviceTrayStatusString(Integer value)
+	{
+		String retVal = "";
+		if ((UInt32)value.intValue() == Device.TrayStatusClosed)
+			retVal = "Tray Closed";
+		else if ((UInt32)value.intValue() == Device.TrayStatusOpen)
+			retVal = "Tray Open";
+		else if ((UInt32)value.intValue() == Device.TrayStatusUnknown)
+			retVal = "Tray Unknown";
+		return retVal;
+
+	}
+	public static String GetDeviceTypeString(Integer value)
+	{
+		String retVal = "";
+		if ((value.intValue() & (int)Device.IsOptical) == 0)
+			retVal = "Optical Device";
+		else if ((value.intValue() & (int)Device.IsFile) == 0)
+			retVal = "Optical File";
+		else if ((value.intValue() & (int)Device.IsTape) == 0)
+			retVal = "Tape";
+		return retVal;
+
+	}
+
+	public static String GetDeviceCopyProtString(System.UInt32 value)
+	{
+		String retVal = "";
+
+		if ((UInt32)((int)value & (int)Device.ProtectionTypeGuardBlockBadECC) == Device.ProtectionTypeGuardBlockBadECC)
+			retVal += "CopyBlock";
+		if ((UInt32)((int)value & (int)Device.ProtectionTypeQflixCSS) == Device.ProtectionTypeQflixCSS)
+			retVal += "MovieDisc";
+		if ((UInt32)((int)value & (int)Device.ProtectionTypeNone) == Device.ProtectionTypeNone)
+			retVal += "None";
+		return retVal;
+
+	}
+            
+}

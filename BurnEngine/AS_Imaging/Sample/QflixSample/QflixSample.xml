@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job_parameters>
+	<version>1.0</version>
+	<source>
+		<ISO>
+			<source_path>dvdshort.iso</source_path>
+			<format_flags>normal</format_flags>
+		</ISO>
+	</source>
+	<output>
+		<burn_method>simulate_protection</burn_method>
+		<replicator_CSS>
+			<disc_key_block_path>dkb.dat</disc_key_block_path>
+			<title_key_block_path>tkb.dat</title_key_block_path>
+		</replicator_CSS>
+
+	</output>
+	<comment> This file would write an image named "DVDSHORT.ISO" using DKB.DAT and TKB.DAT as the CSS parameter files </comment>
+	<comment> The simulate_protection flag is shown, so this can be written on a normal drive. </comment>
+	<comment> To use a Qflix drive, change "simulate_protection" to "production". </comment>
+</job_parameters>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BMHoistSaleManager", "BMHoistSaleManager\BMHoistSaleManager.vcproj", "{BB8A261C-8C6B-4635-9FE5-B48418C2DA7C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BMHoistPasswordTool", "BMHoistPasswordTool\BMHoistPasswordTool.vcproj", "{E6EFBB4F-65AD-4FF0-ABA4-0B8BC04B8489}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB8A261C-8C6B-4635-9FE5-B48418C2DA7C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BB8A261C-8C6B-4635-9FE5-B48418C2DA7C}.Debug|Win32.Build.0 = Debug|Win32
+		{BB8A261C-8C6B-4635-9FE5-B48418C2DA7C}.Release|Win32.ActiveCfg = Release|Win32
+		{BB8A261C-8C6B-4635-9FE5-B48418C2DA7C}.Release|Win32.Build.0 = Release|Win32
+		{E6EFBB4F-65AD-4FF0-ABA4-0B8BC04B8489}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E6EFBB4F-65AD-4FF0-ABA4-0B8BC04B8489}.Debug|Win32.Build.0 = Debug|Win32
+		{E6EFBB4F-65AD-4FF0-ABA4-0B8BC04B8489}.Release|Win32.ActiveCfg = Release|Win32
+		{E6EFBB4F-65AD-4FF0-ABA4-0B8BC04B8489}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

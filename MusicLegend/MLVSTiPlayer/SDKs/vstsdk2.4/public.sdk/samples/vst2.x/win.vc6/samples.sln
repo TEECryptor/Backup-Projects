@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "adelay", "adelay.vcproj", "{EC2E8A68-57EF-4B84-866F-B0E04235C16C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "again", "again.vcproj", "{212FF5D9-4B30-4548-82F3-0BF6812E9E69}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "drawtest", "..\..\..\..\VSTGUI.SF\DRAWTEST\WIN.VC6\drawtest.vcproj", "{06D796E6-C8FF-44A1-A064-0610CD850760}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "minihost", "minihost.vcproj", "{DE89E5D8-3B00-42B4-903D-651A25E1A8F5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "surrounddelay", "surrounddelay.vcproj", "{75BBD5D5-0749-418C-AADF-531078173BB8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vstxsynth", "vstxsynth.vcproj", "{1E73ABF5-022A-43E4-8F5E-15150666C738}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EC2E8A68-57EF-4B84-866F-B0E04235C16C}.Debug.ActiveCfg = Debug|Win32
+		{EC2E8A68-57EF-4B84-866F-B0E04235C16C}.Debug.Build.0 = Debug|Win32
+		{EC2E8A68-57EF-4B84-866F-B0E04235C16C}.Release.ActiveCfg = Release|Win32
+		{EC2E8A68-57EF-4B84-866F-B0E04235C16C}.Release.Build.0 = Release|Win32
+		{212FF5D9-4B30-4548-82F3-0BF6812E9E69}.Debug.ActiveCfg = Debug|Win32
+		{212FF5D9-4B30-4548-82F3-0BF6812E9E69}.Debug.Build.0 = Debug|Win32
+		{212FF5D9-4B30-4548-82F3-0BF6812E9E69}.Release.ActiveCfg = Release|Win32
+		{212FF5D9-4B30-4548-82F3-0BF6812E9E69}.Release.Build.0 = Release|Win32
+		{06D796E6-C8FF-44A1-A064-0610CD850760}.Debug.ActiveCfg = Debug|Win32
+		{06D796E6-C8FF-44A1-A064-0610CD850760}.Debug.Build.0 = Debug|Win32
+		{06D796E6-C8FF-44A1-A064-0610CD850760}.Release.ActiveCfg = Release|Win32
+		{06D796E6-C8FF-44A1-A064-0610CD850760}.Release.Build.0 = Release|Win32
+		{DE89E5D8-3B00-42B4-903D-651A25E1A8F5}.Debug.ActiveCfg = Debug|Win32
+		{DE89E5D8-3B00-42B4-903D-651A25E1A8F5}.Debug.Build.0 = Debug|Win32
+		{DE89E5D8-3B00-42B4-903D-651A25E1A8F5}.Release.ActiveCfg = Release|Win32
+		{DE89E5D8-3B00-42B4-903D-651A25E1A8F5}.Release.Build.0 = Release|Win32
+		{75BBD5D5-0749-418C-AADF-531078173BB8}.Debug.ActiveCfg = Debug|Win32
+		{75BBD5D5-0749-418C-AADF-531078173BB8}.Debug.Build.0 = Debug|Win32
+		{75BBD5D5-0749-418C-AADF-531078173BB8}.Release.ActiveCfg = Release|Win32
+		{75BBD5D5-0749-418C-AADF-531078173BB8}.Release.Build.0 = Release|Win32
+		{1E73ABF5-022A-43E4-8F5E-15150666C738}.Debug.ActiveCfg = Debug|Win32
+		{1E73ABF5-022A-43E4-8F5E-15150666C738}.Debug.Build.0 = Debug|Win32
+		{1E73ABF5-022A-43E4-8F5E-15150666C738}.Release.ActiveCfg = Release|Win32
+		{1E73ABF5-022A-43E4-8F5E-15150666C738}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

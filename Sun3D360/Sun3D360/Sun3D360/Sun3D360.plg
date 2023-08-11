@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Sun3D360 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP1EE.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "../Common" /I "../../Common" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/Sun3D360.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\VC Projects\Sun3D360\Sun360\Sun3D360\GenericWnd.cpp"
+"D:\VC Projects\Sun3D360\Sun360\Sun3D360\JpgManager.cpp"
+"D:\VC Projects\Sun3D360\Sun360\Sun3D360\OpenGLWnd.cpp"
+"D:\VC Projects\Sun3D360\Sun360\Sun3D360\StdAfx.cpp"
+"D:\VC Projects\Sun3D360\Sun360\Sun3D360\Sun3D.cpp"
+"D:\VC Projects\Sun3D360\Sun360\Sun3D360\Sun3D360.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP1EE.tmp" 
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP1EF.tmp" with contents
+[
+Winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ijl11.lib opengl32.lib glu32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/Sun3D360.pdb" /machine:I386 /out:"../Exe/Sun3D360.dll" /implib:"Release/Sun3D360.lib" 
+".\Release\GenericWnd.obj"
+".\Release\JpgManager.obj"
+".\Release\OpenGLWnd.obj"
+".\Release\StdAfx.obj"
+".\Release\Sun3D.obj"
+".\Release\Sun3D360.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP1EF.tmp"
+<h3>Output Window</h3>
+Compiling...
+GenericWnd.cpp
+JpgManager.cpp
+OpenGLWnd.cpp
+StdAfx.cpp
+Sun3D.cpp
+Sun3D360.cpp
+Linking...
+   Creating library Release/Sun3D360.lib and object Release/Sun3D360.exp
+
+
+
+<h3>Results</h3>
+Sun3D360.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

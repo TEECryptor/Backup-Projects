@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SunMsgSender", "SunMsgSender\SunMsgSender.vcproj", "{429B93A5-DE35-4B06-837F-9A352E41B314}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SunMaxScreenServer", "SunMaxScreenServer\SunMaxScreenServer.vcproj", "{1B497424-7337-42B8-928A-8B6D418E68BC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SunMaxScreenClient", "SunMaxScreenClient\SunMaxScreenClient.vcproj", "{0277EA65-C641-4235-BD1E-2D69BF4A12A7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{429B93A5-DE35-4B06-837F-9A352E41B314} = {429B93A5-DE35-4B06-837F-9A352E41B314}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{429B93A5-DE35-4B06-837F-9A352E41B314}.Debug|Win32.ActiveCfg = Debug|Win32
+		{429B93A5-DE35-4B06-837F-9A352E41B314}.Debug|Win32.Build.0 = Debug|Win32
+		{429B93A5-DE35-4B06-837F-9A352E41B314}.Release|Win32.ActiveCfg = Release|Win32
+		{429B93A5-DE35-4B06-837F-9A352E41B314}.Release|Win32.Build.0 = Release|Win32
+		{1B497424-7337-42B8-928A-8B6D418E68BC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1B497424-7337-42B8-928A-8B6D418E68BC}.Debug|Win32.Build.0 = Debug|Win32
+		{1B497424-7337-42B8-928A-8B6D418E68BC}.Release|Win32.ActiveCfg = Release|Win32
+		{1B497424-7337-42B8-928A-8B6D418E68BC}.Release|Win32.Build.0 = Release|Win32
+		{0277EA65-C641-4235-BD1E-2D69BF4A12A7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0277EA65-C641-4235-BD1E-2D69BF4A12A7}.Debug|Win32.Build.0 = Debug|Win32
+		{0277EA65-C641-4235-BD1E-2D69BF4A12A7}.Release|Win32.ActiveCfg = Release|Win32
+		{0277EA65-C641-4235-BD1E-2D69BF4A12A7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

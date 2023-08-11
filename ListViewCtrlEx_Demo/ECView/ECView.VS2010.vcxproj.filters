@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ECView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ECViewApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ECViewDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListViewCtrlEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ECViewApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ECViewDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListViewCtrlEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ECView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\EC.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ECView.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGAUSTA.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ECViewDoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGUK.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGSWED.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGSPAIN.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGSLO.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGSLK.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGPORT.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGPOL.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGNETH.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGMALTA.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGLUX.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGLITH.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGLATV.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGITALY.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGIREL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGHUNG.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGGREEC.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGGERM.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGFRAN.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGFIN.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGEST.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGDEN.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGCZECH.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGCYPR.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FLGBELG.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\hand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\hdrdown.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\hdrup.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ECView.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f88468ba-63b7-4be7-ac4b-53012e1f7020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{bc5988e0-d536-4131-af35-650abd08bff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6858e1a8-8909-48b4-92bf-aa1bdcf1e600}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ECView.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HTTPDownloadLib", "HTTPDownload\HTTPDownloadLib\HTTPDownloadLib.vcproj", "{EABECF5A-41BC-4415-98A2-5EA4F656A0B5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HTTPDownloadDll", "HTTPDownload\HTTPDownloadDll\HTTPDownloadDll.vcproj", "{89290769-BD7E-4E97-A9B8-394A6CC706DE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestHTTPDownload", "TestHTTPDownload\TestHTTPDownload.vcproj", "{59D56321-ABEF-4090-B3C3-08961EACC24E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EABECF5A-41BC-4415-98A2-5EA4F656A0B5} = {EABECF5A-41BC-4415-98A2-5EA4F656A0B5}
+		{89290769-BD7E-4E97-A9B8-394A6CC706DE} = {89290769-BD7E-4E97-A9B8-394A6CC706DE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EABECF5A-41BC-4415-98A2-5EA4F656A0B5}.Debug.ActiveCfg = Debug|Win32
+		{EABECF5A-41BC-4415-98A2-5EA4F656A0B5}.Debug.Build.0 = Debug|Win32
+		{EABECF5A-41BC-4415-98A2-5EA4F656A0B5}.Release.ActiveCfg = Release|Win32
+		{EABECF5A-41BC-4415-98A2-5EA4F656A0B5}.Release.Build.0 = Release|Win32
+		{89290769-BD7E-4E97-A9B8-394A6CC706DE}.Debug.ActiveCfg = Debug|Win32
+		{89290769-BD7E-4E97-A9B8-394A6CC706DE}.Debug.Build.0 = Debug|Win32
+		{89290769-BD7E-4E97-A9B8-394A6CC706DE}.Release.ActiveCfg = Release|Win32
+		{89290769-BD7E-4E97-A9B8-394A6CC706DE}.Release.Build.0 = Release|Win32
+		{59D56321-ABEF-4090-B3C3-08961EACC24E}.Debug.ActiveCfg = Debug|Win32
+		{59D56321-ABEF-4090-B3C3-08961EACC24E}.Debug.Build.0 = Debug|Win32
+		{59D56321-ABEF-4090-B3C3-08961EACC24E}.Release.ActiveCfg = Release|Win32
+		{59D56321-ABEF-4090-B3C3-08961EACC24E}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

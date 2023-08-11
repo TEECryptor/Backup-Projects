@@ -1,0 +1,360 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\RussiaServer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\RussiaServer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 RussiaServer"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "RussiaServer 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_RUSSIASERVER_DIALOG DIALOGEX 0, 0, 499, 399
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "俄国风情服务器端"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "系统控制",IDC_STATIC,10,9,475,31
+    PUSHBUTTON      "开始",IDC_BUTTON_START,25,22,50,14
+    PUSHBUTTON      "停止",IDC_BUTTON_STOP,90,22,50,14
+    PUSHBUTTON      "暂停",IDC_BUTTON_PAUSE,155,22,50,14
+    PUSHBUTTON      "路单查询",IDC_BUTTON_QUERYRST,220,22,50,14
+    PUSHBUTTON      "打印帐单",IDC_BUTTON_PRINTBILL,285,22,50,14
+    PUSHBUTTON      "上下分查询",IDC_BUTTON_QUERYSCORE,350,22,50,14
+    PUSHBUTTON      "关闭分机",IDC_BUTTON_SHUTDOWN,415,22,50,14
+    PUSHBUTTON      "退出系统",IDC_BUTTON_EXIT,435,378,50,14
+    GROUPBOX        "上分操作区",IDC_STATIC,10,107,235,53
+    CTEXT           "分机号：",IDC_STATIC,25,121,34,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_ADD,85,121,50,158,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    CTEXT           "分  值：",IDC_STATIC,25,142,34,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ADDVAULE,85,138,50,16,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "上分",IDC_BUTTON_ADDSCORE,145,140,50,14
+    GROUPBOX        "退分操作区",IDC_STATIC,250,107,235,53
+    CTEXT           "分机号：",IDC_STATIC,265,121,34,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_SUB,325,121,50,155,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    CTEXT           "分  值：",IDC_STATIC,265,142,34,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_SUBVALUE,325,138,50,16,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "退分",IDC_BUTTON_SUBSCORE,384,140,50,14
+    GROUPBOX        "状态显示",IDC_STATIC,10,345,475,28
+    CTEXT           "当前轮数：",IDC_STATIC,25,358,39,12,SS_CENTERIMAGE
+    CTEXT           "本轮局数：",IDC_STATIC,107,358,39,12,SS_CENTERIMAGE
+    CTEXT           "当前局数：",IDC_STATIC,195,358,39,12,SS_CENTERIMAGE
+    GROUPBOX        "运行监视",IDC_STATIC,10,167,475,173
+    GROUPBOX        "参数设置",IDC_STATIC,10,45,475,56
+    CTEXT           "下注时间(秒)：",IDC_STATIC,25,62,55,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_BETTIME,85,58,50,16,WS_GROUP | NOT WS_TABSTOP
+    CTEXT           "每局时间(秒)：",IDC_STATIC,145,62,55,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_INNINGTIME,205,58,50,16,WS_GROUP | NOT 
+                    WS_TABSTOP
+    LTEXT           "压红限制：",IDC_STATIC,25,84,55,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_REDLIMIT,85,80,50,16,WS_GROUP | NOT WS_TABSTOP
+    LTEXT           "压黑限制：",IDC_STATIC,145,84,55,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_BLACKLIMIT,205,80,50,16,WS_GROUP | NOT 
+                    WS_TABSTOP
+    LTEXT           "压绿限制：",IDC_STATIC,265,84,55,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_GREENLIMIT,325,80,50,16,WS_GROUP | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "更改确认",IDC_BUTTON_CONFIRM,384,82,50,14
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,19,177,455,158
+    CTEXT           "",IDC_STATIC_ROUND,69,358,29,12,SS_CENTERIMAGE
+    CTEXT           "",IDC_STATIC_INNING,152,358,29,12,SS_CENTERIMAGE
+    CTEXT           "",IDC_STATIC_CURINNING,241,358,29,12,SS_CENTERIMAGE
+    CTEXT           "当前状态：",IDC_STATIC,285,358,38,12,SS_CENTERIMAGE
+    LTEXT           "",IDC_STATIC_STATE,327,358,146,12,SS_CENTERIMAGE
+    LTEXT           "下注基数：",IDC_STATIC,265,62,55,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_BETMIN,325,62,50,155,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+END
+
+IDD_DIALOG_QUREY DIALOG DISCARDABLE  0, 0, 317, 187
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查询窗口"
+FONT 10, "新宋体"
+BEGIN
+    DEFPUSHBUTTON   "返回",IDOK,121,166,50,14
+    CONTROL         "List1",IDC_LIST_SCOREHISTORY,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,34,22,249,128
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "RussiaServer Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "RussiaServer\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2006\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "RussiaServer.EXE\0"
+            VALUE "ProductName", "RussiaServer 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_RUSSIASERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 492
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 392
+    END
+
+    IDD_DIALOG_QUREY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_RUSSIASERVER_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0031, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0032, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0033, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0034, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0035, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0036, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0037, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0038, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3032, 0x0039, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3132, 0x0030, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3132, 0x0031, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3132, 0x0032, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3132, 0x0033, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3132, 0x0034, 
+    IDC_COMBO_ADD, 0x403, 4, 0
+0x3132, 0x0035, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0031, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0032, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0033, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0034, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0035, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0036, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0037, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0038, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3032, 0x0039, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3132, 0x0030, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3132, 0x0031, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3132, 0x0032, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3132, 0x0033, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3132, 0x0034, 
+    IDC_COMBO_SUB, 0x403, 4, 0
+0x3132, 0x0035, 
+    IDC_COMBO_BETMIN, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO_BETMIN, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_COMBO_BETMIN, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_COMBO_BETMIN, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_COMBO_BETMIN, 0x403, 4, 0
+0x3031, 0x0030, 
+    IDC_COMBO_BETMIN, 0x403, 4, 0
+0x3032, 0x0030, 
+    IDC_COMBO_BETMIN, 0x403, 4, 0
+0x3035, 0x0030, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 RussiaServer(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\RussiaServer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

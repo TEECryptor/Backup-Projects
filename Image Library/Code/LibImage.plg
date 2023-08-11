@@ -1,0 +1,58 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IMGLB - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP14.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "../Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "IMGLB_EXPORTS" /FR"Debug/" /Fp"Debug/LibImage.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\VC Projects\Image Library\Code\BmpImage.cpp"
+"D:\VC Projects\Image Library\Code\Image.cpp"
+"D:\VC Projects\Image Library\Code\JpgImage .cpp"
+"D:\VC Projects\Image Library\Code\LibImage.cpp"
+"D:\VC Projects\Image Library\Code\LibImageImpl.cpp"
+"D:\VC Projects\Image Library\Code\TgaImage.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP14.tmp" 
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP15.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "../Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "IMGLB_EXPORTS" /FR"Debug/" /Fp"Debug/LibImage.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\VC Projects\Image Library\Code\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP15.tmp" 
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP16.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/IMGLB.pdb" /debug /machine:I386 /out:"../Bin/Debug/IMGLIB.dll" /implib:"../Lib/Debug/IMGLIB.lib" /pdbtype:sept 
+".\Debug\BmpImage.obj"
+".\Debug\Image.obj"
+".\Debug\JpgImage .obj"
+".\Debug\LibImage.obj"
+".\Debug\LibImageImpl.obj"
+".\Debug\StdAfx.obj"
+".\Debug\TgaImage.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP16.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+BmpImage.cpp
+Image.cpp
+JpgImage .cpp
+LibImage.cpp
+LibImageImpl.cpp
+TgaImage.cpp
+Generating Code...
+Linking...
+   Creating library ../Lib/Debug/IMGLIB.lib and object ../Lib/Debug/IMGLIB.exp
+
+
+
+<h3>Results</h3>
+IMGLIB.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MLVSTiPlayer", "MLVSTiPlayer\MLVSTiPlayer.vcproj", "{EC7179E5-2288-492C-8E8F-BEA65BB41289}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MLAudioRecoder", "MLAudioRecoder\MLAudioRecoder.vcproj", "{599B24C5-4969-4BF4-9375-2079AC22BCDC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MusicLegendApp", "MusicLegendApp\MusicLegendApp.vcproj", "{FD6F9ABD-F93E-4690-8D02-C846A39D9FDC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{599B24C5-4969-4BF4-9375-2079AC22BCDC} = {599B24C5-4969-4BF4-9375-2079AC22BCDC}
+		{EC7179E5-2288-492C-8E8F-BEA65BB41289} = {EC7179E5-2288-492C-8E8F-BEA65BB41289}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EC7179E5-2288-492C-8E8F-BEA65BB41289}.Debug.ActiveCfg = Debug|Win32
+		{EC7179E5-2288-492C-8E8F-BEA65BB41289}.Debug.Build.0 = Debug|Win32
+		{EC7179E5-2288-492C-8E8F-BEA65BB41289}.Release.ActiveCfg = Release|Win32
+		{EC7179E5-2288-492C-8E8F-BEA65BB41289}.Release.Build.0 = Release|Win32
+		{599B24C5-4969-4BF4-9375-2079AC22BCDC}.Debug.ActiveCfg = Debug|Win32
+		{599B24C5-4969-4BF4-9375-2079AC22BCDC}.Debug.Build.0 = Debug|Win32
+		{599B24C5-4969-4BF4-9375-2079AC22BCDC}.Release.ActiveCfg = Release|Win32
+		{599B24C5-4969-4BF4-9375-2079AC22BCDC}.Release.Build.0 = Release|Win32
+		{FD6F9ABD-F93E-4690-8D02-C846A39D9FDC}.Debug.ActiveCfg = Debug|Win32
+		{FD6F9ABD-F93E-4690-8D02-C846A39D9FDC}.Debug.Build.0 = Debug|Win32
+		{FD6F9ABD-F93E-4690-8D02-C846A39D9FDC}.Release.ActiveCfg = Release|Win32
+		{FD6F9ABD-F93E-4690-8D02-C846A39D9FDC}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Test_Sun3D360 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/Test_Sun3D360.res" /d "NDEBUG" /d "_AFXDLL" "D:\VC Projects\Sun3D360\Sun360\Test_Sun3D360\Test_Sun3D360.rc"" 
+Creating temporary file "C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP1F6.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Release/Test_Sun3D360.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\VC Projects\Sun3D360\Sun360\Test_Sun3D360\StdAfx.cpp"
+"D:\VC Projects\Sun3D360\Sun360\Test_Sun3D360\Test_Sun3D360.cpp"
+"D:\VC Projects\Sun3D360\Sun360\Test_Sun3D360\Test_Sun3D360Dlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\yyf\LOCALS~1\Temp\RSP1F6.tmp" 
+Creating command line "link.exe Sun3D360.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Sun3D360.pdb" /machine:I386 /out:"../Exe/Sun3D360.exe"  ".\Release\StdAfx.obj" ".\Release\Test_Sun3D360.obj" ".\Release\Test_Sun3D360Dlg.obj" ".\Release\Test_Sun3D360.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Test_Sun3D360.cpp
+Test_Sun3D360Dlg.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Sun3D360.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,352 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\MusicLegendApp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MusicLegendApp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_VSTIINFO DIALOGEX 0, 0, 188, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "VSTi Window"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_VSTIINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About MusicLegendApp"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "MusicLegendApp Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_MUSICLEGENDAPP_DIALOG DIALOGEX 0, 0, 431, 364
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Music Legend"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,374,341,50,16
+    CONTROL         "Mute",IDC_CHECK_MUTE_0,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,45,40,32,10
+    LTEXT           "Track 0:",IDC_STATIC,13,42,29,8
+    PUSHBUTTON      "Audio File",IDC_BTN_OPENFILE,82,36,46,14
+    CONTROL         "",IDC_SLIDER_0,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,131,39,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_0,338,40,28,8
+    LTEXT           "Audio File:",IDC_STATIC_FILEINFO_0,45,54,313,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_0,367,39,50,14
+    CONTROL         "Mute",IDC_CHECK_MUTE_1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,70,32,10
+    LTEXT           "Track 1:",IDC_STATIC,14,72,29,8
+    PUSHBUTTON      "VSTi",IDC_BTN_VSTI_1,82,65,20,14
+    PUSHBUTTON      "Midi",IDC_BTN_MIDI_1,108,65,20,14
+    CONTROL         "",IDC_SLIDER_1,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,132,69,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_1,338,70,28,8
+    LTEXT           "Midi File:",IDC_STATIC_FILEINFO_1,46,83,194,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_1,368,66,50,14
+    CONTROL         "Mute",IDC_CHECK_MUTE_2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,101,32,10
+    LTEXT           "Track 2:",IDC_STATIC,14,103,29,8
+    PUSHBUTTON      "VSTi",IDC_BTN_VSTI_2,83,97,20,14
+    PUSHBUTTON      "Midi",IDC_BTN_MIDI_2,108,97,20,14
+    CONTROL         "",IDC_SLIDER_2,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,132,100,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_2,338,101,28,8
+    LTEXT           "Midi File:",IDC_STATIC_FILEINFO_2,46,114,194,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_2,368,95,50,14
+    CONTROL         "Mute",IDC_CHECK_MUTE_3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,130,32,10
+    LTEXT           "Track 3:",IDC_STATIC,14,132,29,8
+    PUSHBUTTON      "VSTi",IDC_BTN_VSTI_3,83,126,20,14
+    PUSHBUTTON      "Midi",IDC_BTN_MIDI_3,108,126,20,14
+    CONTROL         "",IDC_SLIDER_3,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,132,129,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_3,338,130,28,8
+    LTEXT           "Midi File:",IDC_STATIC_FILEINFO_3,46,142,194,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_3,368,124,50,14
+    CONTROL         "Mute",IDC_CHECK_MUTE_4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,159,32,10
+    LTEXT           "Track 4:",IDC_STATIC,14,160,29,8
+    PUSHBUTTON      "VSTi",IDC_BTN_VSTI_4,82,154,20,14
+    PUSHBUTTON      "Midi",IDC_BTN_MIDI_4,108,154,20,14
+    CONTROL         "",IDC_SLIDER_4,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,132,157,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_4,338,159,28,8
+    LTEXT           "Midi File:",IDC_STATIC_FILEINFO_4,46,171,194,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_4,368,153,50,14
+    CONTROL         "Mute",IDC_CHECK_MUTE_5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,187,32,10
+    LTEXT           "Track 5:",IDC_STATIC,14,189,29,8
+    PUSHBUTTON      "VSTi",IDC_BTN_VSTI_5,83,183,20,14
+    PUSHBUTTON      "Midi",IDC_BTN_MIDI_5,108,183,20,14
+    CONTROL         "",IDC_SLIDER_5,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,132,186,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_5,338,187,28,8
+    LTEXT           "Midi File:",IDC_STATIC_FILEINFO_5,46,199,194,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_5,368,181,50,14
+    CONTROL         "Mute",IDC_CHECK_MUTE_6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,215,32,10
+    LTEXT           "Track 6:",IDC_STATIC,14,217,29,8
+    PUSHBUTTON      "VSTi",IDC_BTN_VSTI_6,83,211,20,14
+    PUSHBUTTON      "Midi",IDC_BTN_MIDI_6,108,211,20,14
+    CONTROL         "",IDC_SLIDER_6,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,132,214,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_6,338,215,28,8
+    LTEXT           "Midi File:",IDC_STATIC_FILEINFO_6,46,227,194,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_6,368,209,50,14
+    CONTROL         "Mute",IDC_CHECK_MUTE_7,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,243,32,10
+    LTEXT           "Track 7:",IDC_STATIC,14,245,29,8
+    PUSHBUTTON      "VSTi",IDC_BTN_VSTI_7,82,239,20,14
+    PUSHBUTTON      "Midi",IDC_BTN_MIDI_7,108,239,20,14
+    CONTROL         "",IDC_SLIDER_7,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,132,242,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_7,338,243,28,8
+    LTEXT           "Midi File:",IDC_STATIC_FILEINFO_7,46,255,194,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_7,368,237,50,14
+    CONTROL         "Mute",IDC_CHECK_MUTE_8,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,272,32,10
+    LTEXT           "Track 8:",IDC_STATIC,14,274,29,8
+    PUSHBUTTON      "VSTi",IDC_BTN_VSTI_8,83,268,20,14
+    PUSHBUTTON      "Midi",IDC_BTN_MIDI_8,108,268,20,14
+    CONTROL         "",IDC_SLIDER_8,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,132,271,207,11
+    LTEXT           "0/0 s",IDC_STATIC_TIME_8,338,272,28,8
+    LTEXT           "Midi File:",IDC_STATIC_FILEINFO_8,46,284,194,9
+    PUSHBUTTON      "Play/Stop",IDC_BTN_PLAYSTOP_8,368,266,50,14
+    LTEXT           "VSTi:",IDC_STATIC_VSTINAME_1,247,83,109,9
+    PUSHBUTTON      "VSTi Info",IDC_BTN_VSTIINFO_1,368,80,50,14
+    LTEXT           "VSTi:",IDC_STATIC_VSTINAME_2,247,114,109,9
+    LTEXT           "VSTi:",IDC_STATIC_VSTINAME_3,247,142,109,9
+    LTEXT           "VSTi:",IDC_STATIC_VSTINAME_4,247,171,109,9
+    LTEXT           "VSTi:",IDC_STATIC_VSTINAME_5,247,199,109,9
+    LTEXT           "VSTi:",IDC_STATIC_VSTINAME_6,247,227,109,9
+    LTEXT           "VSTi:",IDC_STATIC_VSTINAME_7,247,255,109,9
+    LTEXT           "VSTi:",IDC_STATIC_VSTINAME_8,247,284,109,9
+    PUSHBUTTON      "VSTi Info",IDC_BTN_VSTIINFO_2,368,109,50,14
+    PUSHBUTTON      "VSTi Info",IDC_BTN_VSTIINFO_3,368,138,50,14
+    PUSHBUTTON      "VSTi Info",IDC_BTN_VSTIINFO_4,368,167,50,14
+    PUSHBUTTON      "VSTi Info",IDC_BTN_VSTIINFO_5,368,195,50,14
+    PUSHBUTTON      "VSTi Info",IDC_BTN_VSTIINFO_6,368,223,50,14
+    PUSHBUTTON      "VSTi Info",IDC_BTN_VSTIINFO_7,368,251,50,14
+    PUSHBUTTON      "VSTi Info",IDC_BTN_VSTIINFO_8,368,280,50,14
+    PUSHBUTTON      "Play/Stop All",IDC_BTN_PLAYSTOP_ALL,368,304,50,14
+    LTEXT           "Audio Out Devices:",IDC_STATIC,13,17,66,8
+    COMBOBOX        IDC_COMBO_DEVICE,82,13,253,74,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "MusicLegendApp.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "MusicLegendApp.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_MUSICLEGENDAPP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 424
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 357
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About MusicLegendApp..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\MusicLegendApp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

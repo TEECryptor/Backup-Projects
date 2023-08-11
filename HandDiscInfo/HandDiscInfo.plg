@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: HandDiscInfo - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ABBYWU~1\LOCALS~1\Temp\RSP336.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/HandDiscInfo.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"D:\VC Projects\HandDiscInfo\HandDiscInfoDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ABBYWU~1\LOCALS~1\Temp\RSP336.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/HandDiscInfo.pdb" /debug /machine:I386 /out:"Debug/HandDiscInfo.exe" /pdbtype:sept  ".\Debug\HandDiscInfo.obj" ".\Debug\HandDiscInfoDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\HandDiscInfo.res" "
+<h3>Output Window</h3>
+Compiling...
+HandDiscInfoDlg.cpp
+d:\vc projects\handdiscinfo\handdiscinfohelper.h(133) : error C2065: 'IOCTL_SCSI_MINIPORT_IDENTIFY' : undeclared identifier
+d:\vc projects\handdiscinfo\handdiscinfohelper.h(136) : error C2065: 'IDE_ATA_IDENTIFY' : undeclared identifier
+d:\vc projects\handdiscinfo\handdiscinfohelper.h(139) : error C2065: 'IOCTL_SCSI_MINIPORT' : undeclared identifier
+d:\vc projects\handdiscinfo\handdiscinfohelper.h(147) : error C2065: 'IDSECTOR' : undeclared identifier
+d:\vc projects\handdiscinfo\handdiscinfohelper.h(147) : error C2065: 'pId' : undeclared identifier
+d:\vc projects\handdiscinfo\handdiscinfohelper.h(147) : error C2059: syntax error : ')'
+d:\vc projects\handdiscinfo\handdiscinfohelper.h(148) : error C2227: left of '->sModelNumber' must point to class/struct/union
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+HandDiscInfo.exe - 7 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

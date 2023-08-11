@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ECDlg", "ECDlg\ECDlg.VS2008.vcproj", "{4717212E-4F37-4593-9C62-797EBDBDD8C4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ECView", "ECView\ECView.VS2008.vcproj", "{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Unicode Debug|Win32 = Unicode Debug|Win32
+		Unicode Release|Win32 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4717212E-4F37-4593-9C62-797EBDBDD8C4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4717212E-4F37-4593-9C62-797EBDBDD8C4}.Debug|Win32.Build.0 = Debug|Win32
+		{4717212E-4F37-4593-9C62-797EBDBDD8C4}.Release|Win32.ActiveCfg = Release|Win32
+		{4717212E-4F37-4593-9C62-797EBDBDD8C4}.Release|Win32.Build.0 = Release|Win32
+		{4717212E-4F37-4593-9C62-797EBDBDD8C4}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{4717212E-4F37-4593-9C62-797EBDBDD8C4}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{4717212E-4F37-4593-9C62-797EBDBDD8C4}.Unicode Release|Win32.ActiveCfg = Unicode Release|Win32
+		{4717212E-4F37-4593-9C62-797EBDBDD8C4}.Unicode Release|Win32.Build.0 = Unicode Release|Win32
+		{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}.Debug|Win32.Build.0 = Debug|Win32
+		{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}.Release|Win32.ActiveCfg = Release|Win32
+		{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}.Release|Win32.Build.0 = Release|Win32
+		{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}.Unicode Release|Win32.ActiveCfg = Unicode Release|Win32
+		{1D95AEBD-187F-46EE-B1BA-0893EEA814ED}.Unicode Release|Win32.Build.0 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
